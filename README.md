@@ -1,2 +1,1 @@
-Building a scalable DCEL data structure to support overlay operations in parallel.  It describes the implementation of a partition strategy to, given two inputs of polygons layers, divide the query area, process local DCELs, run the operator locally and merge back the final resuls.  The overlay operator supported are: intersection, union, difference and symetric difference.
-
+Building a scalable DCEL data structure to support overlay operations in parallel.  It describes the implementation of a partition strategy to, given two inputs of polygons layers, divide the query area, process local DCELs, run the operator locally and merge back the final results.  The overlay operator supported are: intersection, union, difference and symmetric difference.
