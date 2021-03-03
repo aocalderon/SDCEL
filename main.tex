@@ -1,0 +1,75 @@
+%% bare_jrnl.tex
+%% V1.4b
+%% 2015/08/26
+%% by Michael Shell
+%% see http://www.michaelshell.org/
+%% for current contact information.
+%%
+%% This is a skeleton file demonstrating the use of IEEEtran.cls
+%% (requires IEEEtran.cls version 1.8b or later) with an IEEE
+%% journal paper.
+%%
+
+\documentclass[journal,onecolumn]{IEEEtran}
+%
+% If IEEEtran.cls has not been installed into the LaTeX system files,
+% manually specify the path to it like:
+% \documentclass[journal]{../sty/IEEEtran}
+
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{xpatch}
+\usepackage{cite}
+\usepackage{tikz}
+\usetikzlibrary{shapes, arrows, arrows.meta}
+
+\ifCLASSOPTIONcompsoc
+\usepackage[caption=false, font=normalsize, labelfont=sf, textfont=sf]{subfig}
+\else
+\usepackage[caption=false, font=footnotesize]{subfig}
+\fi
+
+\newtheorem{lemma}{Lemma}
+\renewcommand{\IEEEQED}{\IEEEQEDclosed}
+
+%\usepackage{array}
+%\usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
+%\usepackage{url}
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+%% For algorithms...
+\algrenewcommand\alglinenumber[1]{{\sffamily\footnotesize#1:}}
+\makeatletter
+\xpatchcmd{\algorithmic}{\itemsep\z@}{\itemsep=5pt}{}{}
+\makeatother
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+\renewcommand{\algorithmicforall}{\textbf{For Each}}
+
+% Define block styles for tikz...
+% \tikzstyle{decision} = [diamond, draw, fill=blue!20, text width=4.5em, 
+%    text centered, node distance=3cm, inner sep=0pt]
+% \tikzstyle{block} = [rectangle, draw, fill=blue!20, text width=3cm, 
+%    text centered, rounded corners, minimum height=4em]
+% \tikzstyle{info} = [rectangle, scale=0.9, text width=5cm, minimum height=4em, node distance=4.75cm]
+% \tikzstyle{line} = [draw, -latex']
+% \tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=3cm,
+%    minimum height=2em]
+% \tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, 
+%    minimum height=1cm, text centered, draw=black, fill=blue!30]
+
+\begin{document}
+% \title{_}
+% \author{_}
+% 
+% \maketitle
+
+\input{methods}
+
+%\bibliographystyle{IEEEtran}
+%\bibliography{sdcel.bib}
+
+\end{document}

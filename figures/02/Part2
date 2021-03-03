@@ -1,0 +1,13 @@
+\documentclass[border=0cm]{standalone}
+\usepackage{tikz}
+
+\begin{document}
+\begin{tikzpicture}
+    \node at (0,0) {\includegraphics[scale=0.5]{Part2A}};
+    \node at (0.02,-2.1) {\includegraphics[scale=0.5]{Part2B}};
+    \node at (1.5,-1.05) {$\Longrightarrow$};
+    \node at (3.8,-1.025) {\includegraphics[scale=0.9]{Part2Overlap}};
+    \node at (6.1,-1.05) {$\Longrightarrow$};
+    \node at (8.4,-1.025) {\includegraphics[scale=0.9]{Part2Splits}};
+\end{tikzpicture}
+\end{document}

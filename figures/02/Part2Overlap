@@ -1,0 +1,58 @@
+\documentclass[border=0cm]{standalone}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows, arrows.meta}
+\tikzset{    
+    barbarrow/.style={ 
+        color = blue,
+        % style that just defines the arrow tip
+        >={Straight Barb[left,length=5pt,width=5pt]},
+        thick,
+        <->
+    },
+    blues/.style={
+        color=blue
+    },
+    reds/.style={
+        color=red
+    }
+}
+\definecolor{light-gray}{gray}{0.975}
+\definecolor{pcolor}{rgb}{0.21, 0.27, 0.31}
+\begin{document}
+\begin{tikzpicture}
+    \tikzstyle{node1}=[draw,scale=0.4,shape=circle,color=black,fill=black]
+    \tikzstyle{node2}=[draw,scale=0.4,shape=circle,color=red,fill=red]
+    \tikzstyle{text}=[draw,scale=0.5,color=black]
+    \draw[color=light-gray, style=dashed] (4,4) grid (8,8);
+    \draw[color=pcolor, style=dashed, step=4] (4,4) grid (8,8);
+    \node[scale=0.85, color = pcolor] at (7.75, 7.75) {$2$};
+    
+    \node[node1] (M) at (4,6) {};
+    \node[node1] (R) at (6,4) {};
+    \node[node1] (Z) at (4,4) {};
+
+    \node[node1] (L) at (4,4) {};
+    \node[node1] (N) at (4,8) {};
+    \node[node1] (S) at (6,6) {};
+    \node[node1] (T) at (8,4) {};
+
+    \draw[barbarrow, color=red] (M) -- (R);
+    \draw[barbarrow, color=red] (Z) -- (R);
+    \draw[barbarrow, color=red] (Z) -- (M);
+    
+    \draw[barbarrow](L) -- (S); 
+    \draw[barbarrow](N) -- (S); 
+    \draw[barbarrow](S) -- (T);
+    \draw[barbarrow](L) -- (T);
+    \draw[barbarrow](L) -- (N);
+
+    \node[node1] (M) at (4,6) {};
+    \node[node1] (R) at (6,4) {};
+
+    \node[color=red] at (4.5,4.85) {$A_2$};
+    \node[color=blue] at (6,4.75) {$B_2$};
+    \node[color=blue] at (4.75,6) {$B_3$};
+    
+\end{tikzpicture}
+\end{document}

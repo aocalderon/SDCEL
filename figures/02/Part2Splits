@@ -1,0 +1,65 @@
+\documentclass[border=0cm]{standalone}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows, arrows.meta}
+\tikzset{    
+    barbarrow/.style={ 
+        color = blue,
+        % style that just defines the arrow tip
+        >={Straight Barb[left,length=5pt,width=5pt]},
+        thick,
+        <->
+    },
+    blues/.style={
+        color=blue
+    },
+    reds/.style={
+        color=red
+    }
+}
+\definecolor{light-gray}{gray}{0.975}
+\definecolor{pcolor}{rgb}{0.21, 0.27, 0.31}
+\definecolor{purple}{rgb}{1.0, 0.0 1.0}
+\begin{document}
+\begin{tikzpicture}
+    \tikzstyle{node1}=[draw,scale=0.4,shape=circle,color=black,fill=black]
+    \tikzstyle{node2}=[draw,scale=0.4,shape=circle,color=red,fill=red]
+    \tikzstyle{nodePurple}=[draw,scale=0.4,shape=circle,color=purple,fill=purple]
+    \tikzstyle{text}=[draw,scale=0.5,color=black]
+    \draw[color=light-gray, style=dashed] (4,4) grid (8,8);
+    \draw[color=pcolor, style=dashed, step=4] (4,4) grid (8,8);
+    \node[scale=0.85, color = pcolor] at (7.75, 7.75) {$2$};
+    
+    \node[node1] (M) at (4,6) {};
+    \node[node1] (R) at (6,4) {};
+    \node[node1] (Z) at (4,4) {};
+    \node[node1] (N) at (4,8) {};
+    \node[node1] (S) at (6,6) {};
+    \node[node1] (T) at (8,4) {};
+    \node[node1] (U) at (5,5) {};
+
+    \draw[barbarrow, color=red] (M) -- (U);
+    \draw[barbarrow, color=red] (U) -- (R);
+    
+    \draw[barbarrow](Z) -- (U); 
+    \draw[barbarrow](U) -- (S); 
+    \draw[barbarrow](N) -- (S); 
+    \draw[barbarrow](S) -- (T);
+    \draw[barbarrow](R) -- (T);
+    \draw[barbarrow](M) -- (N);
+
+    \draw[barbarrow, color=purple](Z) -- (M);
+    \draw[barbarrow, color=purple] (Z) -- (R);
+
+    \node[nodePurple] (M2) at (4,6) {};
+    \node[nodePurple] (R2) at (6,4) {};
+    \node[nodePurple] (U2) at (5,5) {};
+    \node[nodePurple] (Z2) at (4,4) {};
+
+    \node[scale=0.5] at (4.4,5) {$A_2B_3$};
+    \node[scale=0.5] at (5,4.4) {$A_2B_2$};
+    \node[scale=0.5] at (6,4.75) {$B_2$};
+    \node[scale=0.5] at (4.75,6) {$B_3$};
+    
+\end{tikzpicture}
+\end{document}

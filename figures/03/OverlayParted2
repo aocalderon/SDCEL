@@ -1,0 +1,12 @@
+\documentclass[border=0cm]{standalone}
+\usepackage{tikz}
+
+\begin{document}
+\begin{tikzpicture}
+    \node at (0,-3) {\includegraphics[scale=0.75]{FinalPartitionedDCEL}};
+    \node[scale=2] at (4,-3.25)    {$\Longrightarrow$};
+    \node at (8,-3) {\includegraphics[scale=0.75]{PartitionedOperation}};
+    \node[scale=2] at (12,-3.25)    {$\Longrightarrow$};
+    \node at (16,-3) {\includegraphics[scale=0.75]{PartitionedOperationResult}};
+\end{tikzpicture}
+\end{document}
