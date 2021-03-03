@@ -3,18 +3,16 @@
 \usepackage{tikz}
 \usetikzlibrary{arrows, arrows.meta}
 \tikzset{    
-    barbarrow/.style={ 
-        color = blue,
-        % style that just defines the arrow tip
-        >={Straight Barb[left,length=5pt,width=5pt]},
-        thick,
+    barbarrow/.style={ % style that just defines the arrow tip
+        %>={Straight Barb[left,length=5pt,width=5pt]},
+        >={Triangle[left,length=5pt,width=5pt]},
+        double,
+        semithick,
         <->
     },
-    blues/.style={
-        color=blue
-    },
-    reds/.style={
-        color=red
+    whites/.style={
+        thick, 
+        color=white
     }
 }
 \definecolor{light-gray}{gray}{0.975}
@@ -36,6 +34,10 @@
     \draw[barbarrow, color=red] (Z) -- (R);
     \draw[barbarrow, color=red] (Z) -- (M);    
 
+    \draw[whites] (M) -- (R);
+    \draw[whites] (Z) -- (R);
+    \draw[whites] (Z) -- (M);    
+    
     \node[color=red] at (4.65,4.65) {$A_2$};
     
 \end{tikzpicture}

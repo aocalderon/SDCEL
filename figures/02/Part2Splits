@@ -3,18 +3,16 @@
 \usepackage{tikz}
 \usetikzlibrary{arrows, arrows.meta}
 \tikzset{    
-    barbarrow/.style={ 
-        color = blue,
-        % style that just defines the arrow tip
-        >={Straight Barb[left,length=5pt,width=5pt]},
-        thick,
+    barbarrow/.style={ % style that just defines the arrow tip
+        %>={Straight Barb[left,length=5pt,width=5pt]},
+        >={Triangle[left,length=5pt,width=5pt]},
+        double,
+        semithick,
         <->
     },
-    blues/.style={
-        color=blue
-    },
-    reds/.style={
-        color=red
+    whites/.style={
+        thick, 
+        color=white
     }
 }
 \definecolor{light-gray}{gray}{0.975}
@@ -38,18 +36,29 @@
     \node[node1] (T) at (8,4) {};
     \node[node1] (U) at (5,5) {};
 
+    \draw[barbarrow, color=blue] (Z) -- (U); 
+    \draw[barbarrow, color=blue] (U) -- (S); 
+    \draw[barbarrow, color=blue] (N) -- (S); 
+    \draw[barbarrow, color=blue] (S) -- (T);
+    \draw[barbarrow, color=blue] (R) -- (T);
+    \draw[barbarrow, color=blue] (M) -- (N);
+
+    \draw[whites] (Z) -- (U); 
+    \draw[whites] (U) -- (S); 
+    \draw[whites] (N) -- (S); 
+    \draw[whites] (S) -- (T);
+    \draw[whites] (R) -- (T);
+    \draw[whites] (M) -- (N);
+    
     \draw[barbarrow, color=red] (M) -- (U);
     \draw[barbarrow, color=red] (U) -- (R);
-    
-    \draw[barbarrow](Z) -- (U); 
-    \draw[barbarrow](U) -- (S); 
-    \draw[barbarrow](N) -- (S); 
-    \draw[barbarrow](S) -- (T);
-    \draw[barbarrow](R) -- (T);
-    \draw[barbarrow](M) -- (N);
+    \draw[whites] (M) -- (U);
+    \draw[whites] (U) -- (R);
 
     \draw[barbarrow, color=purple](Z) -- (M);
     \draw[barbarrow, color=purple] (Z) -- (R);
+    \draw[whites](Z) -- (M);
+    \draw[whites] (Z) -- (R);
 
     \node[nodePurple] (M2) at (4,6) {};
     \node[nodePurple] (R2) at (6,4) {};
