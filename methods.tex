@@ -52,8 +52,8 @@ Figure \ref{fig:overlay_operations} shows the results of the five overlay operat
     \caption{Results of the overlay operations supported by the scalable DCEL.}\label{fig:overlay_operations}
 \end{figure}
 
-\subsection{Cell inside polygon problem}
-TODO: Need to introduce the problem and our proposal...
+\subsection{Partition/Cell inside polygon problem}
+The main goal of the proposal is to be able to divide the problem into smalls partitions for efficient processing.  Each partition collects the needed data and it is able to build its local DCEL without the need of query other partitions.  However, under this partition strategy, a new problem arises.  It happens when the partition schema (i.e. a quadtree) deliver a cell where no edges for any of the input layers are located.  The problem is even more complicated when a just hole in located inside a cell.  The problem is that the empty cell (or the empty portion in the case of holes) has no access to which polygon it belongs making its corresponding labeling impossible.
 
 \subsection*{Cell record}
 Cell:
