@@ -1,0 +1,38 @@
+\section{Literature review}
+The data explosion we are living today has impacted not just common areas of our daily lives such as our health, economy or social relationship but also how we move and how we locate ourselves in space.  Nowadays, huge amount of information with a spatial component are generated.  For example, GPS devices and smart-phones are able to collect your location and support navigation queries.  Similarly, Earth observation satellites captures gigabytes of imagery all around the world at daily basis.
+
+This new availability has brought novel and interesting applications but also it is demanding most difficult challenges.  The special characteristics of spatial data (i.e. topology, precision, types of data) demand special techniques, particularly when we are dealing with large and heterogeneous datasets.  The study of efficient algorithms to deal with spatial data has touched diverse domains such as computer sciences, mathematics and physical geography.  In one of this aspect, the computational geometry has explored different techniques and data structures to support such efficiency.
+
+Particularly, one of this problem is related to special operations between layers of geographic data.  One of the most commons outputs of geographic information are maps.  They can provide interesting information in an agile and visual manner, and it is not a surprise than many areas are interested on performing further analysis from this kind of data.  For example, ecology map users are usually interested on discovering areas where different attributes co-exist, for instance, the presence of certain vulnerable animal species and the impact of road construction or accessibility to water resources.  
+
+This kind of queries are supported by binary operators such as intersection, union and difference.  They are implemented in different ways and their applications are widely reported in literature.  Most of this solutions are based on edge-list data structures.  Perhaps the most common implementation of this kind of structures is the DCEL (Double Connected Edge List).  The fundamentals of the DCEL are explained in the seminal paper of \cite{muller_finding_1978} and illustrated with more examples in \cite{preparata_computational_1985}.  The authors highlight among the main advantages of DCELs the opportunity of capturing topological information and allowing multiple overlay operations once the DCEL is created.  In addition, a DCEL can be constructed in $\mathcal{O}(n log(n))$ time using $\mathcal{O}(n)$ additional memory. Once created, the DCEL allows Boolean overlay operations in $\mathcal{O}(n)$ time using $\mathcal{O}(n)$ additional space. 
+
+Nowadays, implementations of DCEL data structures have been presented and used in diverse applications.  \cite{barequet_dcel_1998} presented the description and modelling of a database-oriented implementation of a DCEL. It presents a geometric package aims to support polyhedra or polyhedral surface operations.  The design is discussed in detail together with application examples for collision detection, gap filling and inter-slice interpolation.
+
+In \cite{freiseisen_colored_1998}, the author explains in more detail the different spatial operations (intersection, union and difference) supported by a DCEL while describes the implementation over the Computational Geometry Algorithms Library - CGAL.  This work allows, given two simple polygon layers, the intersections of their boundaries keeping track of related attributes of the inputs.  
+
+An cardinal reference for DCEL description and design should be \cite{berg_computational_2008}.  It describes the core of the DCEL construction algorithm but also go deeper in the explanation of related concepts and techniques used during the DCEL construction such as line segment intersection and plane sweeping methods.  It also compiles an number of well-explained examples and application of its usage, for instance, triangulation, point location and robot motion planning.
+
+\cite{boltcheva_topological-based_2020} describes the use of sequential DCELs to store the needed topological information from mesh extracted from Lidar data to reconstruct roof polygons in 2D.  They highlight the usefulness of 2D topological data structures to avoid the complexities of 3D configurations.
+
+\subsection*{Parallel techniques}
+
+
+
+\vspace{1cm}
+Still working on...
+\begin{itemize}
+    \item DCELs (\cite{muller_finding_1978} and \cite{preparata_computational_1985})
+    \item Sequential techniques (\cite{barequet_dcel_1998}, \cite{boltcheva_topological-based_2020} and \cite{freiseisen_colored_1998})
+    \item Parallel solutions (\cite{challa_dd-rtree_2016}, \cite{franklin_data_2018}, \cite{magalhaes_fast_2015}, \cite{puri_mapreduce_2013}, \cite{sabek_spatial_2017}, \cite{zhou_parallel_2018} and \cite{puri_efficient_2013})
+    \item Arrangements (\cite{agarwal_arrangements_1998} and \cite{halperin-arrangements-2004})
+    \item CGAL (\cite{fogel_cgal_2012}, \cite{flato_design_2001}, \cite{haran_experimental_2009} and \cite{wein_advanced_2007})
+    \item LEDA (\cite{mehlhorn_leda_1995})
+\end{itemize}
+
+
+%% TODO
+% [ ] Big spatial data: high potential, many challenges.  Introduce map overlay problems
+% [ ] Current tool and studies: sequential solution and parallel spatial joins.
+% [ ] Arrangement application...
+% [ ] CGAL...
