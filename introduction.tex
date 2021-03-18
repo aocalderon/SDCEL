@@ -1,14 +1,22 @@
 \section{Introduction}
-The use of spatial data structures is ubiquitous in many areas ranging from computational geometry, robotics and geographic information systems.  It has important advantages to offer to current spatial algorithms in particular to apply spatial indexes and opportunities to exploit proximity among the data.  Many works depends on it to ensure efficiency for example spatial joins, voronio diagrams and robot motion planning (Berg citation).
+The use of spatial data structures is ubiquitous in many areas ranging from computational geometry, robotics and geographic information systems.  It has important advantages to offer to current spatial algorithms in particular the application of spatial indexes and opportunities to exploit proximity among the data.  Many works depends on it to ensure efficiency for example spatial joins, voronio diagrams and robot motion planning \cite{berg_computational_2008}.
 
-Although spatial data structure such as grids, the different flavours of rtrees and quadtrees are widely reported in literature, other structures have been less the focus of attention.  In particular, edge-list structures appear as a technique used in diverse application, specially related with geometric computation.  The use of such structure has been reported in application such as: obtaining silhouettes of polyhedra, efficient Minkowksi sums and offset of polygons and thematic map overlay. 
+Although spatial data structure such as grids, the different flavours of rtrees and quadtrees are widely reported in literature, other structures have been less the focus of attention.  In particular, edge-list structures appear as a technique used in diverse applications, specially related with geometric computation, but their employment have been limited to very specific domains.  The use of such kind of structures has been reported in application like obtaining silhouettes of polyhedra, efficient Minkowksi sums and offset of polygons and diverse types of triangulations mainly in computational geometry projects. 
 
-The most representative data structure in the edge-list family is the Double Connected Edge List (DCEL).  A DCEL is a data structure which collect topological information of the edges, vertices and faces contained by a surface in the plane.  The DCEL and its components represent a planar subdivision of that surface in the plane. In a DCEL, the faces (polygons) represents the cells of the subdivision; the edges are boundaries which divide adjacent faces; and the vertices, itself, are boundaries between adjacent edges.
+The most representative data structure in the edge-list family is the Double Connected Edge List (DCEL).  A DCEL \cite{muller_finding_1978, preparata_computational_1985} is a data structure which collect topological information of the edges, vertices and faces contained by a surface in the plane.  The DCEL and its components represent a planar subdivision of that surface in the plane. In a DCEL, the faces (polygons) represents the cells of the subdivision; the edges are boundaries which divide adjacent faces; and the vertices, itself, are boundaries between adjacent edges.
 
-\vspace{1cm}
-Still working on...
-\begin{itemize}
-    \item Problem in the current DCEL...
-    \item What is our proposal...
-    \item Contributions...
-\end{itemize}
+One interesting problem in which edge-list data structures have been shown utility are the thematic overlay maps. In this problem, two polygon input layers capture geospatial information and attribute data for different kind of phenomena.  In many areas, such as ecology, economics and climate change, it is important to be able of join those layers and match their attributes in order to unveil patterns or anomalies in data.  Several operation are relevant depending of the study, for instance, sometime the user would like to find intersections between the layers and other times be able to see the difference between them. 
+
+\subsection{What is the problem?}
+Even the DCEL data structure has interesting advantages for overlay map operations, current methods are sequential based.  For layers with thousand of polygons the execution time is not feasible.  Further more, most of distributed techniques that have been used in this matter are oriented to a specific spatial operation (intersection, union or difference) and they have to be run from scratch if other operation is required.  In addition, parallel techniques divide the data into partitions and replicate features if needed in order to solve the problem locally which could increase the size of the problem.  Up to now, data structures collecting topological properties, like the DCEL, are not explored in a distributed and scalable fashion.
+
+\subsection{Why is it important?}
+With the scale and volume of available geodata, the rise of big (spatial) data makes necessary to count with fast and efficient techniques for spatial analysis.  For example, today GIS researchers have to deal with spatial operations between layers collecting thousand of counties nation-wide.  The versatility and efficiency of the spatial methods is cardinal for their studies. Given the advantages shown by the DCEL data structure, it should be interesting to count with intermediate data structures that allow multiple map overlay queries and exploit distributed frameworks at the same time. 
+
+\subsection{What are the limitations of related work?}
+We already know that topological data structures are common in computational geometry.  However, most implementations are sequential and they do not scale appropriately on large spatial datasets.  In addition, distributed alternatives like parallel spatial joins add complexity due to spatial partitioning and they are unable to run more than one operation once they have been created.
+
+\subsection{Why is it challenging?}
+However, adapt the design and implementation concepts of the DCEL to a distributed environment should face challenge such as how to deal with initial stages of the construction which are expecting to fit in main memory.  In addition, the partition strategy must divide the data appropriately and collect back the results without any data loss.  Also, such development must guarantee that subsequent Boolean operations should be able to query the DCEL in a transparent way.
+
+At the best of our knowledge, there is not a distributed and scalable DCEL implementation available that meet those criteria.  We think it could be a great tool to support key  challenges and operations in Geoscience today.  
