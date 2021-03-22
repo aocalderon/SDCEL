@@ -1,0 +1,162 @@
+2021-02-08 09:49:58.635|Reading A polygons...
+2021-02-08 09:50:03.517|Inserting polygons...
+2021-02-08 09:50:15.564|Polygon added (1000/7028).
+2021-02-08 09:50:25.749|Polygon added (2000/7028).
+2021-02-08 09:50:30.415|Polygon added (3000/7028).
+2021-02-08 09:50:43.254|Polygon added (4000/7028).
+2021-02-08 09:50:50.448|Polygon added (5000/7028).
+2021-02-08 09:50:59.278|Polygon added (6000/7028).
+2021-02-08 09:51:09.097|Polygon added (7000/7028).
+2021-02-08 09:51:09.613|Insertion done! [7028 polygons|1002370 segments].
+2021-02-08 09:51:09.628|Done with A [1002370 edges].
+2021-02-08 09:51:09.628|Time for A: 66.111 s.
+2021-02-08 09:51:09.858|Reading B polygons...
+2021-02-08 09:51:23.638|Inserting polygons...
+2021-02-08 09:52:26.014|Polygon added (1000/8047).
+2021-02-08 09:55:34.395|Polygon added (2000/8047).
+2021-02-08 09:57:18.096|Polygon added (3000/8047).
+2021-02-08 09:59:51.423|Polygon added (4000/8047).
+2021-02-08 10:01:07.902|Polygon added (5000/8047).
+2021-02-08 10:01:55.617|Polygon added (6000/8047).
+2021-02-08 10:02:13.137|Polygon added (7000/8047).
+2021-02-08 10:02:33.134|Polygon added (8000/8047).
+2021-02-08 10:02:34.013|Insertion done! [8047 polygons|2896123 segments].
+2021-02-08 10:02:34.019|Done with B [2896123 edges].
+2021-02-08 10:02:34.019|Time for B: 670.381 s.
+2021-02-08 10:02:34.019|Computing overlay...
+2021-02-08 10:02:48.769|Time for overlay: 14.75 s.
+2021-02-08 10:02:48.809|Saving faces to faces.wkt...
+2021-02-08 10:03:19.179|Done! 182043 faces saved.
+2021-02-08 10:03:19.179|Computing overlay operation: 2021-02-08 10:03:19.179|Intersection
+2021-02-08 10:03:19.215|Saving faces to Intersection.wkt...
+2021-02-08 10:03:46.370|Done! 179618 faces saved.
+2021-02-08 10:03:46.370|Time for overlay operator: 27.192 s.
+2021-02-08 10:03:46.371|Total Time: 778.434 s.
+2021-02-08 10:03:46.371|Computing overlay operation: 2021-02-08 10:03:46.371|Union
+2021-02-08 10:03:46.405|Saving faces to Union.wkt...
+2021-02-08 10:04:12.872|Done! 182043 faces saved.
+2021-02-08 10:04:12.873|Time for overlay operator: 26.502 s.
+2021-02-08 10:04:12.873|Total Time: 777.744 s.
+2021-02-08 10:04:12.873|Computing overlay operation: 2021-02-08 10:04:12.873|Symmetric
+2021-02-08 10:04:12.874|Saving faces to Symmetric.wkt...
+2021-02-08 10:04:13.369|Done! 2425 faces saved.
+2021-02-08 10:04:13.369|Time for overlay operator: 0.496 s.
+2021-02-08 10:04:13.369|Total Time: 751.738 s.
+2021-02-08 10:04:13.369|Computing overlay operation: 2021-02-08 10:04:13.370|SymmetricA
+2021-02-08 10:04:13.370|Saving faces to SymmetricA.wkt...
+2021-02-08 10:04:13.602|Done! 832 faces saved.
+2021-02-08 10:04:13.602|Time for overlay operator: 0.233 s.
+2021-02-08 10:04:13.602|Total Time: 751.475 s.
+2021-02-08 10:04:13.602|Computing overlay operation: 2021-02-08 10:04:13.602|SymmetricB
+2021-02-08 10:04:13.603|Saving faces to SymmetricB.wkt...
+2021-02-08 10:04:13.885|Done! 1593 faces saved.
+2021-02-08 10:04:13.885|Time for overlay operator: 0.282 s.
+2021-02-08 10:04:13.885|Total Time: 751.524 s.
+2021-02-08 10:04:25.069|Reading A polygons...
+2021-02-08 10:04:29.874|Inserting polygons...
+2021-02-08 10:04:41.922|Polygon added (1000/7028).
+2021-02-08 10:04:51.606|Polygon added (2000/7028).
+2021-02-08 10:04:56.322|Polygon added (3000/7028).
+2021-02-08 10:05:08.658|Polygon added (4000/7028).
+2021-02-08 10:05:15.419|Polygon added (5000/7028).
+2021-02-08 10:05:24.147|Polygon added (6000/7028).
+2021-02-08 10:05:33.512|Polygon added (7000/7028).
+2021-02-08 10:05:34.009|Insertion done! [7028 polygons|1002370 segments].
+2021-02-08 10:05:34.022|Done with A [1002370 edges].
+2021-02-08 10:05:34.023|Time for A: 64.148 s.
+2021-02-08 10:05:34.221|Reading B polygons...
+2021-02-08 10:05:47.382|Inserting polygons...
+2021-02-08 10:06:45.472|Polygon added (1000/8047).
+2021-02-08 10:09:53.999|Polygon added (2000/8047).
+2021-02-08 10:11:35.105|Polygon added (3000/8047).
+2021-02-08 10:14:00.227|Polygon added (4000/8047).
+2021-02-08 10:15:14.963|Polygon added (5000/8047).
+2021-02-08 10:16:03.492|Polygon added (6000/8047).
+2021-02-08 10:16:21.641|Polygon added (7000/8047).
+2021-02-08 10:16:41.983|Polygon added (8000/8047).
+2021-02-08 10:16:42.893|Insertion done! [8047 polygons|2896123 segments].
+2021-02-08 10:16:42.905|Done with B [2896123 edges].
+2021-02-08 10:16:42.905|Time for B: 655.523 s.
+2021-02-08 10:16:42.905|Computing overlay...
+2021-02-08 10:16:59.523|Time for overlay: 16.618 s.
+2021-02-08 10:16:59.567|Saving faces to faces.wkt...
+2021-02-08 10:17:31.590|Done! 182043 faces saved.
+2021-02-08 10:17:31.590|Computing overlay operation: 2021-02-08 10:17:31.590|Intersection
+2021-02-08 10:17:31.626|Saving faces to Intersection.wkt...
+2021-02-08 10:17:58.571|Done! 179618 faces saved.
+2021-02-08 10:17:58.571|Time for overlay operator: 26.98 s.
+2021-02-08 10:17:58.571|Total Time: 763.269 s.
+2021-02-08 10:17:58.571|Computing overlay operation: 2021-02-08 10:17:58.571|Union
+2021-02-08 10:17:58.607|Saving faces to Union.wkt...
+2021-02-08 10:18:26.357|Done! 182043 faces saved.
+2021-02-08 10:18:26.357|Time for overlay operator: 27.786 s.
+2021-02-08 10:18:26.357|Total Time: 764.075 s.
+2021-02-08 10:18:26.357|Computing overlay operation: 2021-02-08 10:18:26.358|Symmetric
+2021-02-08 10:18:26.358|Saving faces to Symmetric.wkt...
+2021-02-08 10:18:26.774|Done! 2425 faces saved.
+2021-02-08 10:18:26.774|Time for overlay operator: 0.416 s.
+2021-02-08 10:18:26.774|Total Time: 736.705 s.
+2021-02-08 10:18:26.774|Computing overlay operation: 2021-02-08 10:18:26.774|SymmetricA
+2021-02-08 10:18:26.774|Saving faces to SymmetricA.wkt...
+2021-02-08 10:18:26.999|Done! 832 faces saved.
+2021-02-08 10:18:26.999|Time for overlay operator: 0.225 s.
+2021-02-08 10:18:26.999|Total Time: 736.514 s.
+2021-02-08 10:18:26.999|Computing overlay operation: 2021-02-08 10:18:26.999|SymmetricB
+2021-02-08 10:18:26.999|Saving faces to SymmetricB.wkt...
+2021-02-08 10:18:27.284|Done! 1593 faces saved.
+2021-02-08 10:18:27.284|Time for overlay operator: 0.285 s.
+2021-02-08 10:18:27.284|Total Time: 736.574 s.
+2021-02-08 10:18:36.084|Reading A polygons...
+2021-02-08 10:18:40.917|Inserting polygons...
+2021-02-08 10:18:53.341|Polygon added (1000/7028).
+2021-02-08 10:19:03.069|Polygon added (2000/7028).
+2021-02-08 10:19:07.739|Polygon added (3000/7028).
+2021-02-08 10:19:20.267|Polygon added (4000/7028).
+2021-02-08 10:19:27.219|Polygon added (5000/7028).
+2021-02-08 10:19:36.182|Polygon added (6000/7028).
+2021-02-08 10:19:45.788|Polygon added (7000/7028).
+2021-02-08 10:19:46.326|Insertion done! [7028 polygons|1002370 segments].
+2021-02-08 10:19:46.338|Done with A [1002370 edges].
+2021-02-08 10:19:46.338|Time for A: 65.421 s.
+2021-02-08 10:19:46.526|Reading B polygons...
+2021-02-08 10:19:59.931|Inserting polygons...
+2021-02-08 10:20:59.146|Polygon added (1000/8047).
+2021-02-08 10:24:04.253|Polygon added (2000/8047).
+2021-02-08 10:25:47.901|Polygon added (3000/8047).
+2021-02-08 10:28:16.885|Polygon added (4000/8047).
+2021-02-08 10:29:31.544|Polygon added (5000/8047).
+2021-02-08 10:30:19.743|Polygon added (6000/8047).
+2021-02-08 10:30:37.486|Polygon added (7000/8047).
+2021-02-08 10:30:57.391|Polygon added (8000/8047).
+2021-02-08 10:30:58.243|Insertion done! [8047 polygons|2896123 segments].
+2021-02-08 10:30:58.250|Done with B [2896123 edges].
+2021-02-08 10:30:58.250|Time for B: 658.319 s.
+2021-02-08 10:30:58.250|Computing overlay...
+2021-02-08 10:31:12.992|Time for overlay: 14.743 s.
+2021-02-08 10:31:13.034|Saving faces to faces.wkt...
+2021-02-08 10:31:45.201|Done! 182043 faces saved.
+2021-02-08 10:31:45.201|Computing overlay operation: 2021-02-08 10:31:45.201|Intersection
+2021-02-08 10:31:45.237|Saving faces to Intersection.wkt...
+2021-02-08 10:32:12.619|Done! 179618 faces saved.
+2021-02-08 10:32:12.620|Time for overlay operator: 27.418 s.
+2021-02-08 10:32:12.620|Total Time: 765.901 s.
+2021-02-08 10:32:12.620|Computing overlay operation: 2021-02-08 10:32:12.620|Union
+2021-02-08 10:32:12.655|Saving faces to Union.wkt...
+2021-02-08 10:32:40.199|Done! 182043 faces saved.
+2021-02-08 10:32:40.199|Time for overlay operator: 27.58 s.
+2021-02-08 10:32:40.199|Total Time: 766.063 s.
+2021-02-08 10:32:40.199|Computing overlay operation: 2021-02-08 10:32:40.199|Symmetric
+2021-02-08 10:32:40.200|Saving faces to Symmetric.wkt...
+2021-02-08 10:32:40.650|Done! 2425 faces saved.
+2021-02-08 10:32:40.650|Time for overlay operator: 0.451 s.
+2021-02-08 10:32:40.650|Total Time: 738.934 s.
+2021-02-08 10:32:40.650|Computing overlay operation: 2021-02-08 10:32:40.651|SymmetricA
+2021-02-08 10:32:40.651|Saving faces to SymmetricA.wkt...
+2021-02-08 10:32:40.896|Done! 832 faces saved.
+2021-02-08 10:32:40.896|Time for overlay operator: 0.245 s.
+2021-02-08 10:32:40.896|Total Time: 738.728 s.
+2021-02-08 10:32:40.896|Computing overlay operation: 2021-02-08 10:32:40.896|SymmetricB
+2021-02-08 10:32:40.897|Saving faces to SymmetricB.wkt...
+2021-02-08 10:32:41.251|Done! 1593 faces saved.
+2021-02-08 10:32:41.251|Time for overlay operator: 0.354 s.
+2021-02-08 10:32:41.251|Total Time: 738.837 s.
