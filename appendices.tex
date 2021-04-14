@@ -1,7 +1,5 @@
-\newpage 
-\appendices
-
 \section{Lineage example}\label{fig:lineage_example}
+
 \begin{figure}[!ht]\label{fig:lineage}
     \includegraphics[page=1,width=0.32\linewidth]{figures/cellinpolygon/lineage}
     \includegraphics[page=2,width=0.32\linewidth]{figures/cellinpolygon/lineage}
@@ -10,7 +8,7 @@
 \end{figure}
 
 \section{Empty Cell Algorithm}\label{app:emptycells}
-\begin{algorithm} \caption{\textsc{getNextCellWithEdges} algorithm}
+\begin{algorithm}[!hb] \caption{\textsc{getNextCellWithEdges} algorithm}
     \textbf{Require:} a quadtree with cell envelopes $\mathcal Q$ and map of cells and their edge count $\mathcal M$.
     \begin{algorithmic}[1]
     \Function{ getNextCellWithEdges }{ $\mathcal Q$, $\mathcal M$ }
@@ -35,7 +33,8 @@
                 \EndFor
             \EndWhile
             \ForEach{ $cell$ in $cellList$ }
-                \State \textbf{output}($cell$, $nextCellWithEdges$, $referenceCorner$)
+                \State \textbf{output}($cell$, \\
+                \hspace{2.5cm} $nextCellWithEdges$, $referenceCorner$)
                 \State remove $cell$ from $\mathcal C$
             \EndFor
         \EndFor

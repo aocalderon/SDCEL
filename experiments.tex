@@ -5,51 +5,50 @@ In order to test our implementation, we used two datasets of polygons.  The firs
 The second dataset is from the Global Administration Areas - GADM\footnote{\url{https://gadm.org/}}. It collects geographical boundaries of the countries and their administrative divisions around the globe.  For the tests, we select the levels 0 (Countries) and level 1 (States). We take individual polygons, it is, any multi-polygon was divided and each polygon was manage independently. The details of both datasets are summarized in table \ref{tab:datasets}.  Experiments runs on a cluster of 12 nodes running Apache Spark 2.4.  Each node has 9 cores and 12G memory available.
 
 \begin{table}[!ht]
-    \renewcommand{\arraystretch}{1.3}
-    \caption{Datasets details}
+    \caption{Datasets details.}
     \label{tab:datasets}
-    \centering
     \begin{tabular}{c c c c}
-    \hline
-        Dataset & Layer & Number of polygons & Number of edges \\
-    \hline
+        \toprule
+        Dataset & Layer & Number        & Number    \\
+        Dataset & Layer & of polygons   & of edges  \\
+        \midrule
         CCTAL & Polygons for 2000 & 7028 & 999763  \\
               & Polygons for 2010 & 8047 & 2901758 \\
         GADM  & Polygons for Level 0 & 116995 & 32789444 \\
               & Polygons for Level 1 & 117891 & 37690256 \\
-    \hline
+        \bottomrule
     \end{tabular}
 \end{table}
 
 \subsection{California dataset}
 
-The first set of experiments aim to compare the performance of the SDCEL implementation over the CCTAL Dataset varying the number of partitions used to divide the data. It sets the parameters of the quadtree used to split the data to obtains different values from coarse (100) to fine (15K) number of partitions (left part in figure \ref{fig:ca_a}).  Clearly there are a trade-off in this case.  The more partitions, each subdivision will have to deal with a smaller number of edges will means a faster execution.  However, it the number of partitions is too high, the cost to divide and collect the results will have an impact.  We can see that an optimal value can be reached around 7K partitions.  A zoom of this part of the plot is shown in figure \ref{fig:ca_b}.
+The first set of experiments aim to compare the performance of the SDCEL implementation over the CCTAL Dataset varying the number of partitions used to divide the data. It sets the parameters of the quadtree used to split the data to obtains different values from coarse (100) to fine (15K) number of partitions (left part in figure \ref{fig:ca}).  Clearly there are a trade-off in this case.  The more partitions, each subdivision will have to deal with a smaller number of edges will means a faster execution.  However, it the number of partitions is too high, the cost to divide and collect the results will have an impact.  We can see that an optimal value can be reached around 7K partitions.  A zoom of this part of the plot is shown in figure \ref{fig:ca}.
 
-In addition with the partition analysis, we compare the performance of the SDCEL implementation against the sequential solution offered by the CGAL library.  The independent column in the right of figure \ref{fig:ca_a} shows its execution time.  Clearly, the appropriate setting for the number of partitions of SDCEL can beat the sequential implementation by several orders of magnitude.
+In addition with the partition analysis, we compare the performance of the SDCEL implementation against the sequential solution offered by the CGAL library.  The independent column in the right of figure \ref{fig:ca} shows its execution time.  Clearly, the appropriate setting for the number of partitions of SDCEL can beat the sequential implementation by several orders of magnitude.
 
 \begin{figure}[!ht]
     \centering
-    \subfloat[SDCEL vs CGAL\label{fig:ca_a}]{%
+    \subfloat[SDCEL vs CGAL. \label{fig:ca_a}]{%
         \includegraphics[width=0.45\linewidth]{figures/experiments/ca.pdf}}
     \hfill
-    \subfloat[SDCEL\label{fig:ca_b}]{%
+    \subfloat[Focus on the most relevant number of partitions. \label{fig:ca_b}]{%
         \includegraphics[width=0.45\linewidth]{figures/experiments/ca_sample.pdf}}
-    \caption{Experiments with California dataset.} \label{fig:ca} 
+    \caption{Experiments with CCTAL dataset. \label{fig:ca}} 
 \end{figure}
 
 \subsection{GADM dataset}
 
-The CCTAL dataset is relatively small but useful in order to compare with the sequential alternative.  However, the CGAL library is unable to deal with big spatial data.  For the case of the GADM dataset, we only present the results for SDCEL given that CGAL crash when run this volume of data.  Figure \ref{fig:gadm} show the execution time of SDCEL varying the number of partitions.  We can seen a similar trade-off as with CCTAL dataset which can be seen more clearly in the right of the figure.  We can identify a optimal number of partitions around the 6K -8K partitions.  Similar as before, the independent column at the right of figure \ref{gadm_a} shows the comparison if the SDCEL runs using just one core.
-
 \begin{figure}[!ht]
     \centering
-    \subfloat[SDCEL execution time\label{gadm_a}]{%
+    \subfloat[SDCEL execution time. \label{fig:gadm_a}]{%
         \includegraphics[width=0.45\linewidth]{figures/experiments/gadm.pdf}}
     \hfill
-    \subfloat[Focus on the most relevant number of partitions. \label{gadm_b}]{%
+    \subfloat[Focus on the most relevant number of partitions. \label{fig:gadm_b}]{%
         \includegraphics[width=0.45\linewidth]{figures/experiments/gadm_sample.pdf}}
-    \caption{Experiments with GADM dataset.} \label{fig:gadm} 
+    \caption{Experiments with GADM dataset. \label{fig:gadm}} 
 \end{figure}
+
+The CCTAL dataset is relatively small but useful in order to compare with the sequential alternative.  However, the CGAL library is unable to deal with big spatial data.  For the case of the GADM dataset, we only present the results for SDCEL given that CGAL crash when run this volume of data.  Figure \ref{fig:gadm} show the execution time of SDCEL varying the number of partitions.  We can seen a similar trade-off as with CCTAL dataset which can be seen more clearly in the right of the figure.  We can identify a optimal number of partitions around the 6K -8K partitions.  Similar as before, the independent column at the right of figure \ref{fig:gadm} shows the comparison if the SDCEL runs using just one core.
 
 \subsection{Speed up and scale up analysis}
 

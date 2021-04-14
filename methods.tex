@@ -8,11 +8,11 @@ Our goal is to create DCELs for each layer in parallel to be able to solve large
 
 The proposed partition schema is illustrated in figure \ref{fig:overlay_parted}.  We will use a sample of edges from both layers to create a set of cells which will spatially partition the space into disjoint areas.  In the example, a simple grid is used but any spatial index can be applied (in our experiments we use quadtrees for better balance and data distribution).  We will use those cells to clip the input polygons to generate new ones that will lie inside of the boundaries of the cell.  Although it will increase the number of edges and the size of the data, we expect that that the gain during parallel processing will make the addition worthwhile.
 
-\begin{figure}[!ht]
+\begin{figure*}[!ht]
     \centering
     \includegraphics[width=\textwidth]{figures/01-OverlayParted}
     \caption{Partition schema.}\label{fig:overlay_parted}
-\end{figure}
+\end{figure*}
 
 Now each cell have the enough data to build a DCEL representation of the new polygons for each layer.  Data for each cell will be marked appropriately and submitted to different nodes to be processed in parallel.  Note that the same partition schema (set of cells) is used in both layers.  That is important due to it allows one-to-one matching between corresponding partitions in both layers.
 
@@ -24,7 +24,7 @@ Figure \ref{fig:part2} depicts an overview of the process taking as example the 
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=0.75\textwidth]{figures/02-Part2}
+    \includegraphics[width=0.9\linewidth]{figures/02-Part2}
     \caption{Merge of local DCEL for partition 2.}\label{fig:part2}
 \end{figure}
 
@@ -36,21 +36,21 @@ Figure \ref{fig:part2} depicts an overview of the process taking as example the 
 
 At this point, we have access to a distributed spatial data structure which collects the individual DCEL representations of the full study area at local basis.  It is easy to see that we can run overlay operations in parallel over the local DCELs and then just collect and merge the results to unify a final answer.  For example, figure \ref{fig:overlay_parted2} illustrates the process to query for the intersection results over the input polygons described in figure \ref{fig:overlay_parted}.
 
-Note that after getting the local results from the local DCELs at each partition, we still need to process those faces which touch the border and can, potentially, have additional sections to be merged in contiguous partitions.  We keep the faces with marked half\_edges for further processing but those ones not involved can be reported immediately.  We use the information of the marked half\_edges to match those that occupy the same place but point on opposite direction.  The faces of those half\_edges are dissolved in one and the involved marked half\_edges are removed. 
-
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=0.75\textwidth]{figures/03-OverlayParted2}
-    \caption{Example of an overlay operation querying the distributed DCEL.}\label{fig:overlay_parted2}
+    \includegraphics[width=\linewidth]{figures/03-OverlayParted2}
+    \caption{Example of an overlay operation querying the distributed DCEL.} \label{fig:overlay_parted2}
 \end{figure}
+
+Note that after getting the local results from the local DCELs at each partition, we still need to process those faces which touch the border and can, potentially, have additional sections to be merged in contiguous partitions.  We keep the faces with marked half-edges for further processing but those ones not involved can be reported immediately.  We use the information of the marked half-edges to match those that occupy the same place but point on opposite direction.  The faces of those half-edges are dissolved in one and the involved marked half-edges are removed. 
 
 Figure \ref{fig:overlay_operations} shows the results of the five overlay operations supported by the scalable DCEL.  To obtain the results we query locally the DCEL filtering the faces according to the characteristics of its label.  For intersection ($A \cap B$), it filters just faces where its label contains both letters (A and B); On the other hand, for symmetric difference ($A \bigtriangleup B$), it filters faces where its labels contains just one of the letters (A or B).  For the case of difference between the layers ($A \setminus B$ or $B \setminus A$), it filters faces and labels according to the requested letter (either A or B). In the case of union ($A \cup B$), all the faces are retrieved. 
 
-\begin{figure}[!ht]
+\begin{figure*}[!ht]
     \centering
     \input{figures/overlay_operations}
     \caption{Results of the overlay operations supported by the scalable DCEL.}\label{fig:overlay_operations}
-\end{figure}
+\end{figure*}
 
 \subsection{Partition/Cell inside polygon problem}
 The main goal of the proposal is to be able to divide the problem into smalls partitions for efficient processing.  Each partition collects the needed data and it is able to build its local DCEL without the need of query other partitions.  However, under this partition strategy, a new problem arises.  It happens when the partition schema (i.e. a quadtree) deliver a cell where no edges for any of the input layers are located.  The problem is even more complicated when a just hole in located inside a cell (figure \ref{fig:emptycells}).  The problem is that the empty cell (or the empty portion in the case of holes) has no access to which polygon it belongs making its corresponding labeling impossible.  
@@ -68,12 +68,12 @@ After the partitioning strategy, a set of the cells is available with the follow
 
 The key of the proposal is to identify the centroid of the parent cell from the empty cell in question.  That point will allow us to retrieve the neighbour cells which can easily be queried if they have edges to extract the needed polygon information.  If all of them are still empty, we proceed to choose that one with the deepest level and recursively repeat the process.  Eventually, a non-empty cell will emerge and all the involved empty cells can be updated.  Figure \ref{fig:emptycellexample} shows a three iteration run of the algorithm with the example of figure \ref{fig:emptycells}.
 
-\begin{figure}[!ht]\label{fig:emptycellexample}
+\begin{figure}[!ht]
     \centering
-    \includegraphics[page=1, width=0.3\linewidth]{figures/cellinpolygon/example}
-    \includegraphics[page=2, width=0.3\linewidth]{figures/cellinpolygon/example}
-    \includegraphics[page=3, width=0.3\linewidth]{figures/cellinpolygon/example}
-    \caption{Three iteration of the proposed algorithm to find the next cell with valid edges from a empty cell.}
+    \includegraphics[page=1, width=0.49\linewidth]{figures/cellinpolygon/example}
+    \includegraphics[page=2, width=0.49\linewidth]{figures/cellinpolygon/example}
+    \includegraphics[page=3, width=0.49\linewidth]{figures/cellinpolygon/example}
+    \caption{Three iterations of the proposed algorithm to find the next cell with valid edges from a empty cell.} \label{fig:emptycellexample}
 \end{figure}
 
 The details and pseudo code of the algorithm can be seen at appendix \ref{app:emptycells}.  We based of proposal in the following lemma and used it to proved our point with the subsequent proof.
