@@ -1,4 +1,18 @@
 \section{Methods} \label{sec:methods}
+
+\subsection(Preliminaries)
+There are some useful concepts to keep in mind in order to understand the creation and use of a DCEL data structure.  It starts with a set of edges, pair of two vertices, start and end, which define its orientation. We assume every edge is an straight line segment.
+
+Define edge
+Define half-edge: An edge usually bounds two faces, so we need two pairs of pointers for it. It is convenient to view the different sides of an edge as two distinct half-edges, so that we have a unique next half-edge and previous half-edge for every half-edge. This also means that a half-edge bounds only one face. The two half-edges we get for a given edge are called twins. (paraphrase)
+Define Face: a face is a polygonal region whose boundary is formed by connected edges and vertices.  The main idea is that the faces of the resulting DCEL can be able to reconstruct the original polygons.
+
+State the problem
+The current challenge is the construction of a distributed and scalable DCEL structure that allows the querying of overlay operations, such as intersection and difference, over a large set of polygons.
+
+Overview of the solution
+The main idea of the solution is to partition the edges from each of the polygons using a spatial data structure (for instance, a quadtree).  Edges contained at each section of the partitioning will be the input of a local DCEL which will store the information of the vertices, half-edges and faces for their edges clipped to the boundary of its spatial partition.  Each local DCEL can be seen as an individual structure which can be queried and the solution will be later merged with the other local DCELs to complete the final answer. 
+
 \subsection{Partition strategy} \label{sec:strategy}
 In many cases, the operations provide by a DCEL could involve large spatial datasets.  Our aim is to offer a solution to deal with data volumes that the current sequential solution are unable to process.  In order to reach that goal we are purposing a partition strategy to build a scalable DCEL in a parallel fashion.  
 
@@ -50,6 +64,19 @@ Figure \ref{fig:overlay_operations} shows the results of the five overlay operat
     \caption{Results of the overlay operations supported by the scalable DCEL.}\label{fig:overlay_operations}
 \end{figure*}
 
+\subsection{Parallel DCEL Computation}
+In this section explain:
+
+* how the edges from the polygons are partitioned
+* how to integrated the intersection of the edges and the boundary of the cells at partition time
+* extract the edges which are connected and are fully contained by the cell, they can be reported directly.
+* extract the edges which are connected but remains open because their are cut by the border of the cell.
+* identify those edges which intersect the boundary and used to create new edges in the borders of the cell.  
+* run the a variation of the sequential algorithm to connect the open edges and the edges from the borders of the cell.
+
+prepare some graphics to explain the steps
+
+
 \subsection{Partition/Cell inside polygon problem} \label{sec:anomalies}
 The main goal of the proposal is to be able to divide the problem into smalls partitions for efficient processing.  Each partition collects the needed data and it is able to build its local DCEL without the need of query other partitions.  However, under this partition strategy, a new problem arises.  It happens when the partition schema (i.e. a quadtree) deliver a cell where no edges for any of the input layers are located.  The problem is even more complicated when a just hole in located inside a cell (figure \ref{fig:emptycells}).  The problem is that the empty cell (or the empty portion in the case of holes) has no access to which polygon it belongs making its corresponding labeling impossible.  
 
@@ -85,7 +112,7 @@ The $\textsc{getCellsInCorner}$ function will query the interior corner of a cel
 \end{proof}
 
 \subsection{Distributed overlay operators} \label{sec:overlay}
-Now that a distribute DCEL has been created, we have to take care on how it should be queried in order to take advantage of such distribution.  Section \ref{sec:strategy} shows the initial strategy to partition the study area and how each partition holds a section of the DCEL clipped to the cell boundary of that partition.  It is straightforward that we could query locally each of the sections but, once it is done, we should unify the results among contiguous partitions.
+Once the distributed DCEL is ready for analysis, we have to take care on how it should be queried in order to take advantage of such distribution.  Section \ref{sec:strategy} shows the initial strategy to partition the study area and how each partition holds a section of the DCEL clipped to the cell boundary of that partition.  It is straightforward that we could query locally each of the sections but, once it is done, we should unify the results among contiguous partitions.
 
 Faces in the interior of a partition (those which do not touch the boundary) are safe to be reported.  However, for those faces which share a half-edge with the boundary, there is a high chance that another section of that face is present in a contiguous partition and has to be checked.  
 

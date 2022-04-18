@@ -8,7 +8,7 @@
 \end{figure}
 
 \section{Empty Cell Algorithm}\label{app:emptycells}
-\begin{algorithm}[!hb] \caption{\textsc{getNextCellWithEdges} algorithm}
+\begin{algorithm}\caption{\textsc{getNextCellWithEdges} algorithm}
     \textbf{Require:} a quadtree with cell envelopes $\mathcal Q$ and map of cells and their edge count $\mathcal M$.
     \begin{algorithmic}[1]
     \Function{ getNextCellWithEdges }{ $\mathcal Q$, $\mathcal M$ }
@@ -42,9 +42,10 @@
     \end{algorithmic}
 \end{algorithm}
 
-\begin{algorithm} \caption{\textsc{getCellsAtCorner} algorithm}
-    \textbf{Require:} a quadtree with cell envelopes $\mathcal Q$ and a cell $c$.
-    \begin{algorithmic}[1]
+\begin{algorithm} 
+    \caption{\textsc{getCellsAtCorner} algorithm}
+    \begin{algorithmic}
+    \Require a quadtree with cell envelopes $\mathcal Q$ and a cell $c$.
     \Function{ getCellsInCorner }{ $\mathcal Q$, $c$ }
         \State $region \gets $ last character in $c.lineage$
         \Switch{ $region$ }
@@ -68,3 +69,4 @@
     \EndFunction
     \end{algorithmic}
 \end{algorithm}
+
