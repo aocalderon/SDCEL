@@ -1,5 +1,7 @@
 \section{Empty Cell Algorithm}\label{app:emptycells}
-\begin{algorithm}\caption{\textsc{getNextCellWithEdges} algorithm}
+Algorihms \ref{alg:one} and \ref{alg:two} explains the steps to obtain a near quadtree cell which guarantee the presence of edges and how select the set of three cells around of a given corner respectively.  The latter is used to choose a possible path if the current cell is empty and it needs to identify at which polygon it belongs.  The former (using the latter) ensures the finding of a cell with the polygons' edges needed to determine the enclosing polygon.
+
+\begin{algorithm}\caption{\textsc{getNextCellWithEdges} algorithm}\label{alg:one}
     \textbf{Require:} a quadtree with cell envelopes $\mathcal Q$ and map of cells and their edge count $\mathcal M$.
     \begin{algorithmic}[1]
     \Function{ getNextCellWithEdges }{ $\mathcal Q$, $\mathcal M$ }
@@ -33,8 +35,7 @@
     \end{algorithmic}
 \end{algorithm}
 
-\begin{algorithm} 
-    \caption{\textsc{getCellsAtCorner} algorithm}
+\begin{algorithm} \caption{\textsc{getCellsAtCorner} algorithm}\label{alg:two}
     \begin{algorithmic}
     \Require a quadtree with cell envelopes $\mathcal Q$ and a cell $c$.
     \Function{ getCellsInCorner }{ $\mathcal Q$, $c$ }
@@ -64,10 +65,12 @@
 \section{Lineage example}
 See figure \ref{fig:lineage_example} for an ilustration of the lineage used in a quadtree.
 
-\begin{figure}[!ht]
+\begin{figure}
     \includegraphics[page=1,width=0.32\linewidth]{figures/cellinpolygon/lineage}
     \includegraphics[page=2,width=0.32\linewidth]{figures/cellinpolygon/lineage}
     \includegraphics[page=3,width=0.32\linewidth]{figures/cellinpolygon/lineage}
     \caption{Lineage can provide the cell's position (string's last character) and its depth (string's length).}
     \label{fig:lineage_example}
+    \Description[Lineage example]{Lineage can provide the cell's position (string's last character) and its depth (string's length).}
 \end{figure}
+

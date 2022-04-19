@@ -26,6 +26,7 @@ The proposed partition schema is illustrated in figure \ref{fig:overlay_parted}.
     \centering
     \includegraphics[width=\textwidth]{figures/01-OverlayParted}
     \caption{Partition schema.}\label{fig:overlay_parted}
+    \Description[Partition schema]{This figure illustrates the partition schema used to distribute the data.}
 \end{figure*}
 
 Now each cell have the enough data to build a DCEL representation of the new polygons for each layer.  Data for each cell will be marked appropriately and submitted to different nodes to be processed in parallel.  Note that the same partition schema (set of cells) is used in both layers.  That is important due to it allows one-to-one matching between corresponding partitions in both layers.
@@ -40,12 +41,14 @@ Figure \ref{fig:part2} depicts an overview of the process taking as example the 
     \centering
     \includegraphics[width=0.9\linewidth]{figures/02-Part2}
     \caption{Merge of local DCEL for partition 2.}\label{fig:part2}
+    \Description[Merge of local DCELs for a particular partition]{This figure shows how the local DCELs works in a particular example.}
 \end{figure}
 
 \begin{figure}[!ht]
     \centering
     \input{figures/merged_dcel}    
     \caption{Result of the merged DCEL.}\label{fig:merged_dcel}
+    \Description[Result of the merged DCEL]{This figure shows what would be the results of the merge DCEL procedure.}
 \end{figure}
 
 At this point, we have access to a distributed spatial data structure which collects the individual DCEL representations of the full study area at local basis.  It is easy to see that we can run overlay operations in parallel over the local DCELs and then just collect and merge the results to unify a final answer.  For example, figure \ref{fig:overlay_parted2} illustrates the process to query for the intersection results over the input polygons described in figure \ref{fig:overlay_parted}.  More details about the implementation of the overlay operators are discussed later in section \ref{sec:overlay}
@@ -54,6 +57,7 @@ At this point, we have access to a distributed spatial data structure which coll
     \centering
     \includegraphics[width=\linewidth]{figures/03-OverlayParted2}
     \caption{Example of an overlay operation querying the distributed DCEL.} \label{fig:overlay_parted2}
+    \Description[An example of an overlay operation]{This figure shows an example of an overlay operation querying the distributed DCEL.}
 \end{figure}
 
 Figure \ref{fig:overlay_operations} shows the results of the five overlay operations supported by the scalable DCEL.  To obtain the results we query locally the DCEL filtering the faces according to the characteristics of its label.  For intersection ($A \cap B$), it filters just faces where its label contains both letters (A and B); On the other hand, for symmetric difference ($A \bigtriangleup B$), it filters faces where its labels contains just one of the letters (A or B).  For the case of difference between the layers ($A \setminus B$ or $B \setminus A$), it filters faces and labels according to the requested letter (either A or B). In the case of union ($A \cup B$), all the faces are retrieved. 
@@ -62,6 +66,7 @@ Figure \ref{fig:overlay_operations} shows the results of the five overlay operat
     \centering
     \input{figures/overlay_operations}
     \caption{Results of the overlay operations supported by the scalable DCEL.}\label{fig:overlay_operations}
+    \Description[Results of the overlay operations]{This figure shows the results of the overlay operations supported by the scalable DCEL.}
 \end{figure*}
 
 \subsection{Parallel DCEL Computation}
@@ -85,6 +90,7 @@ The main goal of the proposal is to be able to divide the problem into smalls pa
     \includegraphics[page=1, width=0.4\textwidth]{figures/cellinpolygon/emptycells.pdf}
     \includegraphics[page=2, width=0.4\textwidth]{figures/cellinpolygon/emptycells.pdf}
     \caption{Example of empty cell and empty cell with holes cases.}\label{fig:emptycells}
+    \Description[Examples of empty cells]{This figure shows some examples of of empty cell and empty cell with holes cases.}
 \end{figure}
 
 To solve the problem, an algorithm is proposed to find the next cell in the valid information about the polygon they are contained.  It is based on the branch information of the cell inside of the spatial index structure used during partition, also know as lineage (see figure \ref{fig:lineage_example} for an example).  For the sack of explanation, we will assume we use a quadtree, but the proposal could be easily adapted to other data structures such as grids.
@@ -99,6 +105,7 @@ The key of the proposal is to identify the centroid of the parent cell from the 
     \includegraphics[page=2, width=0.49\linewidth]{figures/cellinpolygon/example}
     \includegraphics[page=3, width=0.49\linewidth]{figures/cellinpolygon/example}
     \caption{Three iterations of the proposed algorithm to find the next cell with valid edges from a empty cell.} \label{fig:emptycellexample}
+    \Description[Iterartion of the proposed algorithm]{This figure shows three iterations of the proposed algorithm to find the next cell with valid edges from a empty cell.}
 \end{figure}
 
 The details and pseudo code of the algorithm can be seen at appendix \ref{app:emptycells}.  We based of proposal in the following lemma and used it to proved our point with the subsequent proof.
@@ -117,3 +124,15 @@ Once the distributed DCEL is ready for analysis, we have to take care on how it 
 Faces in the interior of a partition (those which do not touch the boundary) are safe to be reported.  However, for those faces which share a half-edge with the boundary, there is a high chance that another section of that face is present in a contiguous partition and has to be checked.  
 
 We execute a merging stage on the set of faces which touch the boundaries of each partition.  It performs a reduce operation pairing faces with the same label and dissolving their geometries.  For example, in figure \ref{fig:overlay_parted2}, it can be seen how faces in different partitions but with the same label are merged into final results by removing their common half-edges. 
+
+\subsection{Alternative methods for overlay}\label{sec:alternative_methods}
+
+To evaluate the best alternatives during the reduce/merge stage, three different approaches were evaluated to glue together segments of faces which could be located in different partitions.  As it was mentioned earlier, those closed segments which form auto-contained faces inside of each partition are immediately reported and there is no need for additional processing.  However, those segments which touch the border of the cell in their partition must be post-processed to evaluate if they could be extended with segments in the neighborhood partitions.
+
+The first naive approach was to collect those segments touching the borders in a master/root node which sequentially will combine segments with the same label and concatenate them accordingly in order to create the final face.  It is a straightforward method but could be really costly if the number of partitions and the subsequent number of segments touching borders are large.
+
+As an alternative, it is proposed to do an intermediate step with a parameter introduced by the user were a level in the quadtree structure is given.  Following this parameter, the segments in partitions below the given level are collect them in intermediate nodes of the quadtree were can be evaluated partially.  The goal of this step is that part of the work can be distributed in a larger number of nodes as a previous step before to be sent to the master/root node for final evaluation.  It is expected that most of the work can be done in this intermediate step.  However, those partitions which are located above of the user defined level still have to be evaluated in an individual node.
+
+It is clear that it will create an optimization issue: if we choose a level low in the structure it can be evaluated in a larger number of intermediate nodes (taking advantage of parallelism) but, at the same time, a large number of partitions will be located above of that threshold and they will be evaluated by an unique node which can dominate the execution time.  On the other hand, if a level is selected high in the quadtree, just a few number of partitions will have to be evaluated in that unique node, but the number of intermediate nodes will also be reduced and the execution time for their evaluation will increase.
+
+Last method take a different approach.  It repartitions the set of segments at each partition by their label itself.  It is, it will reorginize the segments using their labels as the key.  The resultind dataset will put together those segments which share the same label in the same partition and they will be evaluated in the same node.  In this case, the cost of the repartitions should be evaluated but it is expected than the number and size of the resulting partitions will take much more advantage of parallelism.

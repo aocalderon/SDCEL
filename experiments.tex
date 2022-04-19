@@ -1,18 +1,13 @@
 \section{Experiments}
 
-\subsection{Testing overlay alternative methods}
-To evaluate the best alternatives during the reduce/merge stage, three different approaches were evaluated to glue together segments of faces which could be located in different partitions.  As it was mentioned earlier, those closed segments which form auto-contained faces inside of each partition are immediately reported and there is no need for additional processing.  However, those segments which touch the border of the cell in their partition must be post-processed to evaluate if they could be extended with segments in the neighborhood partitions.
-
-The first naive approach was to collect those segments touching the borders in a master/root node which sequentially will combine segments with the same label and concatenate them accordingly in order to create the final face.  It is a straightforward method but could be really costly if the number of partitions and the subsequent number of segments touching borders increase.
-
-As an alternative, it is proposed to do an intermediate step with a parameter introduced by the user were a level in the quadtree structure is given.  Following this parameter, the segments in partitions below the given level are collect them in intermediate nodes of the quadtree were can be evaluated partially.  The goal of this step is that part of the work can be distributed in a larger number of nodes as a previous step before to be sent to the master/root node for final evaluation.  It is expected that mos of the work can be done in this intermediate step.  However, those partitions which lie above of the user defined level still have to be evaluated in an individual node.
-
-It is clear that it will create an optimization issue, if we choose a level down in the structure it can be evaluated in a larger number of intermediate nodes but, at the same time, a large number of partitions will lie above of that threshold and they will be evaluated by an unique node which can dominate the execution time.  On the other hand, if a level is selected high in the quadtree, just a few number of partitions will have to be evaluated in that unique node, but the number of intermediate nodes will also be reduce and the execution time for their evaluation will increase.
+\subsection{Testing overlay alternatives}
+In this section we evaluate the methods described in section \ref{sec:alternative_methods}.  We used the top 8 states from the Census Track Datasets to evaluated the alternatives.  It measures the execution time of the overlay at the master/root node (`At master/root' tag), repartition by segment's label (`By label' tag) and performing an intermediate step at a given level (`At level [X]' tag, where X is the level given by the user).  Figure \ref{fig:overlay_tester} shows the results of the testing.  It clearly shows that the overlay by label repartition gives the best results in all the tests.
 
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=\linewidth]{figures/experiments/Overlay_Tester}
     \caption{Overlay methods evaluation.}\label{fig:overlay_tester}
+    \Description[Overlay methods evaluation]{This figure shows the overlay methods evaluation.}
 \end{figure}
 
 \subsection{Real datasets}
@@ -50,6 +45,7 @@ In addition with the partition analysis, we compare the performance of the SDCEL
     \subfloat[Focus on the most relevant number of partitions. \label{fig:ca_b}]{%
         \includegraphics[width=0.45\linewidth]{figures/experiments/ca_sample.pdf}}
     \caption{Experiments with CCTAL dataset. \label{fig:ca}} 
+    \Description[Experiments with the CCTAL dataset]{This figure shows the experiments using the CCTAL dataset.}
 \end{figure}
 
 \subsection{GADM dataset}
@@ -62,6 +58,7 @@ In addition with the partition analysis, we compare the performance of the SDCEL
     \subfloat[Focus on the most relevant number of partitions. \label{fig:gadm_b}]{%
         \includegraphics[width=0.45\linewidth]{figures/experiments/gadm_sample.pdf}}
     \caption{Experiments with GADM dataset. \label{fig:gadm}} 
+    \Description[Experiments with the GADM dataset]{This figure shows the experiments using the GADM dataset.}
 \end{figure}
 
 The CCTAL dataset is relatively small but useful in order to compare with the sequential alternative.  However, the CGAL library is unable to deal with big spatial data.  For the case of the GADM dataset, we only present the results for SDCEL given that CGAL crash when run this volume of data.  Figure \ref{fig:gadm} show the execution time of SDCEL varying the number of partitions.  We can seen a similar trade-off as with CCTAL dataset which can be seen more clearly in the right of the figure.  We can identify a optimal number of partitions around the 6K -8K partitions.  Similar as before, the independent column at the right of figure \ref{fig:gadm} shows the comparison if the SDCEL runs using just one core.
@@ -80,4 +77,5 @@ In the case of the scale up test, the workload was also modified.  The GADM data
     \subfloat[Scale Up \label{fig:scaleup}]{%
         \includegraphics[width=0.45\linewidth]{figures/experiments/scaleup.pdf}}
     \caption{Speed Up and Scale Up experiments.} \label{fig:speed_scale} 
+    \Description[Speed Up and Scale Up experiments]{This figure shows the experiments for speed up and scale up analysis.}
 \end{figure}
