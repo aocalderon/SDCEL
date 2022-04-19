@@ -1,6 +1,6 @@
 \section{Methods} \label{sec:methods}
 
-\subsection(Preliminaries)
+\subsection{Preliminaries}
 There are some useful concepts to keep in mind in order to understand the creation and use of a DCEL data structure.  It starts with a set of edges, pair of two vertices, start and end, which define its orientation. We assume every edge is an straight line segment.
 
 Define edge
@@ -77,7 +77,7 @@ In this section explain:
 prepare some graphics to explain the steps
 
 
-\subsection{Partition/Cell inside polygon problem} \label{sec:anomalies}
+\subsection{Cell inside polygon problem} \label{sec:anomalies}
 The main goal of the proposal is to be able to divide the problem into smalls partitions for efficient processing.  Each partition collects the needed data and it is able to build its local DCEL without the need of query other partitions.  However, under this partition strategy, a new problem arises.  It happens when the partition schema (i.e. a quadtree) deliver a cell where no edges for any of the input layers are located.  The problem is even more complicated when a just hole in located inside a cell (figure \ref{fig:emptycells}).  The problem is that the empty cell (or the empty portion in the case of holes) has no access to which polygon it belongs making its corresponding labeling impossible.  
 
 \begin{figure}[!ht]
