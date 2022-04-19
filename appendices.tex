@@ -1,12 +1,3 @@
-\section{Lineage example}\label{fig:lineage_example}
-
-\begin{figure}[!ht]\label{fig:lineage}
-    \includegraphics[page=1,width=0.32\linewidth]{figures/cellinpolygon/lineage}
-    \includegraphics[page=2,width=0.32\linewidth]{figures/cellinpolygon/lineage}
-    \includegraphics[page=3,width=0.32\linewidth]{figures/cellinpolygon/lineage}
-    \caption{Lineage can provide the cell's position (string's last character) and its depth (string's length).}
-\end{figure}
-
 \section{Empty Cell Algorithm}\label{app:emptycells}
 \begin{algorithm}\caption{\textsc{getNextCellWithEdges} algorithm}
     \textbf{Require:} a quadtree with cell envelopes $\mathcal Q$ and map of cells and their edge count $\mathcal M$.
@@ -70,3 +61,13 @@
     \end{algorithmic}
 \end{algorithm}
 
+\section{Lineage example}
+See figure \ref{fig:lineage_example} for an ilustration of the lineage used in a quadtree.
+
+\begin{figure}[!ht]
+    \includegraphics[page=1,width=0.32\linewidth]{figures/cellinpolygon/lineage}
+    \includegraphics[page=2,width=0.32\linewidth]{figures/cellinpolygon/lineage}
+    \includegraphics[page=3,width=0.32\linewidth]{figures/cellinpolygon/lineage}
+    \caption{Lineage can provide the cell's position (string's last character) and its depth (string's length).}
+    \label{fig:lineage_example}
+\end{figure}

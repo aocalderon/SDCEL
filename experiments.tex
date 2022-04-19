@@ -1,5 +1,21 @@
 \section{Experiments}
 
+\subsection{Testing overlay alternatives}
+To evaluate the best alternatives during the reduce/merge stage, three different approaches were evaluated to glue together segments of faces which could be located in different partitions.  As it was mentioned earlier, those closed segments which form auto-contained faces inside of each partition are immediately reported and there is no need for additional processing.  However, those segments which touch the border of the cell in their partition must be post-processed to evaluate if they could be extended with segments in the neighborhood partitions.
+
+The first naive approach was to collect those segments touching the borders in a master/root node which sequentially will combine segments with the same label and concatenate them accordingly in order to create the final face.  It is a straightforward method but could be really costly if the number of partitions and the subsequent number of segments touching borders increase.
+
+As an alternative, it is proposed to do an intermediate step with a parameter introduced by the user were a level in the quadtree structure is given.  Following this parameter, the segments in partitions below the given level are collect them in intermediate nodes of the quadtree were can be evaluated partially.  The goal of this step is that part of the work can be distributed in a larger number of nodes as a previous step before to be sent to the master/root node for final evaluation.  It is expected that mos of the work can be done in this intermediate step.  However, those partitions which lie above of the user defined level still have to be evaluated in an individual node.
+
+It is clear that it will create an optimization issue, if we choose a level down in the structure it can be evaluated in a larger number of intermediate nodes but, at the same time, a large number of partitions will lie above of that threshold and they will be evaluated by an unique node which can dominate the execution time.  On the other hand, if a level is selected high in the quadtree, just a few number of partitions will have to be evaluated in that unique node, but the number of intermediate nodes will also be reduce and the execution time for their evaluation will increase.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\linewidth]{figures/experiments/States.pdf}
+    \caption{Overlay methods evaluation.}\label{fig:states}
+\end{figure}
+
+\subsection{Real datasets}
 In order to test our implementation, we used two datasets of polygons.  The first one is the California Census-Track Administrative Levels - CCTAL. The layer A collects the census tracts in California during 2000 meanwhile the layers B collects those ones for 2010.  Something to note with this dataset is that the differences between the layers no just show the changes in time but also they present a small gap (due to technical reasons) between the polygons which will increase considerably the number of intersections and new faces the DCEL should be able to identify.
 
 The second dataset is from the Global Administration Areas - GADM\footnote{\url{https://gadm.org/}}. It collects geographical boundaries of the countries and their administrative divisions around the globe.  For the tests, we select the levels 0 (Countries) and level 1 (States). We take individual polygons, it is, any multi-polygon was divided and each polygon was manage independently. The details of both datasets are summarized in table \ref{tab:datasets}.  Experiments runs on a cluster of 12 nodes running Apache Spark 2.4.  Each node has 9 cores and 12G memory available.
