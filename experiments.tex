@@ -1,6 +1,6 @@
 \section{Experiments}
 
-\subsection{Testing overlay alternatives}
+\subsection{Testing overlay alternative methods}
 To evaluate the best alternatives during the reduce/merge stage, three different approaches were evaluated to glue together segments of faces which could be located in different partitions.  As it was mentioned earlier, those closed segments which form auto-contained faces inside of each partition are immediately reported and there is no need for additional processing.  However, those segments which touch the border of the cell in their partition must be post-processed to evaluate if they could be extended with segments in the neighborhood partitions.
 
 The first naive approach was to collect those segments touching the borders in a master/root node which sequentially will combine segments with the same label and concatenate them accordingly in order to create the final face.  It is a straightforward method but could be really costly if the number of partitions and the subsequent number of segments touching borders increase.
@@ -11,8 +11,8 @@ It is clear that it will create an optimization issue, if we choose a level down
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=\linewidth]{figures/experiments/States.pdf}
-    \caption{Overlay methods evaluation.}\label{fig:states}
+    \includegraphics[width=\linewidth]{figures/experiments/Overlay_Tester}
+    \caption{Overlay methods evaluation.}\label{fig:overlay_tester}
 \end{figure}
 
 \subsection{Real datasets}
