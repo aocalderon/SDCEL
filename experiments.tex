@@ -65,17 +65,33 @@ The CCTAL dataset is relatively small but useful in order to compare with the se
 
 \subsection{Speed up and scale up analysis}
 
-Finally we analyze the scalability of the implementation through the speed up and scale up tests.  For the speed up, the GADM dataset was used with different amount of resources, in this case the number of available nodes.  Each time, the nodes were duplicated and the performance was measured.  Figure \ref{fig:speedup} shows  how as resources double, the response time is almost cut in half each time, as it is expected.  
+Finally we analyze the scalability of the implementation through the speed up and scale up tests.  For the speed up, the GADM dataset was used with different amount of resources, in this case the number of available nodes.  Each time, the nodes were duplicated and the performance was measured.  Figure \ref{fig:gadm_speedup} shows  how as resources double, the response time is almost cut in half each time, as it is expected.
 
-In the case of the scale up test, the workload was also modified.  The GADM dataset was split in 4 regions slightly similar in the number of edges they collect.  At each iteration, both the size of the data and the amount of available resources were doubled. As it was expected, the performance at each scenario should not change significantly as it is shown in figure \ref{fig:scaleup}.
+In the case of the scale up test, the workload was also modified.  The GADM dataset was split in 4 regions slightly similar in the number of edges they collect.  At each iteration, both the size of the data and the amount of available resources were doubled. As it was expected, the performance at each scenario should not change significantly as it is shown in figure \ref{fig:gadm_scaleup}.
 
 \begin{figure}[!ht]
     \centering
-    \subfloat[Speed Up \label{fig:speedup}]{%
-        \includegraphics[width=0.45\linewidth]{figures/experiments/speedup.pdf}}
+    \subfloat[MainUS Speed Up \label{fig:mainus_speedup}]{%
+        \includegraphics[width=0.45\linewidth]{figures/experiments/MainUS_speedup.pdf}
+    }
     \hfill
-    \subfloat[Scale Up \label{fig:scaleup}]{%
-        \includegraphics[width=0.45\linewidth]{figures/experiments/scaleup.pdf}}
-    \caption{Speed Up and Scale Up experiments.} \label{fig:speed_scale} 
-    \Description[Speed Up and Scale Up experiments]{This figure shows the experiments for speed up and scale up analysis.}
+    \subfloat[MainUS Scale Up \label{fig:mainus_scaleup}]{%
+        %\includegraphics[width=0.45\linewidth]{figures/experiments/MainUS_scaleup.pdf}
+    }
+    \caption{Speed Up and Scale Up experiments for MainUS dataset.} \label{fig:mainus_speed_scale}
+    \Description[MainUS Speed Up and Scale Up experiments.]{This figure shows the experiments for speed up and scale up analysis for the MainUS dataset.}
+\end{figure}
+
+
+\begin{figure}[!ht]
+    \centering
+    \subfloat[GADM Speed Up \label{fig:gadm_speedup}]{%
+        \includegraphics[width=0.45\linewidth]{figures/experiments/GADM_speedup.pdf}
+    }
+    \hfill
+    \subfloat[GADM Scale Up \label{fig:gadm_scaleup}]{%
+        %\includegraphics[width=0.45\linewidth]{figures/experiments/GADM_scaleup.pdf}
+    }
+    \caption{Speed Up and Scale Up experiments for GADM dataset.} \label{fig:gadm_speed_scale}
+    \Description[GADM Speed Up and Scale Up experiments.]{This figure shows the experiments for speed up and scale up analysis for GADM dataset.}
 \end{figure}
