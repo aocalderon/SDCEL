@@ -1,5 +1,5 @@
 library(tidyverse)
-setwd("~/Documents/Papers/SDCEL/figures/experiments")
+setwd("~/Documents/Papers/SDCEL/figures/experiments/")
 
 data0 = enframe(read_lines("GADM_speedup_v01.txt"), value="line")
 
@@ -29,4 +29,4 @@ p = ggplot(data3, aes(x = nodes, y = time)) +
   facet_wrap(~ stage)
 plot(p)
 
-ggsave(paste0("GADM_speedup.pdf"), width = 8, height = 5)
+ggsave(paste0("GADM_speedup.pdf"), width = 4, height = 2.5)
