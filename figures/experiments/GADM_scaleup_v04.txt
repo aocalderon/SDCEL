@@ -1,0 +1,354 @@
+DATASET    = gadm/scaleup2/S0
+TOLERANCE  = 1e-3
+PARTITIONS = 14000
+ITERATIONS = 1
+EXECUTORS  = 3
+MASTER     = yarn
+RUN        = 1
+spark-submit --files /home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.maxResultSize=4G --conf spark.kryoserializer.buffer.max=256m --conf spark.locality.wait=3s --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --master yarn --deploy-mode client --num-executors 3 --executor-cores 9 --executor-memory 20g --driver-memory 35g --class edu.ucr.dblab.sdcel.SDCEL2 /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S0/P14000/edgesA --input2 gadm/scaleup2/S0/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S0/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S0/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S0_1e-3_0_4_14000_3_1 --ooption 0 --olevel 4
+2022-04-25 18:34:57,986|13382|application_1648870353198_1173|13635|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.kryoserializer.buffer.max=256m --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 3 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S0/P14000/edgesA --input2 gadm/scaleup2/S0/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S0/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S0/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S0_1e-3_0_4_14000_3_1 --ooption 0 --olevel 4
+2022-04-25 18:34:57,987|13383|application_1648870353198_1173|INFO|tolerance=0.001
+2022-04-25 18:34:57,987|13383|application_1648870353198_1173|INFO|overlay_option=0
+2022-04-25 18:34:57,987|13383|application_1648870353198_1173|INFO|overlay_level=4
+2022-04-25 18:34:58,480|13876|application_1648870353198_1173|494|TIME|start|gadm/scaleup2/S0_1e-3_0_4_14000_3_1
+2022-04-25 18:47:20,261|755657|application_1648870353198_1173|741781|TIME|read|gadm/scaleup2/S0_1e-3_0_4_14000_3_1
+2022-04-25 18:53:30,196|1125592|application_1648870353198_1173|369935|TIME|layer1|gadm/scaleup2/S0_1e-3_0_4_14000_3_1
+2022-04-25 18:59:54,755|1510151|application_1648870353198_1173|384559|TIME|layer2|gadm/scaleup2/S0_1e-3_0_4_14000_3_1
+2022-04-25 19:09:44,536|2099932|application_1648870353198_1173|589781|TIME|overlay|gadm/scaleup2/S0_1e-3_0_4_14000_3_1
+2022-04-25 19:09:44,537|2099933|application_1648870353198_1173|1|TIME|end|gadm/scaleup2/S0_1e-3_0_4_14000_3_1
+DATASET    = gadm/scaleup2/S1
+TOLERANCE  = 1e-3
+PARTITIONS = 14000
+ITERATIONS = 1
+EXECUTORS  = 6
+MASTER     = yarn
+RUN        = 1
+spark-submit --files /home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.maxResultSize=4G --conf spark.kryoserializer.buffer.max=256m --conf spark.locality.wait=3s --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --master yarn --deploy-mode client --num-executors 6 --executor-cores 9 --executor-memory 20g --driver-memory 35g --class edu.ucr.dblab.sdcel.SDCEL2 /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S1/P14000/edgesA --input2 gadm/scaleup2/S1/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S1/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S1/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S1_1e-3_0_4_14000_6_1 --ooption 0 --olevel 4
+2022-04-25 19:10:05,902|16741|application_1648870353198_1174|16993|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.kryoserializer.buffer.max=256m --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 6 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S1/P14000/edgesA --input2 gadm/scaleup2/S1/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S1/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S1/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S1_1e-3_0_4_14000_6_1 --ooption 0 --olevel 4
+2022-04-25 19:10:05,903|16742|application_1648870353198_1174|INFO|tolerance=0.001
+2022-04-25 19:10:05,903|16742|application_1648870353198_1174|INFO|overlay_option=0
+2022-04-25 19:10:05,903|16742|application_1648870353198_1174|INFO|overlay_level=4
+2022-04-25 19:10:06,387|17226|application_1648870353198_1174|485|TIME|start|gadm/scaleup2/S1_1e-3_0_4_14000_6_1
+2022-04-25 19:18:20,903|511742|application_1648870353198_1174|494516|TIME|read|gadm/scaleup2/S1_1e-3_0_4_14000_6_1
+2022-04-25 19:22:12,181|743020|application_1648870353198_1174|231278|TIME|layer1|gadm/scaleup2/S1_1e-3_0_4_14000_6_1
+2022-04-25 19:26:14,636|985475|application_1648870353198_1174|242455|TIME|layer2|gadm/scaleup2/S1_1e-3_0_4_14000_6_1
+2022-04-25 19:33:26,159|1416998|application_1648870353198_1174|431523|TIME|overlay|gadm/scaleup2/S1_1e-3_0_4_14000_6_1
+2022-04-25 19:33:26,159|1416998|application_1648870353198_1174|0|TIME|end|gadm/scaleup2/S1_1e-3_0_4_14000_6_1
+DATASET    = gadm/scaleup2/S2
+TOLERANCE  = 1e-3
+PARTITIONS = 14000
+ITERATIONS = 1
+EXECUTORS  = 9
+MASTER     = yarn
+RUN        = 1
+spark-submit --files /home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.maxResultSize=4G --conf spark.kryoserializer.buffer.max=256m --conf spark.locality.wait=3s --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --master yarn --deploy-mode client --num-executors 9 --executor-cores 9 --executor-memory 20g --driver-memory 35g --class edu.ucr.dblab.sdcel.SDCEL2 /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S2/P14000/edgesA --input2 gadm/scaleup2/S2/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S2/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S2/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S2_1e-3_0_4_14000_9_1 --ooption 0 --olevel 4
+2022-04-25 19:33:45,914|14855|application_1648870353198_1175|15110|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.kryoserializer.buffer.max=256m --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 9 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S2/P14000/edgesA --input2 gadm/scaleup2/S2/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S2/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S2/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S2_1e-3_0_4_14000_9_1 --ooption 0 --olevel 4
+2022-04-25 19:33:45,915|14856|application_1648870353198_1175|INFO|tolerance=0.001
+2022-04-25 19:33:45,915|14856|application_1648870353198_1175|INFO|overlay_option=0
+2022-04-25 19:33:45,915|14856|application_1648870353198_1175|INFO|overlay_level=4
+2022-04-25 19:33:46,395|15336|application_1648870353198_1175|481|TIME|start|gadm/scaleup2/S2_1e-3_0_4_14000_9_1
+2022-04-25 19:40:53,965|442906|application_1648870353198_1175|427570|TIME|read|gadm/scaleup2/S2_1e-3_0_4_14000_9_1
+2022-04-25 19:44:08,221|637162|application_1648870353198_1175|194256|TIME|layer1|gadm/scaleup2/S2_1e-3_0_4_14000_9_1
+2022-04-25 19:47:49,007|857948|application_1648870353198_1175|220786|TIME|layer2|gadm/scaleup2/S2_1e-3_0_4_14000_9_1
+2022-04-25 19:54:53,237|1282178|application_1648870353198_1175|424230|TIME|overlay|gadm/scaleup2/S2_1e-3_0_4_14000_9_1
+2022-04-25 19:54:53,238|1282179|application_1648870353198_1175|1|TIME|end|gadm/scaleup2/S2_1e-3_0_4_14000_9_1
+DATASET    = gadm/scaleup2/S3
+TOLERANCE  = 1e-3
+PARTITIONS = 14000
+ITERATIONS = 1
+EXECUTORS  = 12
+MASTER     = yarn
+RUN        = 1
+spark-submit --files /home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.maxResultSize=4G --conf spark.kryoserializer.buffer.max=256m --conf spark.locality.wait=3s --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --master yarn --deploy-mode client --num-executors 12 --executor-cores 9 --executor-memory 20g --driver-memory 35g --class edu.ucr.dblab.sdcel.SDCEL2 /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S3/P14000/edgesA --input2 gadm/scaleup2/S3/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S3/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S3/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S3_1e-3_0_4_14000_12_1 --ooption 0 --olevel 4
+2022-04-25 19:55:12,653|14500|application_1648870353198_1176|14752|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.kryoserializer.buffer.max=256m --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 12 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S3/P14000/edgesA --input2 gadm/scaleup2/S3/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S3/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S3/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S3_1e-3_0_4_14000_12_1 --ooption 0 --olevel 4
+2022-04-25 19:55:12,654|14501|application_1648870353198_1176|INFO|tolerance=0.001
+2022-04-25 19:55:12,654|14501|application_1648870353198_1176|INFO|overlay_option=0
+2022-04-25 19:55:12,654|14501|application_1648870353198_1176|INFO|overlay_level=4
+2022-04-25 19:55:13,181|15028|application_1648870353198_1176|528|TIME|start|gadm/scaleup2/S3_1e-3_0_4_14000_12_1
+2022-04-25 20:02:13,257|435104|application_1648870353198_1176|420075|TIME|read|gadm/scaleup2/S3_1e-3_0_4_14000_12_1
+2022-04-25 20:05:34,961|636808|application_1648870353198_1176|292009|TIME|layer1|gadm/scaleup2/S3_1e-3_0_4_14000_12_1
+2022-04-25 20:10:05,033|906880|application_1648870353198_1176|294955|TIME|layer2|gadm/scaleup2/S3_1e-3_0_4_14000_12_1
+2022-04-25 20:18:03,677|1385524|application_1648870353198_1176|469873|TIME|overlay|gadm/scaleup2/S3_1e-3_0_4_14000_12_1
+2022-04-25 20:18:03,678|1385525|application_1648870353198_1176|1|TIME|end|gadm/scaleup2/S3_1e-3_0_4_14000_12_1
+DATASET    = gadm/scaleup2/S0
+TOLERANCE  = 1e-3
+PARTITIONS = 14000
+ITERATIONS = 4
+EXECUTORS  = 3
+MASTER     = yarn
+RUN        = 1
+spark-submit --files /home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.maxResultSize=4G --conf spark.kryoserializer.buffer.max=256m --conf spark.locality.wait=3s --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --master yarn --deploy-mode client --num-executors 3 --executor-cores 9 --executor-memory 20g --driver-memory 35g --class edu.ucr.dblab.sdcel.SDCEL2 /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S0/P14000/edgesA --input2 gadm/scaleup2/S0/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S0/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S0/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S0_1e-3_0_4_14000_3_1 --ooption 0 --olevel 4
+2022-04-25 20:34:39,910|13341|application_1648870353198_1177|13597|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.kryoserializer.buffer.max=256m --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 3 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S0/P14000/edgesA --input2 gadm/scaleup2/S0/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S0/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S0/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S0_1e-3_0_4_14000_3_1 --ooption 0 --olevel 4
+2022-04-25 20:34:39,911|13342|application_1648870353198_1177|INFO|tolerance=0.001
+2022-04-25 20:34:39,911|13342|application_1648870353198_1177|INFO|overlay_option=0
+2022-04-25 20:34:39,911|13342|application_1648870353198_1177|INFO|overlay_level=4
+2022-04-25 20:34:40,420|13851|application_1648870353198_1177|510|TIME|start|gadm/scaleup2/S0_1e-3_0_4_14000_3_1
+2022-04-25 20:46:57,640|751071|application_1648870353198_1177|737219|TIME|read|gadm/scaleup2/S0_1e-3_0_4_14000_3_1
+2022-04-25 20:53:06,829|1120260|application_1648870353198_1177|369190|TIME|layer1|gadm/scaleup2/S0_1e-3_0_4_14000_3_1
+2022-04-25 20:59:26,650|1500081|application_1648870353198_1177|379821|TIME|layer2|gadm/scaleup2/S0_1e-3_0_4_14000_3_1
+2022-04-25 21:09:05,166|2078597|application_1648870353198_1177|578516|TIME|overlay|gadm/scaleup2/S0_1e-3_0_4_14000_3_1
+2022-04-25 21:09:05,167|2078598|application_1648870353198_1177|1|TIME|end|gadm/scaleup2/S0_1e-3_0_4_14000_3_1
+RUN        = 2
+spark-submit --files /home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.maxResultSize=4G --conf spark.kryoserializer.buffer.max=256m --conf spark.locality.wait=3s --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --master yarn --deploy-mode client --num-executors 3 --executor-cores 9 --executor-memory 20g --driver-memory 35g --class edu.ucr.dblab.sdcel.SDCEL2 /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S0/P14000/edgesA --input2 gadm/scaleup2/S0/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S0/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S0/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S0_1e-3_0_4_14000_3_2 --ooption 0 --olevel 4
+2022-04-25 21:09:40,958|31421|application_1648870353198_1178|31673|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.kryoserializer.buffer.max=256m --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 3 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S0/P14000/edgesA --input2 gadm/scaleup2/S0/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S0/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S0/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S0_1e-3_0_4_14000_3_2 --ooption 0 --olevel 4
+2022-04-25 21:09:40,959|31422|application_1648870353198_1178|INFO|tolerance=0.001
+2022-04-25 21:09:40,959|31422|application_1648870353198_1178|INFO|overlay_option=0
+2022-04-25 21:09:40,959|31422|application_1648870353198_1178|INFO|overlay_level=4
+2022-04-25 21:09:41,427|31890|application_1648870353198_1178|469|TIME|start|gadm/scaleup2/S0_1e-3_0_4_14000_3_2
+2022-04-25 21:22:27,021|797484|application_1648870353198_1178|765594|TIME|read|gadm/scaleup2/S0_1e-3_0_4_14000_3_2
+2022-04-25 21:28:38,038|1168501|application_1648870353198_1178|371017|TIME|layer1|gadm/scaleup2/S0_1e-3_0_4_14000_3_2
+2022-04-25 21:35:02,819|1553282|application_1648870353198_1178|384781|TIME|layer2|gadm/scaleup2/S0_1e-3_0_4_14000_3_2
+2022-04-25 21:44:45,147|2135610|application_1648870353198_1178|582328|TIME|overlay|gadm/scaleup2/S0_1e-3_0_4_14000_3_2
+2022-04-25 21:44:45,147|2135610|application_1648870353198_1178|0|TIME|end|gadm/scaleup2/S0_1e-3_0_4_14000_3_2
+RUN        = 3
+spark-submit --files /home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.maxResultSize=4G --conf spark.kryoserializer.buffer.max=256m --conf spark.locality.wait=3s --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --master yarn --deploy-mode client --num-executors 3 --executor-cores 9 --executor-memory 20g --driver-memory 35g --class edu.ucr.dblab.sdcel.SDCEL2 /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S0/P14000/edgesA --input2 gadm/scaleup2/S0/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S0/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S0/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S0_1e-3_0_4_14000_3_3 --ooption 0 --olevel 4
+2022-04-25 21:45:21,778|31706|application_1648870353198_1179|32045|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.kryoserializer.buffer.max=256m --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 3 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S0/P14000/edgesA --input2 gadm/scaleup2/S0/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S0/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S0/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S0_1e-3_0_4_14000_3_3 --ooption 0 --olevel 4
+2022-04-25 21:45:21,778|31706|application_1648870353198_1179|INFO|tolerance=0.001
+2022-04-25 21:45:21,779|31707|application_1648870353198_1179|INFO|overlay_option=0
+2022-04-25 21:45:21,779|31707|application_1648870353198_1179|INFO|overlay_level=4
+2022-04-25 21:45:22,216|32144|application_1648870353198_1179|438|TIME|start|gadm/scaleup2/S0_1e-3_0_4_14000_3_3
+2022-04-25 21:57:10,374|740302|application_1648870353198_1179|708158|TIME|read|gadm/scaleup2/S0_1e-3_0_4_14000_3_3
+2022-04-25 22:03:08,211|1098139|application_1648870353198_1179|357837|TIME|layer1|gadm/scaleup2/S0_1e-3_0_4_14000_3_3
+2022-04-25 22:09:13,991|1463919|application_1648870353198_1179|365780|TIME|layer2|gadm/scaleup2/S0_1e-3_0_4_14000_3_3
+2022-04-25 22:18:43,916|2033844|application_1648870353198_1179|569925|TIME|overlay|gadm/scaleup2/S0_1e-3_0_4_14000_3_3
+2022-04-25 22:18:43,916|2033844|application_1648870353198_1179|0|TIME|end|gadm/scaleup2/S0_1e-3_0_4_14000_3_3
+RUN        = 4
+spark-submit --files /home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.maxResultSize=4G --conf spark.kryoserializer.buffer.max=256m --conf spark.locality.wait=3s --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --master yarn --deploy-mode client --num-executors 3 --executor-cores 9 --executor-memory 20g --driver-memory 35g --class edu.ucr.dblab.sdcel.SDCEL2 /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S0/P14000/edgesA --input2 gadm/scaleup2/S0/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S0/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S0/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S0_1e-3_0_4_14000_3_4 --ooption 0 --olevel 4
+2022-04-25 22:19:19,985|31486|application_1648870353198_1180|31745|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.kryoserializer.buffer.max=256m --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 3 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S0/P14000/edgesA --input2 gadm/scaleup2/S0/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S0/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S0/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S0_1e-3_0_4_14000_3_4 --ooption 0 --olevel 4
+2022-04-25 22:19:19,985|31486|application_1648870353198_1180|INFO|tolerance=0.001
+2022-04-25 22:19:19,986|31487|application_1648870353198_1180|INFO|overlay_option=0
+2022-04-25 22:19:19,986|31487|application_1648870353198_1180|INFO|overlay_level=4
+2022-04-25 22:19:20,551|32052|application_1648870353198_1180|566|TIME|start|gadm/scaleup2/S0_1e-3_0_4_14000_3_4
+2022-04-25 22:31:20,543|752044|application_1648870353198_1180|719992|TIME|read|gadm/scaleup2/S0_1e-3_0_4_14000_3_4
+2022-04-25 22:37:24,341|1115842|application_1648870353198_1180|363798|TIME|layer1|gadm/scaleup2/S0_1e-3_0_4_14000_3_4
+2022-04-25 22:43:38,386|1489887|application_1648870353198_1180|374045|TIME|layer2|gadm/scaleup2/S0_1e-3_0_4_14000_3_4
+2022-04-25 22:53:14,521|2066022|application_1648870353198_1180|576135|TIME|overlay|gadm/scaleup2/S0_1e-3_0_4_14000_3_4
+2022-04-25 22:53:14,522|2066023|application_1648870353198_1180|0|TIME|end|gadm/scaleup2/S0_1e-3_0_4_14000_3_4
+DATASET    = gadm/scaleup2/S1
+TOLERANCE  = 1e-3
+PARTITIONS = 14000
+ITERATIONS = 4
+EXECUTORS  = 6
+MASTER     = yarn
+RUN        = 1
+spark-submit --files /home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.maxResultSize=4G --conf spark.kryoserializer.buffer.max=256m --conf spark.locality.wait=3s --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --master yarn --deploy-mode client --num-executors 6 --executor-cores 9 --executor-memory 20g --driver-memory 35g --class edu.ucr.dblab.sdcel.SDCEL2 /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S1/P14000/edgesA --input2 gadm/scaleup2/S1/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S1/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S1/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S1_1e-3_0_4_14000_6_1 --ooption 0 --olevel 4
+2022-04-25 22:53:33,401|14075|application_1648870353198_1181|14330|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.kryoserializer.buffer.max=256m --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 6 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S1/P14000/edgesA --input2 gadm/scaleup2/S1/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S1/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S1/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S1_1e-3_0_4_14000_6_1 --ooption 0 --olevel 4
+2022-04-25 22:53:33,402|14076|application_1648870353198_1181|INFO|tolerance=0.001
+2022-04-25 22:53:33,402|14076|application_1648870353198_1181|INFO|overlay_option=0
+2022-04-25 22:53:33,402|14076|application_1648870353198_1181|INFO|overlay_level=4
+2022-04-25 22:53:33,983|14657|application_1648870353198_1181|582|TIME|start|gadm/scaleup2/S1_1e-3_0_4_14000_6_1
+2022-04-25 23:01:37,131|497805|application_1648870353198_1181|483148|TIME|read|gadm/scaleup2/S1_1e-3_0_4_14000_6_1
+2022-04-25 23:05:28,654|729328|application_1648870353198_1181|231523|TIME|layer1|gadm/scaleup2/S1_1e-3_0_4_14000_6_1
+2022-04-25 23:09:31,809|972483|application_1648870353198_1181|243155|TIME|layer2|gadm/scaleup2/S1_1e-3_0_4_14000_6_1
+2022-04-25 23:16:37,090|1397764|application_1648870353198_1181|425281|TIME|overlay|gadm/scaleup2/S1_1e-3_0_4_14000_6_1
+2022-04-25 23:16:37,091|1397765|application_1648870353198_1181|0|TIME|end|gadm/scaleup2/S1_1e-3_0_4_14000_6_1
+RUN        = 2
+spark-submit --files /home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.maxResultSize=4G --conf spark.kryoserializer.buffer.max=256m --conf spark.locality.wait=3s --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --master yarn --deploy-mode client --num-executors 6 --executor-cores 9 --executor-memory 20g --driver-memory 35g --class edu.ucr.dblab.sdcel.SDCEL2 /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S1/P14000/edgesA --input2 gadm/scaleup2/S1/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S1/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S1/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S1_1e-3_0_4_14000_6_2 --ooption 0 --olevel 4
+2022-04-25 23:16:59,618|17766|application_1648870353198_1182|18049|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.kryoserializer.buffer.max=256m --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 6 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S1/P14000/edgesA --input2 gadm/scaleup2/S1/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S1/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S1/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S1_1e-3_0_4_14000_6_2 --ooption 0 --olevel 4
+2022-04-25 23:16:59,618|17766|application_1648870353198_1182|INFO|tolerance=0.001
+2022-04-25 23:16:59,619|17767|application_1648870353198_1182|INFO|overlay_option=0
+2022-04-25 23:16:59,619|17767|application_1648870353198_1182|INFO|overlay_level=4
+2022-04-25 23:17:00,077|18225|application_1648870353198_1182|459|TIME|start|gadm/scaleup2/S1_1e-3_0_4_14000_6_2
+2022-04-25 23:25:06,319|504467|application_1648870353198_1182|486241|TIME|read|gadm/scaleup2/S1_1e-3_0_4_14000_6_2
+2022-04-25 23:28:56,783|734931|application_1648870353198_1182|230465|TIME|layer1|gadm/scaleup2/S1_1e-3_0_4_14000_6_2
+2022-04-25 23:33:00,250|978398|application_1648870353198_1182|243467|TIME|layer2|gadm/scaleup2/S1_1e-3_0_4_14000_6_2
+2022-04-25 23:40:23,604|1421752|application_1648870353198_1182|443354|TIME|overlay|gadm/scaleup2/S1_1e-3_0_4_14000_6_2
+2022-04-25 23:40:23,604|1421752|application_1648870353198_1182|0|TIME|end|gadm/scaleup2/S1_1e-3_0_4_14000_6_2
+RUN        = 3
+spark-submit --files /home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.maxResultSize=4G --conf spark.kryoserializer.buffer.max=256m --conf spark.locality.wait=3s --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --master yarn --deploy-mode client --num-executors 6 --executor-cores 9 --executor-memory 20g --driver-memory 35g --class edu.ucr.dblab.sdcel.SDCEL2 /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S1/P14000/edgesA --input2 gadm/scaleup2/S1/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S1/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S1/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S1_1e-3_0_4_14000_6_3 --ooption 0 --olevel 4
+2022-04-25 23:40:42,513|14248|application_1648870353198_1183|14498|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.kryoserializer.buffer.max=256m --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 6 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S1/P14000/edgesA --input2 gadm/scaleup2/S1/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S1/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S1/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S1_1e-3_0_4_14000_6_3 --ooption 0 --olevel 4
+2022-04-25 23:40:42,514|14249|application_1648870353198_1183|INFO|tolerance=0.001
+2022-04-25 23:40:42,514|14249|application_1648870353198_1183|INFO|overlay_option=0
+2022-04-25 23:40:42,514|14249|application_1648870353198_1183|INFO|overlay_level=4
+2022-04-25 23:40:42,986|14721|application_1648870353198_1183|473|TIME|start|gadm/scaleup2/S1_1e-3_0_4_14000_6_3
+2022-04-25 23:48:37,650|489385|application_1648870353198_1183|474664|TIME|read|gadm/scaleup2/S1_1e-3_0_4_14000_6_3
+2022-04-25 23:52:26,301|718036|application_1648870353198_1183|228651|TIME|layer1|gadm/scaleup2/S1_1e-3_0_4_14000_6_3
+2022-04-25 23:56:27,324|959059|application_1648870353198_1183|241023|TIME|layer2|gadm/scaleup2/S1_1e-3_0_4_14000_6_3
+2022-04-26 00:03:33,595|1385330|application_1648870353198_1183|426271|TIME|overlay|gadm/scaleup2/S1_1e-3_0_4_14000_6_3
+2022-04-26 00:03:33,596|1385331|application_1648870353198_1183|1|TIME|end|gadm/scaleup2/S1_1e-3_0_4_14000_6_3
+RUN        = 4
+spark-submit --files /home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.maxResultSize=4G --conf spark.kryoserializer.buffer.max=256m --conf spark.locality.wait=3s --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --master yarn --deploy-mode client --num-executors 6 --executor-cores 9 --executor-memory 20g --driver-memory 35g --class edu.ucr.dblab.sdcel.SDCEL2 /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S1/P14000/edgesA --input2 gadm/scaleup2/S1/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S1/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S1/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S1_1e-3_0_4_14000_6_4 --ooption 0 --olevel 4
+2022-04-26 00:03:51,974|13709|application_1648870353198_1184|13968|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.kryoserializer.buffer.max=256m --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 6 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S1/P14000/edgesA --input2 gadm/scaleup2/S1/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S1/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S1/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S1_1e-3_0_4_14000_6_4 --ooption 0 --olevel 4
+2022-04-26 00:03:51,975|13710|application_1648870353198_1184|INFO|tolerance=0.001
+2022-04-26 00:03:51,975|13710|application_1648870353198_1184|INFO|overlay_option=0
+2022-04-26 00:03:51,975|13710|application_1648870353198_1184|INFO|overlay_level=4
+2022-04-26 00:03:52,450|14185|application_1648870353198_1184|476|TIME|start|gadm/scaleup2/S1_1e-3_0_4_14000_6_4
+2022-04-26 00:11:58,065|499800|application_1648870353198_1184|485615|TIME|read|gadm/scaleup2/S1_1e-3_0_4_14000_6_4
+2022-04-26 00:16:01,762|743497|application_1648870353198_1184|243697|TIME|layer1|gadm/scaleup2/S1_1e-3_0_4_14000_6_4
+2022-04-26 00:19:58,321|980056|application_1648870353198_1184|236559|TIME|layer2|gadm/scaleup2/S1_1e-3_0_4_14000_6_4
+2022-04-26 00:27:30,087|1431822|application_1648870353198_1184|451766|TIME|overlay|gadm/scaleup2/S1_1e-3_0_4_14000_6_4
+2022-04-26 00:27:30,087|1431822|application_1648870353198_1184|0|TIME|end|gadm/scaleup2/S1_1e-3_0_4_14000_6_4
+DATASET    = gadm/scaleup2/S2
+TOLERANCE  = 1e-3
+PARTITIONS = 14000
+ITERATIONS = 4
+EXECUTORS  = 9
+MASTER     = yarn
+RUN        = 1
+spark-submit --files /home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.maxResultSize=4G --conf spark.kryoserializer.buffer.max=256m --conf spark.locality.wait=3s --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --master yarn --deploy-mode client --num-executors 9 --executor-cores 9 --executor-memory 20g --driver-memory 35g --class edu.ucr.dblab.sdcel.SDCEL2 /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S2/P14000/edgesA --input2 gadm/scaleup2/S2/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S2/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S2/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S2_1e-3_0_4_14000_9_1 --ooption 0 --olevel 4
+2022-04-26 00:27:49,092|14190|application_1648870353198_1185|14459|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.kryoserializer.buffer.max=256m --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 9 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S2/P14000/edgesA --input2 gadm/scaleup2/S2/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S2/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S2/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S2_1e-3_0_4_14000_9_1 --ooption 0 --olevel 4
+2022-04-26 00:27:49,092|14190|application_1648870353198_1185|INFO|tolerance=0.001
+2022-04-26 00:27:49,092|14190|application_1648870353198_1185|INFO|overlay_option=0
+2022-04-26 00:27:49,093|14191|application_1648870353198_1185|INFO|overlay_level=4
+2022-04-26 00:27:49,562|14660|application_1648870353198_1185|471|TIME|start|gadm/scaleup2/S2_1e-3_0_4_14000_9_1
+2022-04-26 00:35:29,145|474243|application_1648870353198_1185|459583|TIME|read|gadm/scaleup2/S2_1e-3_0_4_14000_9_1
+2022-04-26 00:39:10,591|695689|application_1648870353198_1185|221446|TIME|layer1|gadm/scaleup2/S2_1e-3_0_4_14000_9_1
+2022-04-26 00:43:20,152|945250|application_1648870353198_1185|249561|TIME|layer2|gadm/scaleup2/S2_1e-3_0_4_14000_9_1
+2022-04-26 00:51:57,499|1462597|application_1648870353198_1185|517347|TIME|overlay|gadm/scaleup2/S2_1e-3_0_4_14000_9_1
+2022-04-26 00:51:57,500|1462598|application_1648870353198_1185|1|TIME|end|gadm/scaleup2/S2_1e-3_0_4_14000_9_1
+RUN        = 2
+spark-submit --files /home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.maxResultSize=4G --conf spark.kryoserializer.buffer.max=256m --conf spark.locality.wait=3s --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --master yarn --deploy-mode client --num-executors 9 --executor-cores 9 --executor-memory 20g --driver-memory 35g --class edu.ucr.dblab.sdcel.SDCEL2 /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S2/P14000/edgesA --input2 gadm/scaleup2/S2/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S2/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S2/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S2_1e-3_0_4_14000_9_2 --ooption 0 --olevel 4
+2022-04-26 00:52:34,164|31475|application_1648870353198_1186|31743|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.kryoserializer.buffer.max=256m --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 9 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S2/P14000/edgesA --input2 gadm/scaleup2/S2/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S2/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S2/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S2_1e-3_0_4_14000_9_2 --ooption 0 --olevel 4
+2022-04-26 00:52:34,164|31475|application_1648870353198_1186|INFO|tolerance=0.001
+2022-04-26 00:52:34,165|31476|application_1648870353198_1186|INFO|overlay_option=0
+2022-04-26 00:52:34,165|31476|application_1648870353198_1186|INFO|overlay_level=4
+2022-04-26 00:52:34,661|31972|application_1648870353198_1186|497|TIME|start|gadm/scaleup2/S2_1e-3_0_4_14000_9_2
+2022-04-26 00:59:40,962|458273|application_1648870353198_1186|426301|TIME|read|gadm/scaleup2/S2_1e-3_0_4_14000_9_2
+2022-04-26 01:03:06,607|663918|application_1648870353198_1186|205645|TIME|layer1|gadm/scaleup2/S2_1e-3_0_4_14000_9_2
+2022-04-26 01:07:06,620|903931|application_1648870353198_1186|240013|TIME|layer2|gadm/scaleup2/S2_1e-3_0_4_14000_9_2
+2022-04-26 01:14:43,055|1360366|application_1648870353198_1186|456435|TIME|overlay|gadm/scaleup2/S2_1e-3_0_4_14000_9_2
+2022-04-26 01:14:43,055|1360366|application_1648870353198_1186|0|TIME|end|gadm/scaleup2/S2_1e-3_0_4_14000_9_2
+RUN        = 3
+spark-submit --files /home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.maxResultSize=4G --conf spark.kryoserializer.buffer.max=256m --conf spark.locality.wait=3s --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --master yarn --deploy-mode client --num-executors 9 --executor-cores 9 --executor-memory 20g --driver-memory 35g --class edu.ucr.dblab.sdcel.SDCEL2 /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S2/P14000/edgesA --input2 gadm/scaleup2/S2/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S2/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S2/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S2_1e-3_0_4_14000_9_3 --ooption 0 --olevel 4
+2022-04-26 01:15:02,239|14124|application_1648870353198_1187|14390|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.kryoserializer.buffer.max=256m --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 9 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S2/P14000/edgesA --input2 gadm/scaleup2/S2/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S2/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S2/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S2_1e-3_0_4_14000_9_3 --ooption 0 --olevel 4
+2022-04-26 01:15:02,240|14125|application_1648870353198_1187|INFO|tolerance=0.001
+2022-04-26 01:15:02,240|14125|application_1648870353198_1187|INFO|overlay_option=0
+2022-04-26 01:15:02,240|14125|application_1648870353198_1187|INFO|overlay_level=4
+2022-04-26 01:15:02,707|14592|application_1648870353198_1187|468|TIME|start|gadm/scaleup2/S2_1e-3_0_4_14000_9_3
+2022-04-26 01:21:57,376|429261|application_1648870353198_1187|414669|TIME|read|gadm/scaleup2/S2_1e-3_0_4_14000_9_3
+2022-04-26 01:25:23,589|635474|application_1648870353198_1187|206213|TIME|layer1|gadm/scaleup2/S2_1e-3_0_4_14000_9_3
+2022-04-26 01:29:06,601|858486|application_1648870353198_1187|223012|TIME|layer2|gadm/scaleup2/S2_1e-3_0_4_14000_9_3
+2022-04-26 01:36:49,351|1321236|application_1648870353198_1187|462750|TIME|overlay|gadm/scaleup2/S2_1e-3_0_4_14000_9_3
+2022-04-26 01:36:49,351|1321236|application_1648870353198_1187|0|TIME|end|gadm/scaleup2/S2_1e-3_0_4_14000_9_3
+RUN        = 4
+spark-submit --files /home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.maxResultSize=4G --conf spark.kryoserializer.buffer.max=256m --conf spark.locality.wait=3s --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --master yarn --deploy-mode client --num-executors 9 --executor-cores 9 --executor-memory 20g --driver-memory 35g --class edu.ucr.dblab.sdcel.SDCEL2 /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S2/P14000/edgesA --input2 gadm/scaleup2/S2/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S2/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S2/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S2_1e-3_0_4_14000_9_4 --ooption 0 --olevel 4
+2022-04-26 01:38:04,514|70276|application_1648870353198_1188|70541|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.kryoserializer.buffer.max=256m --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 9 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S2/P14000/edgesA --input2 gadm/scaleup2/S2/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S2/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S2/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S2_1e-3_0_4_14000_9_4 --ooption 0 --olevel 4
+2022-04-26 01:38:04,515|70277|application_1648870353198_1188|INFO|tolerance=0.001
+2022-04-26 01:38:04,515|70277|application_1648870353198_1188|INFO|overlay_option=0
+2022-04-26 01:38:04,515|70277|application_1648870353198_1188|INFO|overlay_level=4
+2022-04-26 01:38:04,981|70743|application_1648870353198_1188|467|TIME|start|gadm/scaleup2/S2_1e-3_0_4_14000_9_4
+2022-04-26 01:45:07,439|493201|application_1648870353198_1188|422458|TIME|read|gadm/scaleup2/S2_1e-3_0_4_14000_9_4
+2022-04-26 01:48:18,619|684381|application_1648870353198_1188|191180|TIME|layer1|gadm/scaleup2/S2_1e-3_0_4_14000_9_4
+2022-04-26 01:51:51,055|896817|application_1648870353198_1188|212436|TIME|layer2|gadm/scaleup2/S2_1e-3_0_4_14000_9_4
+2022-04-26 01:58:12,412|1278174|application_1648870353198_1188|381357|TIME|overlay|gadm/scaleup2/S2_1e-3_0_4_14000_9_4
+2022-04-26 01:58:12,412|1278174|application_1648870353198_1188|0|TIME|end|gadm/scaleup2/S2_1e-3_0_4_14000_9_4
+DATASET    = gadm/scaleup2/S3
+TOLERANCE  = 1e-3
+PARTITIONS = 14000
+ITERATIONS = 4
+EXECUTORS  = 12
+MASTER     = yarn
+RUN        = 1
+spark-submit --files /home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.maxResultSize=4G --conf spark.kryoserializer.buffer.max=256m --conf spark.locality.wait=3s --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --master yarn --deploy-mode client --num-executors 12 --executor-cores 9 --executor-memory 20g --driver-memory 35g --class edu.ucr.dblab.sdcel.SDCEL2 /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S3/P14000/edgesA --input2 gadm/scaleup2/S3/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S3/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S3/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S3_1e-3_0_4_14000_12_1 --ooption 0 --olevel 4
+2022-04-26 01:58:32,270|14404|application_1648870353198_1189|14661|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.kryoserializer.buffer.max=256m --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 12 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S3/P14000/edgesA --input2 gadm/scaleup2/S3/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S3/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S3/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S3_1e-3_0_4_14000_12_1 --ooption 0 --olevel 4
+2022-04-26 01:58:32,270|14404|application_1648870353198_1189|INFO|tolerance=0.001
+2022-04-26 01:58:32,270|14404|application_1648870353198_1189|INFO|overlay_option=0
+2022-04-26 01:58:32,271|14405|application_1648870353198_1189|INFO|overlay_level=4
+2022-04-26 01:58:32,740|14874|application_1648870353198_1189|470|TIME|start|gadm/scaleup2/S3_1e-3_0_4_14000_12_1
+2022-04-26 02:05:52,417|454551|application_1648870353198_1189|439677|TIME|read|gadm/scaleup2/S3_1e-3_0_4_14000_12_1
+2022-04-26 02:09:21,421|663555|application_1648870353198_1189|258685|TIME|layer1|gadm/scaleup2/S3_1e-3_0_4_14000_12_1
+2022-04-26 02:14:24,154|966288|application_1648870353198_1189|287731|TIME|layer2|gadm/scaleup2/S3_1e-3_0_4_14000_12_1
+2022-04-26 02:22:13,688|1435822|application_1648870353198_1189|515427|TIME|overlay|gadm/scaleup2/S3_1e-3_0_4_14000_12_1
+2022-04-26 02:22:13,688|1435822|application_1648870353198_1189|0|TIME|end|gadm/scaleup2/S3_1e-3_0_4_14000_12_1
+RUN        = 2
+spark-submit --files /home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.maxResultSize=4G --conf spark.kryoserializer.buffer.max=256m --conf spark.locality.wait=3s --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --master yarn --deploy-mode client --num-executors 12 --executor-cores 9 --executor-memory 20g --driver-memory 35g --class edu.ucr.dblab.sdcel.SDCEL2 /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S3/P14000/edgesA --input2 gadm/scaleup2/S3/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S3/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S3/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S3_1e-3_0_4_14000_12_2 --ooption 0 --olevel 4
+2022-04-26 02:22:33,517|15162|application_1648870353198_1190|15420|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.kryoserializer.buffer.max=256m --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 12 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S3/P14000/edgesA --input2 gadm/scaleup2/S3/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S3/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S3/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S3_1e-3_0_4_14000_12_2 --ooption 0 --olevel 4
+2022-04-26 02:22:33,518|15163|application_1648870353198_1190|INFO|tolerance=0.001
+2022-04-26 02:22:33,518|15163|application_1648870353198_1190|INFO|overlay_option=0
+2022-04-26 02:22:33,519|15164|application_1648870353198_1190|INFO|overlay_level=4
+2022-04-26 02:22:34,018|15663|application_1648870353198_1190|501|TIME|start|gadm/scaleup2/S3_1e-3_0_4_14000_12_2
+2022-04-26 02:29:55,157|456802|application_1648870353198_1190|441139|TIME|read|gadm/scaleup2/S3_1e-3_0_4_14000_12_2
+2022-04-26 02:33:30,709|672354|application_1648870353198_1190|327886|TIME|layer1|gadm/scaleup2/S3_1e-3_0_4_14000_12_2
+2022-04-26 02:38:37,583|979228|application_1648870353198_1190|221967|TIME|layer2|gadm/scaleup2/S3_1e-3_0_4_14000_12_2
+2022-04-26 02:46:30,914|1452559|application_1648870353198_1190|440606|TIME|overlay|gadm/scaleup2/S3_1e-3_0_4_14000_12_2
+2022-04-26 02:46:30,914|1452559|application_1648870353198_1190|0|TIME|end|gadm/scaleup2/S3_1e-3_0_4_14000_12_2
+RUN        = 3
+spark-submit --files /home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.maxResultSize=4G --conf spark.kryoserializer.buffer.max=256m --conf spark.locality.wait=3s --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --master yarn --deploy-mode client --num-executors 12 --executor-cores 9 --executor-memory 20g --driver-memory 35g --class edu.ucr.dblab.sdcel.SDCEL2 /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S3/P14000/edgesA --input2 gadm/scaleup2/S3/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S3/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S3/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S3_1e-3_0_4_14000_12_3 --ooption 0 --olevel 4
+2022-04-26 02:46:51,204|14422|application_1648870353198_1191|14683|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.kryoserializer.buffer.max=256m --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 12 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S3/P14000/edgesA --input2 gadm/scaleup2/S3/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S3/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S3/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S3_1e-3_0_4_14000_12_3 --ooption 0 --olevel 4
+2022-04-26 02:46:51,205|14423|application_1648870353198_1191|INFO|tolerance=0.001
+2022-04-26 02:46:51,205|14423|application_1648870353198_1191|INFO|overlay_option=0
+2022-04-26 02:46:51,205|14423|application_1648870353198_1191|INFO|overlay_level=4
+2022-04-26 02:46:51,707|14925|application_1648870353198_1191|503|TIME|start|gadm/scaleup2/S3_1e-3_0_4_14000_12_3
+2022-04-26 02:54:12,576|455794|application_1648870353198_1191|440869|TIME|read|gadm/scaleup2/S3_1e-3_0_4_14000_12_3
+2022-04-26 02:57:55,576|678794|application_1648870353198_1191|212492|TIME|layer1|gadm/scaleup2/S3_1e-3_0_4_14000_12_3
+Exception in thread "main" org.apache.spark.SparkException: Job 3 cancelled because SparkContext was shut down
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$cleanUpAfterSchedulerStop$1.apply(DAGScheduler.scala:837)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$cleanUpAfterSchedulerStop$1.apply(DAGScheduler.scala:835)
+	at scala.collection.mutable.HashSet.foreach(HashSet.scala:78)
+	at org.apache.spark.scheduler.DAGScheduler.cleanUpAfterSchedulerStop(DAGScheduler.scala:835)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onStop(DAGScheduler.scala:1890)
+	at org.apache.spark.util.EventLoop.stop(EventLoop.scala:83)
+	at org.apache.spark.scheduler.DAGScheduler.stop(DAGScheduler.scala:1803)
+	at org.apache.spark.SparkContext$$anonfun$stop$8.apply$mcV$sp(SparkContext.scala:1931)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1361)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:1930)
+	at org.apache.spark.scheduler.cluster.YarnClientSchedulerBackend$MonitorThread.run(YarnClientSchedulerBackend.scala:112)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:642)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2034)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2055)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2074)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2099)
+	at org.apache.spark.rdd.RDD$$anonfun$collect$1.apply(RDD.scala:945)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:363)
+	at org.apache.spark.rdd.RDD.collect(RDD.scala:944)
+	at edu.ucr.dblab.sdcel.cells.EmptyCellManager2$.updatePolygonIds(CellManager3.scala:283)
+	at edu.ucr.dblab.sdcel.cells.EmptyCellManager2$.runEmptyCells(CellManager3.scala:178)
+	at edu.ucr.dblab.sdcel.SDCEL2$.main(SDCEL2.scala:103)
+	at edu.ucr.dblab.sdcel.SDCEL2.main(SDCEL2.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.JavaMainApplication.start(SparkApplication.scala:52)
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:904)
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:198)
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:228)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:137)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+RUN        = 4
+spark-submit --files /home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --conf spark.driver.maxResultSize=4G --conf spark.kryoserializer.buffer.max=256m --conf spark.locality.wait=3s --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --master yarn --deploy-mode client --num-executors 12 --executor-cores 9 --executor-memory 20g --driver-memory 35g --class edu.ucr.dblab.sdcel.SDCEL2 /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S3/P14000/edgesA --input2 gadm/scaleup2/S3/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S3/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S3/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S3_1e-3_0_4_14000_12_4 --ooption 0 --olevel 4
+2022-04-26 03:01:37,607|70568|application_1648870353198_1192|70880|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.kryoserializer.buffer.max=256m --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 12 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/scaleup2/S3/P14000/edgesA --input2 gadm/scaleup2/S3/P14000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/scaleup2/S3/P14000/quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/scaleup2/S3/P14000/boundary.wkt --tolerance 1e-3 --qtag gadm/scaleup2/S3_1e-3_0_4_14000_12_4 --ooption 0 --olevel 4
+2022-04-26 03:01:37,607|70568|application_1648870353198_1192|INFO|tolerance=0.001
+2022-04-26 03:01:37,608|70569|application_1648870353198_1192|INFO|overlay_option=0
+2022-04-26 03:01:37,608|70569|application_1648870353198_1192|INFO|overlay_level=4
+2022-04-26 03:01:38,072|71033|application_1648870353198_1192|465|TIME|start|gadm/scaleup2/S3_1e-3_0_4_14000_12_4
+2022-04-26 03:09:03,808|516769|application_1648870353198_1192|445736|TIME|read|gadm/scaleup2/S3_1e-3_0_4_14000_12_4
+2022-04-26 03:12:32,289|725250|application_1648870353198_1192|333303|TIME|layer1|gadm/scaleup2/S3_1e-3_0_4_14000_12_4
+Exception in thread "main" org.apache.spark.SparkException: Job 3 cancelled because SparkContext was shut down
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$cleanUpAfterSchedulerStop$1.apply(DAGScheduler.scala:837)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$cleanUpAfterSchedulerStop$1.apply(DAGScheduler.scala:835)
+	at scala.collection.mutable.HashSet.foreach(HashSet.scala:78)
+	at org.apache.spark.scheduler.DAGScheduler.cleanUpAfterSchedulerStop(DAGScheduler.scala:835)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onStop(DAGScheduler.scala:1890)
+	at org.apache.spark.util.EventLoop.stop(EventLoop.scala:83)
+	at org.apache.spark.scheduler.DAGScheduler.stop(DAGScheduler.scala:1803)
+	at org.apache.spark.SparkContext$$anonfun$stop$8.apply$mcV$sp(SparkContext.scala:1931)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1361)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:1930)
+	at org.apache.spark.scheduler.cluster.YarnClientSchedulerBackend$MonitorThread.run(YarnClientSchedulerBackend.scala:112)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:642)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2034)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2055)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2074)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2099)
+	at org.apache.spark.rdd.RDD$$anonfun$collect$1.apply(RDD.scala:945)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:363)
+	at org.apache.spark.rdd.RDD.collect(RDD.scala:944)
+	at edu.ucr.dblab.sdcel.cells.EmptyCellManager2$.updatePolygonIds(CellManager3.scala:283)
+	at edu.ucr.dblab.sdcel.cells.EmptyCellManager2$.runEmptyCells(CellManager3.scala:178)
+	at edu.ucr.dblab.sdcel.SDCEL2$.main(SDCEL2.scala:103)
+	at edu.ucr.dblab.sdcel.SDCEL2.main(SDCEL2.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.JavaMainApplication.start(SparkApplication.scala:52)
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:904)
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:198)
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:228)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:137)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
