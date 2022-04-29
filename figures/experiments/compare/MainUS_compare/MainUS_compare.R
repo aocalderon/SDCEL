@@ -1,9 +1,7 @@
 library(tidyverse)
-setwd("~/RIDIR/Data/MainUS_compare/")
+setwd("/home/and/Documents/Papers/SDCEL/figures/experiments/compare/MainUS_compare/")
 
-data0a = enframe(read_lines("MainUS_compare_v01.txt"), value="line")
-data0b = enframe(read_lines("MainUS_compare_v02.txt"), value="line")
-data0 = bind_rows(data0a, data0b)
+data0 = enframe(read_lines("MainUS_compare_v01.txt"), value="line")
 
 data1 = data0 %>%
   filter(str_detect(line, '\\|TIME\\|')) 

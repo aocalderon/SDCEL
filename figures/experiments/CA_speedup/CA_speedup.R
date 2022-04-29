@@ -1,7 +1,7 @@
 library(tidyverse)
-setwd("/home/and/Documents/Papers/SDCEL/figures/experiments/MainUS_speedup/")
+setwd("/home/and/Documents/Papers/SDCEL/figures/experiments/CA_speedup/")
 
-data0 = enframe(read_lines("MainUS_speedup_v01.txt"), value="line")
+data0 = enframe(read_lines("CA_speedup_v01.txt"), value="line")
 
 data1 = data0 %>%
   filter(str_detect(line, 'TIME')) 
@@ -20,15 +20,15 @@ data3 = data2 %>%
   group_by(nodes, stage) %>% summarise(time = mean(time))  %>%
   mutate(nodes = fct_relevel(nodes, nodes_labels))
 
-write_tsv(data3, "MainUS_speedup.tsv")
+write_tsv(data3, "CA_speedup.tsv")
 
 p = ggplot(data3, aes(x = nodes, y = time)) + 
   geom_col(width = 0.7, position="dodge") + 
   theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
-  labs(x="Number of nodes", y="Time [s]", title=paste0("Speed up for MainUS dataset")) +
+  labs(x="Number of nodes", y="Time [s]", title=paste0("Speed up for CA dataset")) +
   facet_wrap(~ stage)
 plot(p)
 
 W = as.numeric(Sys.getenv("R_WIDTH"))
 H = as.numeric(Sys.getenv("R_HEIGHT"))
-ggsave(paste0("MainUS_speedup.pdf"), width = W, height = H)
+ggsave(paste0("CA_speedup.pdf"), width = W, height = H)

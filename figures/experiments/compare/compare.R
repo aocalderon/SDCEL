@@ -5,8 +5,10 @@ gadm   = read_tsv("GADM_compare/GADM_compare.tsv") %>%
   add_column(dataset = "GADM")
 mainus = read_tsv("MainUS_compare/MainUS_compare.tsv") %>%
   add_column(dataset = "MainUS")
+ca = read_tsv("CA_compare/CA_compare.tsv") %>%
+  add_column(dataset = "CA")
 
-data = bind_rows(gadm, mainus)
+data = bind_rows(gadm, mainus, ca)
 
 p = ggplot(data, aes(x = dataset, y = time, fill = l1l2)) + 
   geom_col(width = 0.7, position="dodge") + 
