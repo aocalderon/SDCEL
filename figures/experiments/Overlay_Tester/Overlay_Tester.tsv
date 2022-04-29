@@ -1,0 +1,89 @@
+method	time	tag	overlay_option	overlay_level	stage
+By Label	9.779399999999999	CA	0	4	overlay
+By Label	5.0512	FL	0	4	overlay
+By Label	5.851	GA	0	4	overlay
+By Label	6.1544	NC	0	4	overlay
+By Label	5.1244	PA	0	4	overlay
+By Label	5.6106	TN	0	4	overlay
+By Label	10.5114	TX	0	4	overlay
+By Label	5.864	VA	0	4	overlay
+At Master/Root	66.652	CA	1	4	overlayMaster
+At Master/Root	26.3502	FL	1	4	overlayMaster
+At Master/Root	26.9818	GA	1	4	overlayMaster
+At Master/Root	32.3632	NC	1	4	overlayMaster
+At Master/Root	29.0254	PA	1	4	overlayMaster
+At Master/Root	29.3622	TN	1	4	overlayMaster
+At Master/Root	70.0506	TX	1	4	overlayMaster
+At Master/Root	26.287399999999998	VA	1	4	overlayMaster
+At Level [10]	117.811	CA	2	10	overlayByLevel
+At Level [10]	47.7276	FL	2	10	overlayByLevel
+At Level [10]	49.5696	GA	2	10	overlayByLevel
+At Level [10]	61.0668	NC	2	10	overlayByLevel
+At Level [10]	53.284	PA	2	10	overlayByLevel
+At Level [10]	53.2192	TN	2	10	overlayByLevel
+At Level [10]	123.095	TX	2	10	overlayByLevel
+At Level [10]	51.9906	VA	2	10	overlayByLevel
+At Level [11]	117.9742	CA	2	11	overlayByLevel
+At Level [11]	49.4518	FL	2	11	overlayByLevel
+At Level [11]	49.9656	GA	2	11	overlayByLevel
+At Level [11]	60.0886	NC	2	11	overlayByLevel
+At Level [11]	51.8638	PA	2	11	overlayByLevel
+At Level [11]	50.8312	TN	2	11	overlayByLevel
+At Level [11]	117.1032	TX	2	11	overlayByLevel
+At Level [11]	51.8838	VA	2	11	overlayByLevel
+At Level [12]	115.747	CA	2	12	overlayByLevel
+At Level [12]	47.4966	FL	2	12	overlayByLevel
+At Level [12]	48.5018	GA	2	12	overlayByLevel
+At Level [12]	61.5808	NC	2	12	overlayByLevel
+At Level [12]	53.4504	PA	2	12	overlayByLevel
+At Level [12]	54.6244	TN	2	12	overlayByLevel
+At Level [12]	123.033	TX	2	12	overlayByLevel
+At Level [12]	50.537	VA	2	12	overlayByLevel
+At Level [4]	62.2924	CA	2	4	overlayByLevel
+At Level [4]	26.6192	FL	2	4	overlayByLevel
+At Level [4]	27.4264	GA	2	4	overlayByLevel
+At Level [4]	32.214	NC	2	4	overlayByLevel
+At Level [4]	29.714199999999998	PA	2	4	overlayByLevel
+At Level [4]	29.2722	TN	2	4	overlayByLevel
+At Level [4]	64.9382	TX	2	4	overlayByLevel
+At Level [4]	27.564	VA	2	4	overlayByLevel
+At Level [5]	63.575	CA	2	5	overlayByLevel
+At Level [5]	25.7194	FL	2	5	overlayByLevel
+At Level [5]	28.9724	GA	2	5	overlayByLevel
+At Level [5]	33.525	NC	2	5	overlayByLevel
+At Level [5]	27.8094	PA	2	5	overlayByLevel
+At Level [5]	28.7594	TN	2	5	overlayByLevel
+At Level [5]	65.922	TX	2	5	overlayByLevel
+At Level [5]	28.2812	VA	2	5	overlayByLevel
+At Level [6]	63.8388	CA	2	6	overlayByLevel
+At Level [6]	26.9458	FL	2	6	overlayByLevel
+At Level [6]	32.1794	GA	2	6	overlayByLevel
+At Level [6]	35.086	NC	2	6	overlayByLevel
+At Level [6]	34.5848	PA	2	6	overlayByLevel
+At Level [6]	30.9574	TN	2	6	overlayByLevel
+At Level [6]	66.3324	TX	2	6	overlayByLevel
+At Level [6]	29.5472	VA	2	6	overlayByLevel
+At Level [7]	71.0736	CA	2	7	overlayByLevel
+At Level [7]	34.1548	FL	2	7	overlayByLevel
+At Level [7]	43.2968	GA	2	7	overlayByLevel
+At Level [7]	48.6184	NC	2	7	overlayByLevel
+At Level [7]	45.612	PA	2	7	overlayByLevel
+At Level [7]	44.5074	TN	2	7	overlayByLevel
+At Level [7]	79.844	TX	2	7	overlayByLevel
+At Level [7]	42.0202	VA	2	7	overlayByLevel
+At Level [8]	90.1488	CA	2	8	overlayByLevel
+At Level [8]	46.4602	FL	2	8	overlayByLevel
+At Level [8]	50.2484	GA	2	8	overlayByLevel
+At Level [8]	58.8194	NC	2	8	overlayByLevel
+At Level [8]	52.537	PA	2	8	overlayByLevel
+At Level [8]	52.6172	TN	2	8	overlayByLevel
+At Level [8]	106.0022	TX	2	8	overlayByLevel
+At Level [8]	50.3376	VA	2	8	overlayByLevel
+At Level [9]	113.1722	CA	2	9	overlayByLevel
+At Level [9]	48.1782	FL	2	9	overlayByLevel
+At Level [9]	49.1124	GA	2	9	overlayByLevel
+At Level [9]	60.375	NC	2	9	overlayByLevel
+At Level [9]	53.9814	PA	2	9	overlayByLevel
+At Level [9]	52.0582	TN	2	9	overlayByLevel
+At Level [9]	121.1284	TX	2	9	overlayByLevel
+At Level [9]	49.932	VA	2	9	overlayByLevel
