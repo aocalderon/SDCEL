@@ -1,0 +1,300 @@
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B6K.wkt --tag1 3K --tag2 6K --appid 1
+INFO	1666975728483	1	3K	6K	Traditional	START	0
+INFO	1666975728776	1	3K	6K	Traditional	END	293
+INFO	1666975728777	1	3K	6K	Sweeping	START	0
+INFO	1666975728984	1	3K	6K	Sweeping	END	207
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B9K.wkt --tag1 3K --tag2 9K --appid 1
+INFO	1666975730554	1	3K	9K	Traditional	START	0
+INFO	1666975730893	1	3K	9K	Traditional	END	339
+INFO	1666975730893	1	3K	9K	Sweeping	START	0
+INFO	1666975731124	1	3K	9K	Sweeping	END	230
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B12K.wkt --tag1 3K --tag2 12K --appid 1
+INFO	1666975732839	1	3K	12K	Traditional	START	0
+INFO	1666975733280	1	3K	12K	Traditional	END	441
+INFO	1666975733280	1	3K	12K	Sweeping	START	0
+INFO	1666975733541	1	3K	12K	Sweeping	END	261
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B15K.wkt --tag1 3K --tag2 15K --appid 1
+INFO	1666975735403	1	3K	15K	Traditional	START	0
+INFO	1666975735881	1	3K	15K	Traditional	END	478
+INFO	1666975735882	1	3K	15K	Sweeping	START	0
+INFO	1666975736157	1	3K	15K	Sweeping	END	275
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B18K.wkt --tag1 3K --tag2 18K --appid 1
+INFO	1666975738081	1	3K	18K	Traditional	START	0
+INFO	1666975738682	1	3K	18K	Traditional	END	601
+INFO	1666975738682	1	3K	18K	Sweeping	START	0
+INFO	1666975738962	1	3K	18K	Sweeping	END	280
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B21K.wkt --tag1 3K --tag2 21K --appid 1
+INFO	1666975741003	1	3K	21K	Traditional	START	0
+INFO	1666975741631	1	3K	21K	Traditional	END	628
+INFO	1666975741632	1	3K	21K	Sweeping	START	0
+INFO	1666975741934	1	3K	21K	Sweeping	END	302
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B6K.wkt --tag1 3K --tag2 6K --appid 2
+INFO	1666975743354	2	3K	6K	Traditional	START	0
+INFO	1666975743661	2	3K	6K	Traditional	END	307
+INFO	1666975743661	2	3K	6K	Sweeping	START	0
+INFO	1666975743866	2	3K	6K	Sweeping	END	205
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B9K.wkt --tag1 3K --tag2 9K --appid 2
+INFO	1666975745318	2	3K	9K	Traditional	START	0
+INFO	1666975745681	2	3K	9K	Traditional	END	363
+INFO	1666975745682	2	3K	9K	Sweeping	START	0
+INFO	1666975745928	2	3K	9K	Sweeping	END	246
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B12K.wkt --tag1 3K --tag2 12K --appid 2
+INFO	1666975747648	2	3K	12K	Traditional	START	0
+INFO	1666975748048	2	3K	12K	Traditional	END	400
+INFO	1666975748049	2	3K	12K	Sweeping	START	0
+INFO	1666975748319	2	3K	12K	Sweeping	END	270
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B15K.wkt --tag1 3K --tag2 15K --appid 2
+INFO	1666975750159	2	3K	15K	Traditional	START	0
+INFO	1666975750695	2	3K	15K	Traditional	END	536
+INFO	1666975750695	2	3K	15K	Sweeping	START	0
+INFO	1666975750965	2	3K	15K	Sweeping	END	270
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B18K.wkt --tag1 3K --tag2 18K --appid 2
+INFO	1666975752919	2	3K	18K	Traditional	START	0
+INFO	1666975753513	2	3K	18K	Traditional	END	594
+INFO	1666975753513	2	3K	18K	Sweeping	START	0
+INFO	1666975753811	2	3K	18K	Sweeping	END	298
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B21K.wkt --tag1 3K --tag2 21K --appid 2
+INFO	1666975755978	2	3K	21K	Traditional	START	0
+INFO	1666975756671	2	3K	21K	Traditional	END	693
+INFO	1666975756671	2	3K	21K	Sweeping	START	0
+INFO	1666975756973	2	3K	21K	Sweeping	END	302
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B6K.wkt --tag1 3K --tag2 6K --appid 3
+INFO	1666975758424	3	3K	6K	Traditional	START	0
+INFO	1666975758718	3	3K	6K	Traditional	END	295
+INFO	1666975758718	3	3K	6K	Sweeping	START	0
+INFO	1666975758948	3	3K	6K	Sweeping	END	229
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B9K.wkt --tag1 3K --tag2 9K --appid 3
+INFO	1666975760399	3	3K	9K	Traditional	START	0
+INFO	1666975760758	3	3K	9K	Traditional	END	359
+INFO	1666975760758	3	3K	9K	Sweeping	START	0
+INFO	1666975761021	3	3K	9K	Sweeping	END	263
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B12K.wkt --tag1 3K --tag2 12K --appid 3
+INFO	1666975762715	3	3K	12K	Traditional	START	0
+INFO	1666975763101	3	3K	12K	Traditional	END	386
+INFO	1666975763102	3	3K	12K	Sweeping	START	0
+INFO	1666975763369	3	3K	12K	Sweeping	END	267
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B15K.wkt --tag1 3K --tag2 15K --appid 3
+INFO	1666975765192	3	3K	15K	Traditional	START	0
+INFO	1666975765679	3	3K	15K	Traditional	END	486
+INFO	1666975765679	3	3K	15K	Sweeping	START	0
+INFO	1666975765978	3	3K	15K	Sweeping	END	299
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B18K.wkt --tag1 3K --tag2 18K --appid 3
+INFO	1666975767926	3	3K	18K	Traditional	START	0
+INFO	1666975768549	3	3K	18K	Traditional	END	623
+INFO	1666975768549	3	3K	18K	Sweeping	START	0
+INFO	1666975768848	3	3K	18K	Sweeping	END	299
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B21K.wkt --tag1 3K --tag2 21K --appid 3
+INFO	1666975770885	3	3K	21K	Traditional	START	0
+INFO	1666975771593	3	3K	21K	Traditional	END	707
+INFO	1666975771593	3	3K	21K	Sweeping	START	0
+INFO	1666975771903	3	3K	21K	Sweeping	END	310
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B6K.wkt --tag1 3K --tag2 6K --appid 4
+INFO	1666975773332	4	3K	6K	Traditional	START	0
+INFO	1666975773635	4	3K	6K	Traditional	END	303
+INFO	1666975773636	4	3K	6K	Sweeping	START	0
+INFO	1666975773842	4	3K	6K	Sweeping	END	206
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B9K.wkt --tag1 3K --tag2 9K --appid 4
+INFO	1666975775287	4	3K	9K	Traditional	START	0
+INFO	1666975775628	4	3K	9K	Traditional	END	341
+INFO	1666975775628	4	3K	9K	Sweeping	START	0
+INFO	1666975775878	4	3K	9K	Sweeping	END	250
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B12K.wkt --tag1 3K --tag2 12K --appid 4
+INFO	1666975777592	4	3K	12K	Traditional	START	0
+INFO	1666975778009	4	3K	12K	Traditional	END	417
+INFO	1666975778009	4	3K	12K	Sweeping	START	0
+INFO	1666975778281	4	3K	12K	Sweeping	END	272
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B15K.wkt --tag1 3K --tag2 15K --appid 4
+INFO	1666975780057	4	3K	15K	Traditional	START	0
+INFO	1666975780588	4	3K	15K	Traditional	END	531
+INFO	1666975780589	4	3K	15K	Sweeping	START	0
+INFO	1666975780876	4	3K	15K	Sweeping	END	287
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B18K.wkt --tag1 3K --tag2 18K --appid 4
+INFO	1666975782871	4	3K	18K	Traditional	START	0
+INFO	1666975783468	4	3K	18K	Traditional	END	597
+INFO	1666975783469	4	3K	18K	Sweeping	START	0
+INFO	1666975783766	4	3K	18K	Sweeping	END	297
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B21K.wkt --tag1 3K --tag2 21K --appid 4
+INFO	1666975785805	4	3K	21K	Traditional	START	0
+INFO	1666975786468	4	3K	21K	Traditional	END	663
+INFO	1666975786469	4	3K	21K	Sweeping	START	0
+INFO	1666975786760	4	3K	21K	Sweeping	END	291
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B6K.wkt --tag1 3K --tag2 6K --appid 5
+INFO	1666975788174	5	3K	6K	Traditional	START	0
+INFO	1666975788447	5	3K	6K	Traditional	END	274
+INFO	1666975788448	5	3K	6K	Sweeping	START	0
+INFO	1666975788677	5	3K	6K	Sweeping	END	229
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B9K.wkt --tag1 3K --tag2 9K --appid 5
+INFO	1666975790104	5	3K	9K	Traditional	START	0
+INFO	1666975790534	5	3K	9K	Traditional	END	430
+INFO	1666975790534	5	3K	9K	Sweeping	START	0
+INFO	1666975790820	5	3K	9K	Sweeping	END	285
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B12K.wkt --tag1 3K --tag2 12K --appid 5
+INFO	1666975792541	5	3K	12K	Traditional	START	0
+INFO	1666975793048	5	3K	12K	Traditional	END	507
+INFO	1666975793049	5	3K	12K	Sweeping	START	0
+INFO	1666975793318	5	3K	12K	Sweeping	END	269
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B15K.wkt --tag1 3K --tag2 15K --appid 5
+INFO	1666975795663	5	3K	15K	Traditional	START	0
+INFO	1666975796167	5	3K	15K	Traditional	END	503
+INFO	1666975796167	5	3K	15K	Sweeping	START	0
+INFO	1666975796458	5	3K	15K	Sweeping	END	291
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B18K.wkt --tag1 3K --tag2 18K --appid 5
+INFO	1666975798460	5	3K	18K	Traditional	START	0
+INFO	1666975799280	5	3K	18K	Traditional	END	820
+INFO	1666975799281	5	3K	18K	Sweeping	START	0
+INFO	1666975799588	5	3K	18K	Sweeping	END	307
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B21K.wkt --tag1 3K --tag2 21K --appid 5
+INFO	1666975801691	5	3K	21K	Traditional	START	0
+INFO	1666975802336	5	3K	21K	Traditional	END	645
+INFO	1666975802336	5	3K	21K	Sweeping	START	0
+INFO	1666975802627	5	3K	21K	Sweeping	END	290
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B6K.wkt --tag1 3K --tag2 6K --appid 6
+INFO	1666975803984	6	3K	6K	Traditional	START	0
+INFO	1666975804357	6	3K	6K	Traditional	END	374
+INFO	1666975804357	6	3K	6K	Sweeping	START	0
+INFO	1666975804565	6	3K	6K	Sweeping	END	208
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B9K.wkt --tag1 3K --tag2 9K --appid 6
+INFO	1666975806028	6	3K	9K	Traditional	START	0
+INFO	1666975806573	6	3K	9K	Traditional	END	545
+INFO	1666975806573	6	3K	9K	Sweeping	START	0
+INFO	1666975806860	6	3K	9K	Sweeping	END	287
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B12K.wkt --tag1 3K --tag2 12K --appid 6
+INFO	1666975808553	6	3K	12K	Traditional	START	0
+INFO	1666975808947	6	3K	12K	Traditional	END	394
+INFO	1666975808947	6	3K	12K	Sweeping	START	0
+INFO	1666975809240	6	3K	12K	Sweeping	END	293
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B15K.wkt --tag1 3K --tag2 15K --appid 6
+INFO	1666975811042	6	3K	15K	Traditional	START	0
+INFO	1666975811555	6	3K	15K	Traditional	END	514
+INFO	1666975811556	6	3K	15K	Sweeping	START	0
+INFO	1666975811845	6	3K	15K	Sweeping	END	288
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B18K.wkt --tag1 3K --tag2 18K --appid 6
+INFO	1666975813832	6	3K	18K	Traditional	START	0
+INFO	1666975814437	6	3K	18K	Traditional	END	605
+INFO	1666975814437	6	3K	18K	Sweeping	START	0
+INFO	1666975814729	6	3K	18K	Sweeping	END	292
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B21K.wkt --tag1 3K --tag2 21K --appid 6
+INFO	1666975816838	6	3K	21K	Traditional	START	0
+INFO	1666975817428	6	3K	21K	Traditional	END	590
+INFO	1666975817428	6	3K	21K	Sweeping	START	0
+INFO	1666975817728	6	3K	21K	Sweeping	END	300
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B6K.wkt --tag1 3K --tag2 6K --appid 7
+INFO	1666975819163	7	3K	6K	Traditional	START	0
+INFO	1666975819478	7	3K	6K	Traditional	END	315
+INFO	1666975819479	7	3K	6K	Sweeping	START	0
+INFO	1666975819688	7	3K	6K	Sweeping	END	209
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B9K.wkt --tag1 3K --tag2 9K --appid 7
+INFO	1666975821132	7	3K	9K	Traditional	START	0
+INFO	1666975821473	7	3K	9K	Traditional	END	342
+INFO	1666975821473	7	3K	9K	Sweeping	START	0
+INFO	1666975821727	7	3K	9K	Sweeping	END	254
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B12K.wkt --tag1 3K --tag2 12K --appid 7
+INFO	1666975823427	7	3K	12K	Traditional	START	0
+INFO	1666975823825	7	3K	12K	Traditional	END	398
+INFO	1666975823825	7	3K	12K	Sweeping	START	0
+INFO	1666975824081	7	3K	12K	Sweeping	END	255
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B15K.wkt --tag1 3K --tag2 15K --appid 7
+INFO	1666975825906	7	3K	15K	Traditional	START	0
+INFO	1666975826401	7	3K	15K	Traditional	END	495
+INFO	1666975826401	7	3K	15K	Sweeping	START	0
+INFO	1666975826672	7	3K	15K	Sweeping	END	271
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B18K.wkt --tag1 3K --tag2 18K --appid 7
+INFO	1666975828608	7	3K	18K	Traditional	START	0
+INFO	1666975829140	7	3K	18K	Traditional	END	532
+INFO	1666975829140	7	3K	18K	Sweeping	START	0
+INFO	1666975829416	7	3K	18K	Sweeping	END	276
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B21K.wkt --tag1 3K --tag2 21K --appid 7
+INFO	1666975831447	7	3K	21K	Traditional	START	0
+INFO	1666975832138	7	3K	21K	Traditional	END	691
+INFO	1666975832138	7	3K	21K	Sweeping	START	0
+INFO	1666975832466	7	3K	21K	Sweeping	END	328
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B6K.wkt --tag1 3K --tag2 6K --appid 8
+INFO	1666975833912	8	3K	6K	Traditional	START	0
+INFO	1666975834202	8	3K	6K	Traditional	END	290
+INFO	1666975834203	8	3K	6K	Sweeping	START	0
+INFO	1666975834416	8	3K	6K	Sweeping	END	213
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B9K.wkt --tag1 3K --tag2 9K --appid 8
+INFO	1666975835883	8	3K	9K	Traditional	START	0
+INFO	1666975836259	8	3K	9K	Traditional	END	376
+INFO	1666975836259	8	3K	9K	Sweeping	START	0
+INFO	1666975836519	8	3K	9K	Sweeping	END	260
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B12K.wkt --tag1 3K --tag2 12K --appid 8
+INFO	1666975838199	8	3K	12K	Traditional	START	0
+INFO	1666975838608	8	3K	12K	Traditional	END	410
+INFO	1666975838608	8	3K	12K	Sweeping	START	0
+INFO	1666975838873	8	3K	12K	Sweeping	END	264
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B15K.wkt --tag1 3K --tag2 15K --appid 8
+INFO	1666975840664	8	3K	15K	Traditional	START	0
+INFO	1666975841122	8	3K	15K	Traditional	END	458
+INFO	1666975841122	8	3K	15K	Sweeping	START	0
+INFO	1666975841386	8	3K	15K	Sweeping	END	264
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B18K.wkt --tag1 3K --tag2 18K --appid 8
+INFO	1666975843348	8	3K	18K	Traditional	START	0
+INFO	1666975843899	8	3K	18K	Traditional	END	550
+INFO	1666975843899	8	3K	18K	Sweeping	START	0
+INFO	1666975844194	8	3K	18K	Sweeping	END	295
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B21K.wkt --tag1 3K --tag2 21K --appid 8
+INFO	1666975846208	8	3K	21K	Traditional	START	0
+INFO	1666975846860	8	3K	21K	Traditional	END	652
+INFO	1666975846861	8	3K	21K	Sweeping	START	0
+INFO	1666975847153	8	3K	21K	Sweeping	END	291
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B6K.wkt --tag1 3K --tag2 6K --appid 9
+INFO	1666975848569	9	3K	6K	Traditional	START	0
+INFO	1666975848857	9	3K	6K	Traditional	END	287
+INFO	1666975848857	9	3K	6K	Sweeping	START	0
+INFO	1666975849066	9	3K	6K	Sweeping	END	209
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B9K.wkt --tag1 3K --tag2 9K --appid 9
+INFO	1666975850527	9	3K	9K	Traditional	START	0
+INFO	1666975850986	9	3K	9K	Traditional	END	459
+INFO	1666975850986	9	3K	9K	Sweeping	START	0
+INFO	1666975851239	9	3K	9K	Sweeping	END	253
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B12K.wkt --tag1 3K --tag2 12K --appid 9
+INFO	1666975852935	9	3K	12K	Traditional	START	0
+INFO	1666975853341	9	3K	12K	Traditional	END	406
+INFO	1666975853341	9	3K	12K	Sweeping	START	0
+INFO	1666975853604	9	3K	12K	Sweeping	END	263
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B15K.wkt --tag1 3K --tag2 15K --appid 9
+INFO	1666975855358	9	3K	15K	Traditional	START	0
+INFO	1666975855810	9	3K	15K	Traditional	END	452
+INFO	1666975855810	9	3K	15K	Sweeping	START	0
+INFO	1666975856073	9	3K	15K	Sweeping	END	263
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B18K.wkt --tag1 3K --tag2 18K --appid 9
+INFO	1666975858058	9	3K	18K	Traditional	START	0
+INFO	1666975858643	9	3K	18K	Traditional	END	585
+INFO	1666975858644	9	3K	18K	Sweeping	START	0
+INFO	1666975858965	9	3K	18K	Sweeping	END	321
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B21K.wkt --tag1 3K --tag2 21K --appid 9
+INFO	1666975861120	9	3K	21K	Traditional	START	0
+INFO	1666975861785	9	3K	21K	Traditional	END	665
+INFO	1666975861785	9	3K	21K	Sweeping	START	0
+INFO	1666975862082	9	3K	21K	Sweeping	END	297
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B6K.wkt --tag1 3K --tag2 6K --appid 10
+INFO	1666975863483	10	3K	6K	Traditional	START	0
+INFO	1666975863786	10	3K	6K	Traditional	END	303
+INFO	1666975863786	10	3K	6K	Sweeping	START	0
+INFO	1666975864010	10	3K	6K	Sweeping	END	224
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B9K.wkt --tag1 3K --tag2 9K --appid 10
+INFO	1666975865480	10	3K	9K	Traditional	START	0
+INFO	1666975865894	10	3K	9K	Traditional	END	415
+INFO	1666975865894	10	3K	9K	Sweeping	START	0
+INFO	1666975866129	10	3K	9K	Sweeping	END	235
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B12K.wkt --tag1 3K --tag2 12K --appid 10
+INFO	1666975867788	10	3K	12K	Traditional	START	0
+INFO	1666975868168	10	3K	12K	Traditional	END	380
+INFO	1666975868168	10	3K	12K	Sweeping	START	0
+INFO	1666975868431	10	3K	12K	Sweeping	END	263
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B15K.wkt --tag1 3K --tag2 15K --appid 10
+INFO	1666975870231	10	3K	15K	Traditional	START	0
+INFO	1666975870706	10	3K	15K	Traditional	END	475
+INFO	1666975870706	10	3K	15K	Sweeping	START	0
+INFO	1666975870995	10	3K	15K	Sweeping	END	289
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B18K.wkt --tag1 3K --tag2 18K --appid 10
+INFO	1666975872974	10	3K	18K	Traditional	START	0
+INFO	1666975873541	10	3K	18K	Traditional	END	567
+INFO	1666975873541	10	3K	18K	Sweeping	START	0
+INFO	1666975873843	10	3K	18K	Sweeping	END	302
+scala -cp /home/and/Spark/2.4/jars/geospark-1.2.0.jar:/home/and/Spark/2.4/jars/scallop_2.11-3.1.5.jar:/home/and/Spark/2.4/jars/scala-library-2.11.12.jar:/home/and/Spark/2.4/jars/jgrapht-core-1.4.0.jar:/home/and/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar sdcel.bo.RangeTester --input1 /home/and/RIDIR/Datasets/BiasIntersections/PA3/A3K.wkt --input2 /home/and/RIDIR/Datasets/BiasIntersections/PA3/B21K.wkt --tag1 3K --tag2 21K --appid 10
+INFO	1666975875943	10	3K	21K	Traditional	START	0
+INFO	1666975876699	10	3K	21K	Traditional	END	756
+INFO	1666975876699	10	3K	21K	Sweeping	START	0
+INFO	1666975877036	10	3K	21K	Sweeping	END	337

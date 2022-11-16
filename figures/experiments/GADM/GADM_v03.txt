@@ -1,0 +1,312 @@
+DATASET    = gadm/l3vsl2
+TOLERANCE  = 1e-3
+FIRST      = 22000
+INCREMENT  = 2000
+LAST       = 30000
+ITERATIONS = 5
+MASTER     = yarn
+Run 1 ./sdcel2_debug gadm/l3vsl2/P22000 /home/acald013/RIDIR/local_path/gadm/l3vsl2/P22000/ 1e-3 "22000_gadm/l3vsl2_1e-3_1" yarn 
+2022-04-06 15:10:19,517|31643|application_1648870353198_0286|31935|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 12 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/l3vsl2/P22000/edgesA --input2 gadm/l3vsl2/P22000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/l3vsl2/P22000//quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/l3vsl2/P22000//boundary.wkt --tolerance 1e-3 --qtag 22000_gadm/l3vsl2_1e-3_1 --ooption 0 --level 4
+2022-04-06 15:10:19,517|31643|application_1648870353198_0286|INFO|tolerance=0.001
+2022-04-06 15:10:19,518|31644|application_1648870353198_0286|INFO|overlay_option=0
+2022-04-06 15:10:19,518|31644|application_1648870353198_0286|INFO|overlay_level=4
+2022-04-06 15:10:20,252|32378|application_1648870353198_0286|735|TIME|start|22000_gadm/l3vsl2_1e-3_1
+2022-04-06 15:23:01,545|793671|application_1648870353198_0286|761293|TIME|read|22000_gadm/l3vsl2_1e-3_1
+2022-04-06 15:31:48,304|1320430|application_1648870353198_0286|526759|TIME|layer1|22000_gadm/l3vsl2_1e-3_1
+2022-04-06 15:44:35,622|2087748|application_1648870353198_0286|767318|TIME|layer2|22000_gadm/l3vsl2_1e-3_1
+2022-04-06 15:52:52,484|2584610|application_1648870353198_0286|496862|TIME|overlay|22000_gadm/l3vsl2_1e-3_1
+2022-04-06 15:52:52,485|2584611|application_1648870353198_0286|1|TIME|end|22000_gadm/l3vsl2_1e-3_1
+Run 1 ./sdcel2_debug gadm/l3vsl2/P24000 /home/acald013/RIDIR/local_path/gadm/l3vsl2/P24000/ 1e-3 "24000_gadm/l3vsl2_1e-3_1" yarn 
+2022-04-06 15:53:11,929|14640|application_1648870353198_0287|14887|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 12 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/l3vsl2/P24000/edgesA --input2 gadm/l3vsl2/P24000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/l3vsl2/P24000//quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/l3vsl2/P24000//boundary.wkt --tolerance 1e-3 --qtag 24000_gadm/l3vsl2_1e-3_1 --ooption 0 --level 4
+2022-04-06 15:53:11,929|14640|application_1648870353198_0287|INFO|tolerance=0.001
+2022-04-06 15:53:11,930|14641|application_1648870353198_0287|INFO|overlay_option=0
+2022-04-06 15:53:11,930|14641|application_1648870353198_0287|INFO|overlay_level=4
+2022-04-06 15:53:12,615|15326|application_1648870353198_0287|686|TIME|start|24000_gadm/l3vsl2_1e-3_1
+2022-04-06 16:07:52,441|895152|application_1648870353198_0287|879826|TIME|read|24000_gadm/l3vsl2_1e-3_1
+2022-04-06 16:18:29,044|1531755|application_1648870353198_0287|636603|TIME|layer1|24000_gadm/l3vsl2_1e-3_1
+2022-04-06 16:33:42,711|2445422|application_1648870353198_0287|913667|TIME|layer2|24000_gadm/l3vsl2_1e-3_1
+2022-04-06 16:43:08,621|3011332|application_1648870353198_0287|565910|TIME|overlay|24000_gadm/l3vsl2_1e-3_1
+2022-04-06 16:43:08,621|3011332|application_1648870353198_0287|0|TIME|end|24000_gadm/l3vsl2_1e-3_1
+Run 1 ./sdcel2_debug gadm/l3vsl2/P26000 /home/acald013/RIDIR/local_path/gadm/l3vsl2/P26000/ 1e-3 "26000_gadm/l3vsl2_1e-3_1" yarn 
+2022-04-06 16:43:29,231|15376|application_1648870353198_0288|15634|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 12 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/l3vsl2/P26000/edgesA --input2 gadm/l3vsl2/P26000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/l3vsl2/P26000//quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/l3vsl2/P26000//boundary.wkt --tolerance 1e-3 --qtag 26000_gadm/l3vsl2_1e-3_1 --ooption 0 --level 4
+2022-04-06 16:43:29,232|15377|application_1648870353198_0288|INFO|tolerance=0.001
+2022-04-06 16:43:29,232|15377|application_1648870353198_0288|INFO|overlay_option=0
+2022-04-06 16:43:29,232|15377|application_1648870353198_0288|INFO|overlay_level=4
+2022-04-06 16:43:29,928|16073|application_1648870353198_0288|697|TIME|start|26000_gadm/l3vsl2_1e-3_1
+2022-04-06 16:59:26,962|973107|application_1648870353198_0288|957034|TIME|read|26000_gadm/l3vsl2_1e-3_1
+2022-04-06 17:11:57,435|1723580|application_1648870353198_0288|750473|TIME|layer1|26000_gadm/l3vsl2_1e-3_1
+2022-04-06 17:30:04,961|2811106|application_1648870353198_0288|1087526|TIME|layer2|26000_gadm/l3vsl2_1e-3_1
+2022-04-06 17:40:11,037|3417182|application_1648870353198_0288|606076|TIME|overlay|26000_gadm/l3vsl2_1e-3_1
+2022-04-06 17:40:11,038|3417183|application_1648870353198_0288|1|TIME|end|26000_gadm/l3vsl2_1e-3_1
+Run 1 ./sdcel2_debug gadm/l3vsl2/P28000 /home/acald013/RIDIR/local_path/gadm/l3vsl2/P28000/ 1e-3 "28000_gadm/l3vsl2_1e-3_1" yarn 
+2022-04-06 17:40:30,289|14672|application_1648870353198_0289|14924|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 12 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/l3vsl2/P28000/edgesA --input2 gadm/l3vsl2/P28000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/l3vsl2/P28000//quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/l3vsl2/P28000//boundary.wkt --tolerance 1e-3 --qtag 28000_gadm/l3vsl2_1e-3_1 --ooption 0 --level 4
+2022-04-06 17:40:30,289|14672|application_1648870353198_0289|INFO|tolerance=0.001
+2022-04-06 17:40:30,290|14673|application_1648870353198_0289|INFO|overlay_option=0
+2022-04-06 17:40:30,290|14673|application_1648870353198_0289|INFO|overlay_level=4
+2022-04-06 17:40:31,099|15482|application_1648870353198_0289|810|TIME|start|28000_gadm/l3vsl2_1e-3_1
+2022-04-06 17:58:33,481|1097864|application_1648870353198_0289|1082382|TIME|read|28000_gadm/l3vsl2_1e-3_1
+2022-04-06 18:13:22,679|1987062|application_1648870353198_0289|889198|TIME|layer1|28000_gadm/l3vsl2_1e-3_1
+2022-04-06 18:35:45,713|3330096|application_1648870353198_0289|1343034|TIME|layer2|28000_gadm/l3vsl2_1e-3_1
+2022-04-06 18:47:19,913|4024296|application_1648870353198_0289|694200|TIME|overlay|28000_gadm/l3vsl2_1e-3_1
+2022-04-06 18:47:19,914|4024297|application_1648870353198_0289|1|TIME|end|28000_gadm/l3vsl2_1e-3_1
+Run 1 ./sdcel2_debug gadm/l3vsl2/P30000 /home/acald013/RIDIR/local_path/gadm/l3vsl2/P30000/ 1e-3 "30000_gadm/l3vsl2_1e-3_1" yarn 
+2022-04-06 18:47:39,472|14377|application_1648870353198_0290|14635|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 12 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/l3vsl2/P30000/edgesA --input2 gadm/l3vsl2/P30000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/l3vsl2/P30000//quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/l3vsl2/P30000//boundary.wkt --tolerance 1e-3 --qtag 30000_gadm/l3vsl2_1e-3_1 --ooption 0 --level 4
+2022-04-06 18:47:39,472|14377|application_1648870353198_0290|INFO|tolerance=0.001
+2022-04-06 18:47:39,473|14378|application_1648870353198_0290|INFO|overlay_option=0
+2022-04-06 18:47:39,473|14378|application_1648870353198_0290|INFO|overlay_level=4
+2022-04-06 18:47:40,317|15222|application_1648870353198_0290|845|TIME|start|30000_gadm/l3vsl2_1e-3_1
+2022-04-06 19:07:22,111|1197016|application_1648870353198_0290|1181794|TIME|read|30000_gadm/l3vsl2_1e-3_1
+2022-04-06 19:24:01,666|2196571|application_1648870353198_0290|999555|TIME|layer1|30000_gadm/l3vsl2_1e-3_1
+2022-04-06 19:49:54,077|3748982|application_1648870353198_0290|1552411|TIME|layer2|30000_gadm/l3vsl2_1e-3_1
+2022-04-06 20:02:33,165|4508070|application_1648870353198_0290|759088|TIME|overlay|30000_gadm/l3vsl2_1e-3_1
+2022-04-06 20:02:33,166|4508071|application_1648870353198_0290|1|TIME|end|30000_gadm/l3vsl2_1e-3_1
+Run 2 ./sdcel2_debug gadm/l3vsl2/P22000 /home/acald013/RIDIR/local_path/gadm/l3vsl2/P22000/ 1e-3 "22000_gadm/l3vsl2_1e-3_2" yarn 
+2022-04-06 20:02:54,228|15162|application_1648870353198_0291|15436|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 12 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/l3vsl2/P22000/edgesA --input2 gadm/l3vsl2/P22000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/l3vsl2/P22000//quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/l3vsl2/P22000//boundary.wkt --tolerance 1e-3 --qtag 22000_gadm/l3vsl2_1e-3_2 --ooption 0 --level 4
+2022-04-06 20:02:54,229|15163|application_1648870353198_0291|INFO|tolerance=0.001
+2022-04-06 20:02:54,229|15163|application_1648870353198_0291|INFO|overlay_option=0
+2022-04-06 20:02:54,229|15163|application_1648870353198_0291|INFO|overlay_level=4
+2022-04-06 20:02:54,921|15855|application_1648870353198_0291|693|TIME|start|22000_gadm/l3vsl2_1e-3_2
+2022-04-06 20:15:24,190|765124|application_1648870353198_0291|749269|TIME|read|22000_gadm/l3vsl2_1e-3_2
+2022-04-06 20:24:04,920|1285854|application_1648870353198_0291|520730|TIME|layer1|22000_gadm/l3vsl2_1e-3_2
+2022-04-06 20:36:38,912|2039846|application_1648870353198_0291|753992|TIME|layer2|22000_gadm/l3vsl2_1e-3_2
+2022-04-06 20:45:04,565|2545499|application_1648870353198_0291|505653|TIME|overlay|22000_gadm/l3vsl2_1e-3_2
+2022-04-06 20:45:04,567|2545501|application_1648870353198_0291|2|TIME|end|22000_gadm/l3vsl2_1e-3_2
+Run 2 ./sdcel2_debug gadm/l3vsl2/P24000 /home/acald013/RIDIR/local_path/gadm/l3vsl2/P24000/ 1e-3 "24000_gadm/l3vsl2_1e-3_2" yarn 
+2022-04-06 20:45:23,706|13993|application_1648870353198_0292|14243|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 12 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/l3vsl2/P24000/edgesA --input2 gadm/l3vsl2/P24000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/l3vsl2/P24000//quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/l3vsl2/P24000//boundary.wkt --tolerance 1e-3 --qtag 24000_gadm/l3vsl2_1e-3_2 --ooption 0 --level 4
+2022-04-06 20:45:23,706|13993|application_1648870353198_0292|INFO|tolerance=0.001
+2022-04-06 20:45:23,707|13994|application_1648870353198_0292|INFO|overlay_option=0
+2022-04-06 20:45:23,707|13994|application_1648870353198_0292|INFO|overlay_level=4
+2022-04-06 20:45:24,632|14919|application_1648870353198_0292|926|TIME|start|24000_gadm/l3vsl2_1e-3_2
+2022-04-06 20:59:40,855|871142|application_1648870353198_0292|856223|TIME|read|24000_gadm/l3vsl2_1e-3_2
+2022-04-06 21:10:21,267|1511554|application_1648870353198_0292|640412|TIME|layer1|24000_gadm/l3vsl2_1e-3_2
+2022-04-06 21:26:07,414|2457701|application_1648870353198_0292|946147|TIME|layer2|24000_gadm/l3vsl2_1e-3_2
+2022-04-06 21:35:58,115|3048402|application_1648870353198_0292|590701|TIME|overlay|24000_gadm/l3vsl2_1e-3_2
+2022-04-06 21:35:58,116|3048403|application_1648870353198_0292|1|TIME|end|24000_gadm/l3vsl2_1e-3_2
+Run 2 ./sdcel2_debug gadm/l3vsl2/P26000 /home/acald013/RIDIR/local_path/gadm/l3vsl2/P26000/ 1e-3 "26000_gadm/l3vsl2_1e-3_2" yarn 
+2022-04-06 21:36:17,860|14629|application_1648870353198_0293|14878|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 12 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/l3vsl2/P26000/edgesA --input2 gadm/l3vsl2/P26000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/l3vsl2/P26000//quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/l3vsl2/P26000//boundary.wkt --tolerance 1e-3 --qtag 26000_gadm/l3vsl2_1e-3_2 --ooption 0 --level 4
+2022-04-06 21:36:17,860|14629|application_1648870353198_0293|INFO|tolerance=0.001
+2022-04-06 21:36:17,861|14630|application_1648870353198_0293|INFO|overlay_option=0
+2022-04-06 21:36:17,861|14630|application_1648870353198_0293|INFO|overlay_level=4
+2022-04-06 21:36:18,613|15382|application_1648870353198_0293|753|TIME|start|26000_gadm/l3vsl2_1e-3_2
+2022-04-06 21:52:17,666|974435|application_1648870353198_0293|959053|TIME|read|26000_gadm/l3vsl2_1e-3_2
+2022-04-06 22:04:43,150|1719919|application_1648870353198_0293|745484|TIME|layer1|26000_gadm/l3vsl2_1e-3_2
+2022-04-06 22:24:18,543|2895312|application_1648870353198_0293|1175393|TIME|layer2|26000_gadm/l3vsl2_1e-3_2
+2022-04-06 22:36:06,779|3603548|application_1648870353198_0293|708236|TIME|overlay|26000_gadm/l3vsl2_1e-3_2
+2022-04-06 22:36:06,779|3603548|application_1648870353198_0293|0|TIME|end|26000_gadm/l3vsl2_1e-3_2
+Run 2 ./sdcel2_debug gadm/l3vsl2/P28000 /home/acald013/RIDIR/local_path/gadm/l3vsl2/P28000/ 1e-3 "28000_gadm/l3vsl2_1e-3_2" yarn 
+2022-04-06 22:36:43,914|31371|application_1648870353198_0296|31742|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 12 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/l3vsl2/P28000/edgesA --input2 gadm/l3vsl2/P28000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/l3vsl2/P28000//quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/l3vsl2/P28000//boundary.wkt --tolerance 1e-3 --qtag 28000_gadm/l3vsl2_1e-3_2 --ooption 0 --level 4
+2022-04-06 22:36:43,915|31372|application_1648870353198_0296|INFO|tolerance=0.001
+2022-04-06 22:36:43,915|31372|application_1648870353198_0296|INFO|overlay_option=0
+2022-04-06 22:36:43,916|31373|application_1648870353198_0296|INFO|overlay_level=4
+2022-04-06 22:36:44,726|32183|application_1648870353198_0296|812|TIME|start|28000_gadm/l3vsl2_1e-3_2
+2022-04-06 23:49:02,859|4370316|application_1648870353198_0296|4338133|TIME|read|28000_gadm/l3vsl2_1e-3_2
+2022-04-07 00:03:42,835|5250292|application_1648870353198_0296|879976|TIME|layer1|28000_gadm/l3vsl2_1e-3_2
+2022-04-07 00:25:35,104|6562561|application_1648870353198_0296|1312269|TIME|layer2|28000_gadm/l3vsl2_1e-3_2
+2022-04-07 00:36:39,659|7227116|application_1648870353198_0296|664555|TIME|overlay|28000_gadm/l3vsl2_1e-3_2
+2022-04-07 00:36:39,659|7227116|application_1648870353198_0296|0|TIME|end|28000_gadm/l3vsl2_1e-3_2
+Run 2 ./sdcel2_debug gadm/l3vsl2/P30000 /home/acald013/RIDIR/local_path/gadm/l3vsl2/P30000/ 1e-3 "30000_gadm/l3vsl2_1e-3_2" yarn 
+2022-04-07 00:37:00,122|15946|application_1648870353198_0297|16239|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 12 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/l3vsl2/P30000/edgesA --input2 gadm/l3vsl2/P30000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/l3vsl2/P30000//quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/l3vsl2/P30000//boundary.wkt --tolerance 1e-3 --qtag 30000_gadm/l3vsl2_1e-3_2 --ooption 0 --level 4
+2022-04-07 00:37:00,122|15946|application_1648870353198_0297|INFO|tolerance=0.001
+2022-04-07 00:37:00,122|15946|application_1648870353198_0297|INFO|overlay_option=0
+2022-04-07 00:37:00,123|15947|application_1648870353198_0297|INFO|overlay_level=4
+2022-04-07 00:37:00,932|16756|application_1648870353198_0297|811|TIME|start|30000_gadm/l3vsl2_1e-3_2
+2022-04-07 00:57:07,229|1223053|application_1648870353198_0297|1206297|TIME|read|30000_gadm/l3vsl2_1e-3_2
+2022-04-07 01:14:07,113|2242937|application_1648870353198_0297|1019884|TIME|layer1|30000_gadm/l3vsl2_1e-3_2
+2022-04-07 01:40:07,440|3803264|application_1648870353198_0297|1560327|TIME|layer2|30000_gadm/l3vsl2_1e-3_2
+2022-04-07 01:52:21,239|4537063|application_1648870353198_0297|733799|TIME|overlay|30000_gadm/l3vsl2_1e-3_2
+2022-04-07 01:52:21,239|4537063|application_1648870353198_0297|0|TIME|end|30000_gadm/l3vsl2_1e-3_2
+Run 3 ./sdcel2_debug gadm/l3vsl2/P22000 /home/acald013/RIDIR/local_path/gadm/l3vsl2/P22000/ 1e-3 "22000_gadm/l3vsl2_1e-3_3" yarn 
+2022-04-07 01:52:41,356|14518|application_1648870353198_0298|14775|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 12 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/l3vsl2/P22000/edgesA --input2 gadm/l3vsl2/P22000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/l3vsl2/P22000//quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/l3vsl2/P22000//boundary.wkt --tolerance 1e-3 --qtag 22000_gadm/l3vsl2_1e-3_3 --ooption 0 --level 4
+2022-04-07 01:52:41,356|14518|application_1648870353198_0298|INFO|tolerance=0.001
+2022-04-07 01:52:41,356|14518|application_1648870353198_0298|INFO|overlay_option=0
+2022-04-07 01:52:41,356|14518|application_1648870353198_0298|INFO|overlay_level=4
+2022-04-07 01:52:42,021|15183|application_1648870353198_0298|666|TIME|start|22000_gadm/l3vsl2_1e-3_3
+2022-04-07 02:05:14,839|768001|application_1648870353198_0298|752818|TIME|read|22000_gadm/l3vsl2_1e-3_3
+2022-04-07 02:13:51,962|1285124|application_1648870353198_0298|517123|TIME|layer1|22000_gadm/l3vsl2_1e-3_3
+2022-04-07 02:26:33,252|2046414|application_1648870353198_0298|761290|TIME|layer2|22000_gadm/l3vsl2_1e-3_3
+2022-04-07 02:34:41,508|2534670|application_1648870353198_0298|488256|TIME|overlay|22000_gadm/l3vsl2_1e-3_3
+2022-04-07 02:34:41,509|2534671|application_1648870353198_0298|1|TIME|end|22000_gadm/l3vsl2_1e-3_3
+Run 3 ./sdcel2_debug gadm/l3vsl2/P24000 /home/acald013/RIDIR/local_path/gadm/l3vsl2/P24000/ 1e-3 "24000_gadm/l3vsl2_1e-3_3" yarn 
+2022-04-07 02:35:00,446|14084|application_1648870353198_0299|14333|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 12 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/l3vsl2/P24000/edgesA --input2 gadm/l3vsl2/P24000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/l3vsl2/P24000//quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/l3vsl2/P24000//boundary.wkt --tolerance 1e-3 --qtag 24000_gadm/l3vsl2_1e-3_3 --ooption 0 --level 4
+2022-04-07 02:35:00,446|14084|application_1648870353198_0299|INFO|tolerance=0.001
+2022-04-07 02:35:00,446|14084|application_1648870353198_0299|INFO|overlay_option=0
+2022-04-07 02:35:00,447|14085|application_1648870353198_0299|INFO|overlay_level=4
+2022-04-07 02:35:01,151|14789|application_1648870353198_0299|705|TIME|start|24000_gadm/l3vsl2_1e-3_3
+2022-04-07 02:49:23,898|877536|application_1648870353198_0299|862747|TIME|read|24000_gadm/l3vsl2_1e-3_3
+2022-04-07 02:59:57,618|1511256|application_1648870353198_0299|633720|TIME|layer1|24000_gadm/l3vsl2_1e-3_3
+2022-04-07 03:15:27,601|2441239|application_1648870353198_0299|929983|TIME|layer2|24000_gadm/l3vsl2_1e-3_3
+2022-04-07 03:24:36,075|2989713|application_1648870353198_0299|548474|TIME|overlay|24000_gadm/l3vsl2_1e-3_3
+2022-04-07 03:24:36,076|2989714|application_1648870353198_0299|1|TIME|end|24000_gadm/l3vsl2_1e-3_3
+Run 3 ./sdcel2_debug gadm/l3vsl2/P26000 /home/acald013/RIDIR/local_path/gadm/l3vsl2/P26000/ 1e-3 "26000_gadm/l3vsl2_1e-3_3" yarn 
+2022-04-07 03:24:56,719|14695|application_1648870353198_0300|14952|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 12 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/l3vsl2/P26000/edgesA --input2 gadm/l3vsl2/P26000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/l3vsl2/P26000//quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/l3vsl2/P26000//boundary.wkt --tolerance 1e-3 --qtag 26000_gadm/l3vsl2_1e-3_3 --ooption 0 --level 4
+2022-04-07 03:24:56,720|14696|application_1648870353198_0300|INFO|tolerance=0.001
+2022-04-07 03:24:56,720|14696|application_1648870353198_0300|INFO|overlay_option=0
+2022-04-07 03:24:56,720|14696|application_1648870353198_0300|INFO|overlay_level=4
+2022-04-07 03:24:57,478|15454|application_1648870353198_0300|759|TIME|start|26000_gadm/l3vsl2_1e-3_3
+2022-04-07 03:40:58,391|976367|application_1648870353198_0300|960913|TIME|read|26000_gadm/l3vsl2_1e-3_3
+2022-04-07 03:52:29,036|1667012|application_1648870353198_0300|690645|TIME|layer1|26000_gadm/l3vsl2_1e-3_3
+2022-04-07 04:08:51,491|2649467|application_1648870353198_0300|982455|TIME|layer2|26000_gadm/l3vsl2_1e-3_3
+2022-04-07 04:19:20,687|3278663|application_1648870353198_0300|629196|TIME|overlay|26000_gadm/l3vsl2_1e-3_3
+2022-04-07 04:19:20,688|3278664|application_1648870353198_0300|1|TIME|end|26000_gadm/l3vsl2_1e-3_3
+Run 3 ./sdcel2_debug gadm/l3vsl2/P28000 /home/acald013/RIDIR/local_path/gadm/l3vsl2/P28000/ 1e-3 "28000_gadm/l3vsl2_1e-3_3" yarn 
+2022-04-07 04:19:40,324|15140|application_1648870353198_0301|15387|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 12 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/l3vsl2/P28000/edgesA --input2 gadm/l3vsl2/P28000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/l3vsl2/P28000//quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/l3vsl2/P28000//boundary.wkt --tolerance 1e-3 --qtag 28000_gadm/l3vsl2_1e-3_3 --ooption 0 --level 4
+2022-04-07 04:19:40,324|15140|application_1648870353198_0301|INFO|tolerance=0.001
+2022-04-07 04:19:40,325|15141|application_1648870353198_0301|INFO|overlay_option=0
+2022-04-07 04:19:40,325|15141|application_1648870353198_0301|INFO|overlay_level=4
+2022-04-07 04:19:41,120|15936|application_1648870353198_0301|796|TIME|start|28000_gadm/l3vsl2_1e-3_3
+2022-04-07 04:37:34,908|1089724|application_1648870353198_0301|1073788|TIME|read|28000_gadm/l3vsl2_1e-3_3
+2022-04-07 04:52:14,727|1969543|application_1648870353198_0301|879819|TIME|layer1|28000_gadm/l3vsl2_1e-3_3
+2022-04-07 05:14:28,403|3303219|application_1648870353198_0301|1333675|TIME|layer2|28000_gadm/l3vsl2_1e-3_3
+2022-04-07 05:25:36,160|3970976|application_1648870353198_0301|667758|TIME|overlay|28000_gadm/l3vsl2_1e-3_3
+2022-04-07 05:25:36,161|3970977|application_1648870353198_0301|1|TIME|end|28000_gadm/l3vsl2_1e-3_3
+Run 3 ./sdcel2_debug gadm/l3vsl2/P30000 /home/acald013/RIDIR/local_path/gadm/l3vsl2/P30000/ 1e-3 "30000_gadm/l3vsl2_1e-3_3" yarn 
+2022-04-07 05:25:55,577|14323|application_1648870353198_0302|14577|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 12 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/l3vsl2/P30000/edgesA --input2 gadm/l3vsl2/P30000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/l3vsl2/P30000//quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/l3vsl2/P30000//boundary.wkt --tolerance 1e-3 --qtag 30000_gadm/l3vsl2_1e-3_3 --ooption 0 --level 4
+2022-04-07 05:25:55,578|14324|application_1648870353198_0302|INFO|tolerance=0.001
+2022-04-07 05:25:55,578|14324|application_1648870353198_0302|INFO|overlay_option=0
+2022-04-07 05:25:55,578|14324|application_1648870353198_0302|INFO|overlay_level=4
+2022-04-07 05:25:56,422|15168|application_1648870353198_0302|845|TIME|start|30000_gadm/l3vsl2_1e-3_3
+2022-04-07 05:45:45,862|1204608|application_1648870353198_0302|1189440|TIME|read|30000_gadm/l3vsl2_1e-3_3
+2022-04-07 06:02:43,344|2222090|application_1648870353198_0302|1017482|TIME|layer1|30000_gadm/l3vsl2_1e-3_3
+2022-04-07 06:28:43,399|3782145|application_1648870353198_0302|1560055|TIME|layer2|30000_gadm/l3vsl2_1e-3_3
+2022-04-07 06:40:55,219|4513965|application_1648870353198_0302|731820|TIME|overlay|30000_gadm/l3vsl2_1e-3_3
+2022-04-07 06:40:55,219|4513965|application_1648870353198_0302|0|TIME|end|30000_gadm/l3vsl2_1e-3_3
+Run 4 ./sdcel2_debug gadm/l3vsl2/P22000 /home/acald013/RIDIR/local_path/gadm/l3vsl2/P22000/ 1e-3 "22000_gadm/l3vsl2_1e-3_4" yarn 
+2022-04-07 06:41:15,768|15191|application_1648870353198_0303|15446|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 12 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/l3vsl2/P22000/edgesA --input2 gadm/l3vsl2/P22000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/l3vsl2/P22000//quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/l3vsl2/P22000//boundary.wkt --tolerance 1e-3 --qtag 22000_gadm/l3vsl2_1e-3_4 --ooption 0 --level 4
+2022-04-07 06:41:15,768|15191|application_1648870353198_0303|INFO|tolerance=0.001
+2022-04-07 06:41:15,768|15191|application_1648870353198_0303|INFO|overlay_option=0
+2022-04-07 06:41:15,769|15192|application_1648870353198_0303|INFO|overlay_level=4
+2022-04-07 06:41:16,420|15843|application_1648870353198_0303|653|TIME|start|22000_gadm/l3vsl2_1e-3_4
+2022-04-07 06:53:42,730|762153|application_1648870353198_0303|746310|TIME|read|22000_gadm/l3vsl2_1e-3_4
+2022-04-07 07:02:19,345|1278768|application_1648870353198_0303|516615|TIME|layer1|22000_gadm/l3vsl2_1e-3_4
+2022-04-07 07:14:43,446|2022869|application_1648870353198_0303|744101|TIME|layer2|22000_gadm/l3vsl2_1e-3_4
+2022-04-07 07:23:27,117|2546540|application_1648870353198_0303|523671|TIME|overlay|22000_gadm/l3vsl2_1e-3_4
+2022-04-07 07:23:27,117|2546540|application_1648870353198_0303|0|TIME|end|22000_gadm/l3vsl2_1e-3_4
+Run 4 ./sdcel2_debug gadm/l3vsl2/P24000 /home/acald013/RIDIR/local_path/gadm/l3vsl2/P24000/ 1e-3 "24000_gadm/l3vsl2_1e-3_4" yarn 
+2022-04-07 07:23:46,989|14943|application_1648870353198_0304|15198|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 12 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/l3vsl2/P24000/edgesA --input2 gadm/l3vsl2/P24000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/l3vsl2/P24000//quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/l3vsl2/P24000//boundary.wkt --tolerance 1e-3 --qtag 24000_gadm/l3vsl2_1e-3_4 --ooption 0 --level 4
+2022-04-07 07:23:46,990|14944|application_1648870353198_0304|INFO|tolerance=0.001
+2022-04-07 07:23:46,990|14944|application_1648870353198_0304|INFO|overlay_option=0
+2022-04-07 07:23:46,990|14944|application_1648870353198_0304|INFO|overlay_level=4
+2022-04-07 07:23:47,702|15656|application_1648870353198_0304|713|TIME|start|24000_gadm/l3vsl2_1e-3_4
+2022-04-07 07:38:04,524|872478|application_1648870353198_0304|856822|TIME|read|24000_gadm/l3vsl2_1e-3_4
+2022-04-07 07:49:43,407|1571361|application_1648870353198_0304|698883|TIME|layer1|24000_gadm/l3vsl2_1e-3_4
+2022-04-07 08:07:14,139|2622093|application_1648870353198_0304|1050731|TIME|layer2|24000_gadm/l3vsl2_1e-3_4
+2022-04-07 08:21:06,570|3454524|application_1648870353198_0304|832432|TIME|overlay|24000_gadm/l3vsl2_1e-3_4
+2022-04-07 08:21:06,570|3454524|application_1648870353198_0304|0|TIME|end|24000_gadm/l3vsl2_1e-3_4
+Run 4 ./sdcel2_debug gadm/l3vsl2/P26000 /home/acald013/RIDIR/local_path/gadm/l3vsl2/P26000/ 1e-3 "26000_gadm/l3vsl2_1e-3_4" yarn 
+2022-04-07 08:21:42,715|31453|application_1648870353198_0306|31711|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 12 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/l3vsl2/P26000/edgesA --input2 gadm/l3vsl2/P26000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/l3vsl2/P26000//quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/l3vsl2/P26000//boundary.wkt --tolerance 1e-3 --qtag 26000_gadm/l3vsl2_1e-3_4 --ooption 0 --level 4
+2022-04-07 08:21:42,715|31453|application_1648870353198_0306|INFO|tolerance=0.001
+2022-04-07 08:21:42,715|31453|application_1648870353198_0306|INFO|overlay_option=0
+2022-04-07 08:21:42,715|31453|application_1648870353198_0306|INFO|overlay_level=4
+2022-04-07 08:21:43,433|32171|application_1648870353198_0306|719|TIME|start|26000_gadm/l3vsl2_1e-3_4
+2022-04-07 08:53:30,106|1938844|application_1648870353198_0306|1906673|TIME|read|26000_gadm/l3vsl2_1e-3_4
+2022-04-07 09:07:04,805|2753543|application_1648870353198_0306|814698|TIME|layer1|26000_gadm/l3vsl2_1e-3_4
+2022-04-07 09:26:50,316|3939054|application_1648870353198_0306|1185512|TIME|layer2|26000_gadm/l3vsl2_1e-3_4
+2022-04-07 09:41:27,667|4816405|application_1648870353198_0306|877351|TIME|overlay|26000_gadm/l3vsl2_1e-3_4
+2022-04-07 09:41:27,667|4816405|application_1648870353198_0306|0|TIME|end|26000_gadm/l3vsl2_1e-3_4
+Run 4 ./sdcel2_debug gadm/l3vsl2/P28000 /home/acald013/RIDIR/local_path/gadm/l3vsl2/P28000/ 1e-3 "28000_gadm/l3vsl2_1e-3_4" yarn 
+2022-04-07 09:42:03,602|31348|application_1648870353198_0308|31604|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 12 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/l3vsl2/P28000/edgesA --input2 gadm/l3vsl2/P28000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/l3vsl2/P28000//quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/l3vsl2/P28000//boundary.wkt --tolerance 1e-3 --qtag 28000_gadm/l3vsl2_1e-3_4 --ooption 0 --level 4
+2022-04-07 09:42:03,602|31348|application_1648870353198_0308|INFO|tolerance=0.001
+2022-04-07 09:42:03,602|31348|application_1648870353198_0308|INFO|overlay_option=0
+2022-04-07 09:42:03,603|31349|application_1648870353198_0308|INFO|overlay_level=4
+2022-04-07 09:42:04,382|32128|application_1648870353198_0308|780|TIME|start|28000_gadm/l3vsl2_1e-3_4
+Exception in thread "main" org.apache.spark.SparkException: Job 0 cancelled because SparkContext was shut down
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$cleanUpAfterSchedulerStop$1.apply(DAGScheduler.scala:837)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$cleanUpAfterSchedulerStop$1.apply(DAGScheduler.scala:835)
+	at scala.collection.mutable.HashSet.foreach(HashSet.scala:78)
+	at org.apache.spark.scheduler.DAGScheduler.cleanUpAfterSchedulerStop(DAGScheduler.scala:835)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onStop(DAGScheduler.scala:1890)
+	at org.apache.spark.util.EventLoop.stop(EventLoop.scala:83)
+	at org.apache.spark.scheduler.DAGScheduler.stop(DAGScheduler.scala:1803)
+	at org.apache.spark.SparkContext$$anonfun$stop$8.apply$mcV$sp(SparkContext.scala:1931)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1361)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:1930)
+	at org.apache.spark.scheduler.cluster.YarnClientSchedulerBackend$MonitorThread.run(YarnClientSchedulerBackend.scala:112)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:642)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2034)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2055)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2074)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2099)
+	at org.apache.spark.rdd.RDD$$anonfun$collect$1.apply(RDD.scala:945)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:363)
+	at org.apache.spark.rdd.RDD.collect(RDD.scala:944)
+	at edu.ucr.dblab.sdcel.cells.EmptyCellManager2$.getEmptyCells(CellManager3.scala:39)
+	at edu.ucr.dblab.sdcel.SDCEL2$.main(SDCEL2.scala:61)
+	at edu.ucr.dblab.sdcel.SDCEL2.main(SDCEL2.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.JavaMainApplication.start(SparkApplication.scala:52)
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:904)
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:198)
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:228)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:137)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+Run 4 ./sdcel2_debug gadm/l3vsl2/P30000 /home/acald013/RIDIR/local_path/gadm/l3vsl2/P30000/ 1e-3 "30000_gadm/l3vsl2_1e-3_4" yarn 
+2022-04-07 10:09:27,862|31330|application_1648870353198_0309|31586|COMMAND|org.apache.spark.deploy.SparkSubmit --master yarn --deploy-mode client --conf spark.driver.memory=35g --conf spark.driver.maxResultSize=4G --conf spark.locality.wait=3s --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL2 --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 12 --executor-cores 9 --executor-memory 20g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/l3vsl2/P30000/edgesA --input2 gadm/l3vsl2/P30000/edgesB --quadtree /home/acald013/RIDIR/local_path/gadm/l3vsl2/P30000//quadtree.wkt --boundary /home/acald013/RIDIR/local_path/gadm/l3vsl2/P30000//boundary.wkt --tolerance 1e-3 --qtag 30000_gadm/l3vsl2_1e-3_4 --ooption 0 --level 4
+2022-04-07 10:09:27,863|31331|application_1648870353198_0309|INFO|tolerance=0.001
+2022-04-07 10:09:27,863|31331|application_1648870353198_0309|INFO|overlay_option=0
+2022-04-07 10:09:27,864|31332|application_1648870353198_0309|INFO|overlay_level=4
+2022-04-07 10:09:28,629|32097|application_1648870353198_0309|767|TIME|start|30000_gadm/l3vsl2_1e-3_4
+Exception in thread "main" java.lang.IllegalStateException: Cannot call methods on a stopped SparkContext.
+This stopped SparkContext was created at:
+
+org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:925)
+edu.ucr.dblab.sdcel.SDCEL2$.main(SDCEL2.scala:27)
+edu.ucr.dblab.sdcel.SDCEL2.main(SDCEL2.scala)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.apache.spark.deploy.JavaMainApplication.start(SparkApplication.scala:52)
+org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:904)
+org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:198)
+org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:228)
+org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:137)
+org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+
+The currently active SparkContext was created at:
+
+(No active SparkContext.)
+         
+	at org.apache.spark.SparkContext.assertNotStopped(SparkContext.scala:99)
+	at org.apache.spark.SparkContext.broadcast(SparkContext.scala:1479)
+	at org.apache.spark.sql.execution.datasources.text.TextFileFormat.buildReader(TextFileFormat.scala:114)
+	at org.apache.spark.sql.execution.datasources.FileFormat$class.buildReaderWithPartitionValues(FileFormat.scala:129)
+	at org.apache.spark.sql.execution.datasources.TextBasedFileFormat.buildReaderWithPartitionValues(FileFormat.scala:160)
+	at org.apache.spark.sql.execution.FileSourceScanExec.inputRDD$lzycompute(DataSourceScanExec.scala:297)
+	at org.apache.spark.sql.execution.FileSourceScanExec.inputRDD(DataSourceScanExec.scala:295)
+	at org.apache.spark.sql.execution.FileSourceScanExec.inputRDDs(DataSourceScanExec.scala:315)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec.doExecute(WholeStageCodegenExec.scala:605)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$execute$1.apply(SparkPlan.scala:131)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$execute$1.apply(SparkPlan.scala:127)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$executeQuery$1.apply(SparkPlan.scala:155)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:152)
+	at org.apache.spark.sql.execution.SparkPlan.execute(SparkPlan.scala:127)
+	at org.apache.spark.sql.execution.DeserializeToObjectExec.doExecute(objects.scala:89)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$execute$1.apply(SparkPlan.scala:131)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$execute$1.apply(SparkPlan.scala:127)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$executeQuery$1.apply(SparkPlan.scala:155)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:152)
+	at org.apache.spark.sql.execution.SparkPlan.execute(SparkPlan.scala:127)
+	at org.apache.spark.sql.execution.QueryExecution.toRdd$lzycompute(QueryExecution.scala:80)
+	at org.apache.spark.sql.execution.QueryExecution.toRdd(QueryExecution.scala:80)
+	at org.apache.spark.sql.Dataset.rdd$lzycompute(Dataset.scala:2980)
+	at org.apache.spark.sql.Dataset.rdd(Dataset.scala:2978)
+	at edu.ucr.dblab.sdcel.PartitionReader$.readEdges(PartitionReader.scala:69)
+	at edu.ucr.dblab.sdcel.SDCEL2$.main(SDCEL2.scala:60)
+	at edu.ucr.dblab.sdcel.SDCEL2.main(SDCEL2.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.JavaMainApplication.start(SparkApplication.scala:52)
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:904)
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:198)
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:228)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:137)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
