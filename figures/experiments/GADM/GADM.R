@@ -12,7 +12,7 @@ extractPartitions <- function(input){
   return(str_replace(str_replace(input, "gadm/edges_P", ""), "K/edgesA", ""))
 }
 
-log = enframe(readLines("gadm.txt"))
+log = enframe(readLines("GADM.txt"))
 spark = log %>% filter(grepl(value, pattern = "SparkSubmit ")) %>% 
   separate(value, into = c("time", "appId", "command"), sep = "\\|")
 spark$params = spark$command %>% map(getParams)
@@ -66,12 +66,12 @@ q = ggplot(data = local, aes(x = partitions, y = time)) +
   facet_grid(~method) +
   scale_y_continuous(breaks = seq(ymin, ymax, ytic)) + coord_cartesian(ylim = c(ymin, ymax)) + 
   labs(x="", y="", title="") 
-plot_grid(p, q, align = "h", ncol = 2, rel_widths = c(6/10, 1/10))
-ggsave(paste0("gadm.pdf"), width = 12, height = 8, device = "pdf")
+plot_grid(p, q, align = "h", ncol = 2, rel_widths = c(6/10, 2/10))
+ggsave(paste0("GADM.pdf"), width = 6, height = 4, device = "pdf")
 
 p = ggplot(data = data, aes(x = partitions, y = time)) +
   geom_bar(stat="identity", position=position_dodge(width = 0.75), width = 0.7) + 
   theme(axis.text.x = element_text(angle = 90, hjust = 1)) + 
   labs(x="Partitions (x1000)", y="Time [min]", title="Execution time by number of partitions") 
 plot(p)
-ggsave(paste0("gadm_sample.pdf"), width = 12, height = 8, device = "pdf")
+ggsave(paste0("GADM_sample.pdf"), width = 6, height = 4, device = "pdf")

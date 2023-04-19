@@ -1,0 +1,6 @@
+2021-02-08 17:16:33,487|5233|local-1612833391368|org.apache.spark.deploy.SparkSubmit --master local[1] --deploy-mode client --conf spark.driver.memory=30g --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=file:/home/acald013/Spark/2.4/conf/log4j.properties --class edu.ucr.dblab.sdcel.SDCEL --files /home/acald013/Spark/2.4/conf/log4j.properties --jars /home/acald013/Spark/2.4/jars/geospark-1.2.0.jar,/home/acald013/Spark/2.4/jars/scallop_2.11-3.1.5.jar,/home/acald013/Spark/2.4/jars/spark-measure_2.11-0.16.jar --num-executors 12 --executor-cores 9 --executor-memory 32g /home/acald013/RIDIR/Code/SDCEL/target/scala-2.11/sdcel_2.11-0.1.jar --input1 gadm/edges_P8K/edgesA --input2 gadm/edges_P8K/edgesB --quadtree /home/acald013/Test/edges_P8K/quadtree.wkt --boundary /home/acald013/Test/edges_P8K/boundary.wkt --scale 1e8 --save
+2021-02-08 17:16:33,487|5233|local-1612833391368|Starting session... Done!
+2021-02-08 17:18:01,345|93091|local-1612833391368|Reading data... Done!
+2021-02-08 17:18:01,883|93629|local-1612833391368|Getting LDCELs for A... done!
+2021-02-08 17:18:02,188|93934|local-1612833391368|Getting LDCELs for B... done!
+2021-02-08 22:54:20,969|20272715|local-1612833391368|Merging DCELs... done!

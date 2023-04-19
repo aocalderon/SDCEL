@@ -9,7 +9,7 @@ getParams <- function(command){
   return(paste(params, collapse = " "))
 }
 
-log = enframe(readLines("ca.txt"))
+log = enframe(readLines("CA.txt"))
 spark = log %>% filter(grepl(value, pattern = "SparkSubmit ")) %>% 
   separate(value, into = c("time", "duration", "appId", "command"), sep = "\\|")
 spark$params = spark$command %>% map(getParams)
@@ -50,14 +50,14 @@ bar1 = ggplot(data = data, aes(x = partitions, y = time)) +
   geom_bar(stat="identity", width = 0.75) + 
   theme(axis.text.x = element_text(angle = 90, hjust = 1)) + facet_grid(~method) +
   scale_y_continuous(breaks = seq(0, 800, 200)) + coord_cartesian(ylim = c(0, 800)) + 
-  labs(x="Number of partitions (x1000)", y="Time [sec]", title="Execution time by number of partitions compared with CGAL") 
+  labs(x="Number of partitions (x1000)", y="Time [sec]", title="Execution time by number of partitions") 
 bar2 = ggplot(data = cgal, aes(x = partitions, y = time)) +
   geom_bar(stat="identity", width = 0.75) + 
   theme(axis.text.x = element_text(angle = 90, hjust = 1), axis.ticks.x = element_blank()) + facet_grid(~method) +
   scale_y_continuous(breaks = seq(0, 800, 200)) + coord_cartesian(ylim = c(0, 800)) + 
   labs(x="", y="", title="") 
-plot_grid(bar1, bar2, align = "h", ncol = 2, rel_widths = c(6/10, 1/10))
-ggsave(paste0("ca.pdf"), width = 12, height = 8, device = "pdf")
+plot_grid(bar1, bar2, align = "h", ncol = 2, rel_widths = c(6/10, 2/10))
+ggsave(paste0("CA.pdf"), width = 6, height = 4, device = "pdf")
 
 sample = c("1", "2", "5", "10", "25", "50")
 p = ggplot(data = data %>% filter(capacity %in% sample), aes(x = partitions, y = time)) +
@@ -65,4 +65,4 @@ p = ggplot(data = data %>% filter(capacity %in% sample), aes(x = partitions, y =
  theme(axis.text.x = element_text(angle = 90, hjust = 1)) + 
  labs(x="Number of partitions (x1000)", y="Time [sec]", title="Execution time by number of partitions") 
 
-ggsave(paste0("ca_sample.pdf"), width = 12, height = 8, device = "pdf")
+ggsave(paste0("CA_sample.pdf"), width = 6, height = 4, device = "pdf")
