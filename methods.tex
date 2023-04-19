@@ -3,15 +3,9 @@
 \subsection{Preliminaries}
 There are some useful concepts to keep in mind in order to understand the creation and use of a DCEL data structure.  It starts with a set of edges, pair of two vertices, start and end, which define its orientation. We assume every edge is an straight line segment.
 
-Define edge
-Define half-edge: An edge usually bounds two faces, so we need two pairs of pointers for it. It is convenient to view the different sides of an edge as two distinct half-edges, so that we have a unique next half-edge and previous half-edge for every half-edge. This also means that a half-edge bounds only one face. The two half-edges we get for a given edge are called twins. (paraphrase)
-Define Face: a face is a polygonal region whose boundary is formed by connected edges and vertices.  The main idea is that the faces of the resulting DCEL can be able to reconstruct the original polygons.
+An edge usually bounds two faces, so we need two pairs of pointers for it. It is convenient to view the different sides of an edge as two distinct half-edges, so that we have a unique next half-edge and previous half-edge for every edge. This also means that a half-edge bounds only one face. The two half-edges we get for a given edge are called twins.  A face is a polygonal region whose boundary is formed by connected edges and vertices.  The main idea is that the faces of the resulting DCEL can be able to reconstruct the original polygons.
 
-State the problem
-The current challenge is the construction of a distributed and scalable DCEL structure that allows the querying of overlay operations, such as intersection and difference, over a large set of polygons.
-
-Overview of the solution
-The main idea of the solution is to partition the edges from each of the polygons using a spatial data structure (for instance, a quadtree).  Edges contained at each section of the partitioning will be the input of a local DCEL which will store the information of the vertices, half-edges and faces for their edges clipped to the boundary of its spatial partition.  Each local DCEL can be seen as an individual structure which can be queried and the solution will be later merged with the other local DCELs to complete the final answer. 
+The current challenge is the construction of a distributed and scalable DCEL structure that allows the querying of overlay operations, such as intersection and difference, over a large set of polygons.  The main idea of the solution is to partition the edges from each of the polygons using a spatial data structure (for instance, a quadtree).  Edges contained at each section of the partitioning will be the input of a local DCEL which will store the information of the vertices, half-edges and faces for their edges clipped to the boundary of its spatial partition.  Each local DCEL can be seen as an individual structure which can be queried and the solution will be later merged with the other local DCELs in their neighbourhood to complete the final answer. 
 
 \subsection{Partition strategy} \label{sec:strategy}
 In many cases, the operations provide by a DCEL could involve large spatial datasets.  Our aim is to offer a solution to deal with data volumes that the current sequential solution are unable to process.  In order to reach that goal we are purposing a partition strategy to build a scalable DCEL in a parallel fashion.  
@@ -29,9 +23,9 @@ The proposed partition schema is illustrated in figure \ref{fig:overlay_parted}.
     \Description[Partition schema]{This figure illustrates the partition schema used to distribute the data.}
 \end{figure*}
 
-Now each cell have the enough data to build a DCEL representation of the new polygons for each layer.  Data for each cell will be marked appropriately and submitted to different nodes to be processed in parallel.  Note that the same partition schema (set of cells) is used in both layers.  That is important due to it allows one-to-one matching between corresponding partitions in both layers.
+Now each cell have the enough data to build a DCEL representation of the polygons for each layer.  Data for each cell will be marked appropriately and submitted to different nodes to be processed in parallel.  Note that the same partition schema (set of cells) is used in both layers.  That is important due to it allows one-to-one matching between corresponding partitions in both layers.
 
-During the local DCEL construction for individual layers, it is straightforward the connection between the edges inside of each polygon.  From the inputs, it can easily be identified the position of each edge relate to its next and previous edges and to which face's (polygon's) boundary the edge belongs.  Each edge is converted to a half-edge and their pointers are update accordingly.  However, a query to identify the twin pointer of each half-edge is still needed given that the input polygons do not provide which polygons are in its neighborhood. The matching is done through a self-join query among the current half-edges to pair those which share the same vertices in opposite directions.
+During the local DCEL construction for individual layers, it is straightforward the connection between the edges inside of each polygon.  From the inputs, it can easily be identified the position of each edge relate to its next and previous edges and to which face (polygon) the edge belongs.  Each edge is converted to a half-edge and their pointers are update accordingly.  However, a query to identify the twin pointer of each half-edge is still needed given that the input polygons do not provide which polygons are in its neighborhood. The matching is done through a self-join query among the current half-edges to pair those which share the same vertices in opposite directions.
 
 However, when we pair the partitions from the both layers, we got two local DCELs (each representing the polygons for each layer) and the processing we need now is a merge between both of them.  It requires: (i) Identify the intersection points between the half-edges of each local DCEL and add them as new vertices; (ii) Split those half-edges involve in an intersection with a recently added vertex (prune duplicates if needed); (iii) Traverse the list of vertices and update their incident half-edge list; (iv) Update the pointers for next and previous half-edges in those affected by the splits; (v) Update the list of faces and their corresponding labels.
 
@@ -72,23 +66,34 @@ Figure \ref{fig:overlay_operations} shows the results of the five overlay operat
 \subsection{Parallel DCEL Computation}
 In this section explain:
 
-* how the edges from the polygons are partitioned
-* how to integrated the intersection of the edges and the boundary of the cells at partition time
-* extract the edges which are connected and are fully contained by the cell, they can be reported directly.
-* extract the edges which are connected but remains open because their are cut by the border of the cell.
-* identify those edges which intersect the boundary and used to create new edges in the borders of the cell.  
-* run the a variation of the sequential algorithm to connect the open edges and the edges from the borders of the cell.
+* how the edges from the polygons are partitioned \\
+
+During the partition process, the edges of each polygon are attached with pointers to their next and previous edge according to their order in the polygon vertices.  As explained before, a spatial index is used to assign each edge to a particular cell.  Each edge is queried in the spatial data structure and it is labeled with the cell where it is contained.  If a edge covers multiples cell it is duplicated in each one but clipped to the corresponding cell boundary.  In addition, edges representing the boundary of the cell are added to complement the edges enclosed in each cell.  Those artificial edges are marked accordingly to be removed during the merge stage.
+
+* how to integrated the intersection of the edges and the boundary of the cells at partition time \\
+
+The edges of the cell added at this stage are useful to complete the local DCEL.  It will allow that the resulting DCEL will enclose the full area of the cell and the matching with the local DCEL of the other layer during the merge process.  The edges which intersect the boundary of the cell will be connected to the edges of the boundary to form closed faces in the resulting local DCEL.
+
+* extract the edges which are connected and are fully contained by the cell, they can be reported directly.\\
+
+As the edges have been partitioned accordingly to the spatial index, each cell will contain all the data they need to process and compute a DCEL locally in a parallel fashion. In each case, after the DCEL is built those edges and faces that are not involved with the edges introduced by the boundary of the cell could be reported directly and they do not need additional analysis.  It is, most of the edges in the middle of the cell which do not have contact to the boundary are ready for the merging stage and they do not need additional processing.
+
+
+
+
+* extract the edges which are connected but remains open because their are cut by the border of the cell.\\
+* identify those edges which intersect the boundary and used to create new edges in the borders of the cell.\\  
+* run the a variation of the sequential algorithm to connect the open edges and the edges from the borders of the cell.\\
 
 prepare some graphics to explain the steps
-
 
 \subsection{Cell inside polygon problem} \label{sec:anomalies}
 The main goal of the proposal is to be able to divide the problem into smalls partitions for efficient processing.  Each partition collects the needed data and it is able to build its local DCEL without the need of query other partitions.  However, under this partition strategy, a new problem arises.  It happens when the partition schema (i.e. a quadtree) deliver a cell where no edges for any of the input layers are located.  The problem is even more complicated when a just hole in located inside a cell (figure \ref{fig:emptycells}).  The problem is that the empty cell (or the empty portion in the case of holes) has no access to which polygon it belongs making its corresponding labeling impossible.  
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[page=1, width=0.4\textwidth]{figures/cellinpolygon/emptycells.pdf}
-    \includegraphics[page=2, width=0.4\textwidth]{figures/cellinpolygon/emptycells.pdf}
+    \includegraphics[page=1, width=0.5\textwidth]{figures/cellinpolygon/emptycells.pdf}
+    \includegraphics[page=2, width=0.5\textwidth]{figures/cellinpolygon/emptycells.pdf}
     \caption{Example of empty cell and empty cell with holes cases.}\label{fig:emptycells}
     \Description[Examples of empty cells]{This figure shows some examples of of empty cell and empty cell with holes cases.}
 \end{figure}
@@ -105,7 +110,7 @@ The key of the proposal is to identify the centroid of the parent cell from the 
     \includegraphics[page=2, width=0.49\linewidth]{figures/cellinpolygon/example}
     \includegraphics[page=3, width=0.49\linewidth]{figures/cellinpolygon/example}
     \caption{Three iterations of the proposed algorithm to find the next cell with valid edges from a empty cell.} \label{fig:emptycellexample}
-    \Description[Iterartion of the proposed algorithm]{This figure shows three iterations of the proposed algorithm to find the next cell with valid edges from a empty cell.}
+    \Description[Iteration of the proposed algorithm]{This figure shows three iterations of the proposed algorithm to find the next cell with valid edges from a empty cell.}
 \end{figure}
 
 The details and pseudo code of the algorithm can be seen at appendix \ref{app:emptycells}.  We based of proposal in the following lemma and used it to proved our point with the subsequent proof.
@@ -135,4 +140,13 @@ As an alternative, it is proposed to do an intermediate step with a parameter in
 
 It is clear that it will create an optimization issue: if we choose a level low in the structure it can be evaluated in a larger number of intermediate nodes (taking advantage of parallelism) but, at the same time, a large number of partitions will be located above of that threshold and they will be evaluated by an unique node which can dominate the execution time.  On the other hand, if a level is selected high in the quadtree, just a few number of partitions will have to be evaluated in that unique node, but the number of intermediate nodes will also be reduced and the execution time for their evaluation will increase.
 
-Last method take a different approach.  It repartitions the set of segments at each partition by their label itself.  It is, it will reorginize the segments using their labels as the key.  The resultind dataset will put together those segments which share the same label in the same partition and they will be evaluated in the same node.  In this case, the cost of the repartitions should be evaluated but it is expected than the number and size of the resulting partitions will take much more advantage of parallelism.
+Last method take a different approach.  It partitions the set of segments at each partition by their label itself.  It is, it will reorganize the segments using their labels as the key.  The resulting dataset will put together those segments which share the same label in the same partition and they will be evaluated in the same node.  In this case, the cost of the partition should be evaluated but it is expected than the number and size of the resulting partitions will take much more advantage of parallelism.
+
+\subsection{Alternative methods for unbalance data}\label{sec:unbalance}
+It has been noted that the most time consuming operating is the overlay of the data once the individual DCELs have been created for each layer.  Particularly, when the combination of half-edges from each layer is performing at each cell, the most critical task is finding the intersection points between the two set of half-edges. It has been also noted that in some cases the number of half-edges from each layer can be quiet unbalance.
+
+In the traditional approach, a common sweep-line approach is performed scanning both sets of half-edges from left to right (scanning the x-axis) inside each cell and the corresponding intersections points are reported in order to continue with the creation of the merged DCEL. This approach does not consider the fact that in some cell one of the sets can be larger than the other and there is no need to scan all the half-edges in many cases.
+
+An alternative approach is proposed for those cases.  It start detecting which sets contains more half-edges and which has more probability to overlap the smaller one in the x-axis. Then, it performs a simple scan in the smaller to extract the wide of this dataset and returned in the form of intervals over the x-axis.  It has to be noted that a smaller dataset can extend in several intervals over the bigger dataset and it has been managed accordingly.  
+
+With each interval, it is possible to locate the point in the x-axis where the sweep-line algorithm should start scanning from the bigger set and compared with the half-edges from de smaller one. On those cases where the bigger and smaller set differ considerably in size, it is possible to save time due to the fact that many sections of the bigger set do not required to be scanned nor compared with the smaller set.
